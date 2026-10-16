@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Manual de VeriFree</title>
+<meta name="description" content="Manual de usuario de VeriFree Facturación: instalación, empresa, borradores, facturas, envío a la AEAT y copias de seguridad.">
+<link rel="icon" type="image/png" href="icono.png">
+<link rel="apple-touch-icon" href="icono.png">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="marco">
+    <a class="marca" href="./"><img src="icono.png" alt="" width="32" height="32">VeriFree <span>Facturación</span></a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="./#funciones">Qué hace</a>
+      <a href="./#capturas">Capturas</a>
+      <a href="./#precios">Precios</a>
+      <a href="manual.html" aria-current="page">Manual</a>
+      <a href="./#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="manual">
+  <div class="marco">
+    <nav class="indice" aria-label="Índice del manual">
+      <p>Índice</p>
+      <ol>
+        <li><a href="#instalar">Instalar</a></li>
+        <li><a href="#empresa">Crear la empresa</a></li>
+        <li><a href="#configuracion">Configuración</a></li>
+        <li><a href="#borradores">Hacer una factura</a></li>
+        <li><a href="#facturas">Facturas emitidas</a></li>
+        <li><a href="#aeat">Envío a la AEAT</a></li>
+        <li><a href="#electronica">Factura electrónica</a></li>
+        <li><a href="#libro">Libro registro</a></li>
+        <li><a href="#copias">Copias de seguridad</a></li>
+      </ol>
+    </nav>
+
+    <article class="texto">
+      <h1>Manual de usuario</h1>
+      <p class="intro">Todo lo necesario para empezar a facturar con VeriFree, en el orden en que lo vas a necesitar.</p>
+
+      <section id="instalar">
+        <h2>1. Instalar</h2>
+        <p>VeriFree es un único archivo, <span class="ruta">VeriFree.exe</span>, que no necesita instalación. Antes de abrirlo:</p>
+        <ol>
+          <li>Instala el <a href="https://dotnet.microsoft.com/es-es/download/dotnet/10.0">.NET 10 Desktop Runtime</a> de Microsoft, si no lo tienes.</li>
+          <li>Guarda <span class="ruta">VeriFree.exe</span> en una carpeta tuya, por ejemplo <span class="ruta">Documentos\VeriFree</span>.</li>
+          <li>Ábrelo desde esa carpeta con doble clic.</li>
+        </ol>
+        <p class="aviso">Si lo abres directamente desde un ZIP o desde un correo, el programa te avisa y no sigue: Windows lo ejecutaría desde una carpeta temporal y los datos se perderían.</p>
+        <p>Los datos se guardan junto al programa, en la carpeta <span class="ruta">Empresas</span>, una carpeta por empresa.</p>
+      </section>
+
+      <section id="empresa">
+        <h2>2. Crear la empresa</h2>
+        <p>La primera vez, el programa pide los datos fiscales de la empresa: NIF, razón social, dirección, código postal, población, provincia, país e IBAN. Pulsa <strong>Crear la empresa</strong> y ya puedes facturar.</p>
+        <h3>Varias empresas</h3>
+        <p>Arriba a la izquierda está el nombre de la empresa abierta. Púlsalo para cambiar a otra o elige <strong>Crear una empresa nueva…</strong>. Cada empresa tiene sus facturas, su numeración y su configuración por separado.</p>
+      </section>
+
+      <section id="configuracion">
+        <h2>3. Configuración</h2>
+        <p>En <strong>Configuración</strong> hay una pestaña para cada cosa. <strong>Guardar cambios</strong> guarda Empresa, Cobro y Valores por defecto; las series y el logo se guardan al momento.</p>
+        <dl>
+          <dt>Empresa</dt>
+          <dd>Los datos fiscales, que se copian en cada factura al emitirla; el texto al pie de las facturas (por ejemplo, la inscripción en el Registro Mercantil o el aviso de protección de datos); la actividad económica, para el libro registro, y el logo.</dd>
+          <dt>Cobro</dt>
+          <dd>El IBAN, que se imprime en las facturas por transferencia, y el móvil de Bizum, que se imprime en las facturas por Bizum.</dd>
+          <dt>Valores por defecto</dt>
+          <dd>Con qué empieza cada borrador nuevo: el IVA de las líneas, la forma de pago, la serie y si lleva retención de IRPF.</dd>
+          <dt>Series</dt>
+          <dd>La serie A para las facturas y la R para las rectificativas, con una numeración que empieza cada año (A-2026-0001). Puedes crear otras.</dd>
+          <dt>VERI*FACTU</dt>
+          <dd>El certificado con el que se envía a la AEAT y el estado de los envíos. Ver <a href="#aeat">Envío a la AEAT</a>.</dd>
+          <dt>Factura electrónica</dt>
+          <dd>La firma de las facturas electrónicas y la carpeta donde se guarda una copia. Ver <a href="#electronica">Factura electrónica</a>.</dd>
+        </dl>
+      </section>
+
+      <section id="borradores">
+        <h2>4. Hacer una factura</h2>
+        <p>Las facturas se preparan como borradores y se emiten cuando están bien. Un borrador se puede cambiar cuantas veces quieras; una factura emitida, no.</p>
+        <ol>
+          <li>Ve a <strong>Borradores</strong> y pulsa <strong>Nuevo borrador</strong>.</li>
+          <li>Escribe los datos del cliente y la descripción de la operación, y elige la serie. Si la operación se hizo otro día, marca la casilla y pon la fecha.</li>
+          <li>Añade las líneas: descripción, cantidad, precio e IVA. Si una línea no lleva retención (por ejemplo, material o gastos), desmárcala en esa línea.</li>
+          <li>Elige la forma de pago y, si quieres, el vencimiento. Sin vencimiento, la factura es al contado, el día de la emisión.</li>
+          <li>Marca <strong>Con retención de IRPF</strong> si el cliente es una empresa o un profesional que te la practica.</li>
+        </ol>
+        <p>A la derecha ves los totales y lo que falta («Falta el NIF del cliente»…). Cuando no falta nada, pone <strong>Listo para emitir</strong> y se activa <strong>Emitir…</strong>.</p>
+        <p><strong>Vista previa</strong> muestra el PDF del borrador, sin validez fiscal.</p>
+        <h3>Emitir</h3>
+        <p>Al pulsar <strong>Emitir…</strong>, la factura se emite con la fecha de hoy y el siguiente número de la serie. Después no se puede modificar: si hubiera algún error, se corrige con una factura rectificativa.</p>
+        <p>En la lista de borradores puedes marcar varios y emitirlos de una vez con <strong>Emitir marcados…</strong>; solo se emiten los que estén listos. <strong>Duplicar</strong> crea una copia exacta de un borrador.</p>
+      </section>
+
+      <section id="facturas">
+        <h2>5. Facturas emitidas</h2>
+        <p>En <strong>Facturas</strong> están las emitidas del periodo y el año que elijas, con sus totales: base imponible, IVA repercutido, retención de IRPF y total facturado. El buscador busca en el número de la factura y en el nombre o el NIF del cliente.</p>
+        <figure class="captura">
+          <img src="capturas/facturas.png" alt="Lista de facturas de VeriFree con los totales del trimestre y los botones de cada factura" width="1920" height="1140" loading="lazy">
+          <figcaption>Datos de ejemplo.</figcaption>
+        </figure>
+        <p>Con una factura elegida:</p>
+        <dl>
+          <dt>Ver PDF, Imprimir y Guardar PDF…</dt>
+          <dd>La factura en PDF, con el QR tributario. También se abre con doble clic en la factura.</dd>
+          <dt>Guardar factura electrónica…</dt>
+          <dd>La factura electrónica firmada, para enviarla al cliente.</dd>
+          <dt>Repetir</dt>
+          <dd>Un borrador nuevo con el mismo cliente, las mismas líneas y el mismo pago.</dd>
+          <dt>Nueva para este cliente</dt>
+          <dd>Un borrador nuevo con los datos del cliente, su forma de pago y su retención, sin líneas.</dd>
+          <dt>Rectificar…</dt>
+          <dd>Prepara una factura rectificativa para corregir la elegida.</dd>
+          <dt>Anular…</dt>
+          <dd>Anula una factura que no debió emitirse. La anulación también se envía a la AEAT.</dd>
+        </dl>
+      </section>
+
+      <section id="aeat">
+        <h2>6. Envío a la AEAT</h2>
+        <p>Cada factura y cada anulación se envían solas a la AEAT al emitirlas. Si no hay conexión, el programa lo vuelve a intentar solo y, mientras falte algo, lo avisa una banda arriba con un botón para resolverlo.</p>
+        <h3>El certificado</h3>
+        <p>En <strong>Configuración › VERI*FACTU</strong>, elige el certificado con el que se envía: el de la empresa o el de quien tenga poder para enviar por ella (apoderado o colaborador social). El programa lista los certificados instalados en Windows que sirven para conectar con la AEAT; si el tuyo está en un archivo, usa <strong>Importar archivo .pfx / .p12…</strong>.</p>
+        <p>El certificado se queda en Windows: en la carpeta de la empresa no se guarda ni el certificado ni su contraseña.</p>
+        <h3>Si algo falla</h3>
+        <ul>
+          <li>En la misma pestaña ves cuántos registros quedan por enviar. <strong>Enviar ahora</strong> los envía sin esperar al próximo intento, respetando el tiempo de espera que fija la AEAT.</li>
+          <li>En <strong>Facturas</strong>, la casilla <strong>Solo con avisos de la AEAT</strong> deja solo las facturas que la AEAT ha rechazado o ha aceptado con errores.</li>
+          <li>Cuando la causa esté resuelta, <strong>Volver a enviar…</strong> envía de nuevo esa factura con los mismos datos.</li>
+        </ul>
+      </section>
+
+      <section id="electronica">
+        <h2>7. Factura electrónica</h2>
+        <p>Cada factura emitida tiene su factura electrónica en el formato de la AEAT (UBL), firmada justo después de emitirla con el certificado de la empresa o el de su representante. Lleva la dirección del QR, con la que quien la recibe comprueba en la AEAT que está registrada.</p>
+        <p>Si no se puede firmar, se sigue facturando y una banda lo avisa. <strong>Firmar ahora</strong>, en <strong>Configuración › Factura electrónica</strong>, firma lo pendiente sin esperar al próximo intento.</p>
+        <p>Ahí mismo puedes guardar una copia de cada factura firmada en una carpeta de archivo. La predeterminada está dentro de la carpeta de la empresa; también puedes elegir otra, por ejemplo una que compartas con tu asesoría.</p>
+      </section>
+
+      <section id="libro">
+        <h2>8. Libro registro</h2>
+        <p>En <strong>Facturas</strong>, <strong>Exportar libro…</strong> guarda el libro registro de facturas expedidas del ejercicio, hasta el final del periodo elegido, en el formato de la AEAT. Es lo que suele pedir la asesoría.</p>
+        <p>Antes, elige la actividad económica de la empresa en <strong>Configuración › Empresa</strong>: se busca por su nombre en la lista de actividades y epígrafes del IAE de la AEAT.</p>
+      </section>
+
+      <section id="copias">
+        <h2>9. Copias de seguridad</h2>
+        <p>Todo lo de cada empresa está en su carpeta, dentro de <span class="ruta">Empresas</span>, junto a <span class="ruta">VeriFree.exe</span>. Para hacer una copia de seguridad:</p>
+        <ol>
+          <li>Cierra VeriFree.</li>
+          <li>Copia la carpeta <span class="ruta">Empresas</span> a otro disco, a una memoria USB o a tu nube de confianza.</li>
+        </ol>
+        <p>Para recuperarla, vuelve a poner esa carpeta junto a <span class="ruta">VeriFree.exe</span>.</p>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="pie">
+  <div class="marco">
+    <span>© 2026 César Morillas</span>
+    <a href="mailto:contacto@verifree.es">contacto@verifree.es</a>
+  </div>
+</footer>
+
+</body>
+</html>
