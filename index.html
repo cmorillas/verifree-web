@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VeriFree Facturación</title>
+<meta name="description" content="Programa de facturación con VERI*FACTU para autónomos y pymes. Sin nube y sin cuentas: tus facturas se quedan en tu equipo.">
+<meta property="og:title" content="VeriFree Facturación">
+<meta property="og:description" content="Facturación con VERI*FACTU, en tu ordenador.">
+<meta property="og:image" content="https://verifree.es/icono.png">
+<meta property="og:url" content="https://verifree.es/">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" type="image/png" href="icono.png">
+<link rel="apple-touch-icon" href="icono.png">
+<style>
+/* Una columna centrada; la portada en dos columnas (texto y ejemplo de registros), una banda oscura para los datos. */
+:root {
+  --fondo: #ffffff;
+  --papel: #f5f7fb;
+  --tinta: #0f1b3d;
+  --suave: #4f5d78;
+  --linea: #dce3ee;
+  --marino: #162b68;
+  --azul: #2456d6;
+  --azul-tenue: #e3ebfd;
+  --verde: #0f8f65;
+  --verde-tenue: #dcf5ec;
+  --ambar: #9a5b06;
+  --ambar-tenue: #fdf0d5;
+  --banda: #162b68;
+  --banda-texto: #f5f7fb;
+  --banda-suave: #b9c6e8;
+  --letra: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --titular: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --mono: "Cascadia Mono", Consolas, ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fondo: #0b1226; --papel: #101935; --tinta: #e6ebf5; --suave: #9eabc6; --linea: #24315a;
+    --marino: #c9d6ff; --azul: #86a8ff; --azul-tenue: #1a2a5c; --verde: #45d19f; --verde-tenue: #0f3a2e;
+    --ambar: #f2b955; --ambar-tenue: #3a2a0c; --banda: #14245a; --banda-texto: #e6ebf5; --banda-suave: #a8b6dc;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --fondo: #0b1226; --papel: #101935; --tinta: #e6ebf5; --suave: #9eabc6; --linea: #24315a;
+  --marino: #c9d6ff; --azul: #86a8ff; --azul-tenue: #1a2a5c; --verde: #45d19f; --verde-tenue: #0f3a2e;
+  --ambar: #f2b955; --ambar-tenue: #3a2a0c; --banda: #14245a; --banda-texto: #e6ebf5; --banda-suave: #a8b6dc;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--tinta);
+  font: 400 1.0625rem/1.6 var(--letra);
+}
+a { color: var(--azul); text-underline-offset: 0.18em; }
+a:focus-visible { outline: 2px solid var(--azul); outline-offset: 3px; border-radius: 2px; }
+img { max-width: 100%; }
+h1, h2, h3 { font-family: var(--titular); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+
+.marco {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* Cabecera */
+.cabecera { border-bottom: 1px solid var(--linea); }
+.cabecera .marco {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  padding-block: 0.875rem;
+}
+.marca {
+  display: flex; align-items: center; gap: 0.625rem;
+  color: var(--tinta); text-decoration: none; font-weight: 650; font-size: 1.0625rem;
+}
+.marca img { width: 32px; height: 32px; }
+.marca span { color: var(--suave); font-weight: 400; }
+.menu { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.9375rem; }
+.menu a { color: var(--suave); text-decoration: none; }
+.menu a:hover { color: var(--tinta); }
+
+/* Portada */
+.portada .marco {
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 3rem; align-items: center;
+  padding-block: 4.5rem 4rem;
+}
+.portada h1 {
+  font-size: clamp(2.125rem, 3.4vw + 1rem, 3.25rem); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700;
+}
+.portada h1 .vf { color: var(--marino); white-space: nowrap; }
+.entradilla { margin-top: 1.25rem; font-size: 1.25rem; color: var(--suave); max-width: 32rem; }
+.estado-programa {
+  margin-top: 1.75rem; display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.9375rem; color: var(--ambar); background: var(--ambar-tenue);
+  padding: 0.375rem 0.75rem; border-radius: 999px;
+}
+.estado-programa::before { content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: currentColor; }
+
+/* Ejemplo de registros encadenados */
+.registros {
+  margin: 0; background: var(--papel); border: 1px solid var(--linea); border-radius: 12px;
+  padding: 1.25rem; min-width: 0;
+}
+.registros figcaption {
+  font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--suave);
+  margin-bottom: 1rem; display: flex; justify-content: space-between; gap: 1rem;
+}
+.registros ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; }
+.registro {
+  position: relative; background: var(--fondo); border: 1px solid var(--linea); border-radius: 8px;
+  padding: 0.75rem 0.875rem; font-size: 0.875rem;
+}
+.registro + .registro::before {
+  content: ""; position: absolute; left: 1.5rem; top: calc(-1.25rem - 1px); height: 1.25rem;
+  border-left: 2px dashed var(--azul);
+}
+.reg-cab { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; }
+.reg-num { font-weight: 650; font-variant-numeric: tabular-nums; }
+.reg-dato { color: var(--suave); font-variant-numeric: tabular-nums; }
+.huellas { display: grid; grid-template-columns: auto 1fr; gap: 0.125rem 0.75rem; margin: 0.5rem 0 0; }
+.huellas dt { color: var(--suave); }
+.huellas dd { margin: 0; font-family: var(--mono); font-size: 0.8125rem; min-width: 0; overflow-wrap: anywhere; }
+.par { background: var(--azul-tenue); color: var(--azul); border-radius: 4px; padding: 0 0.3em; }
+.chip { font-size: 0.75rem; border-radius: 999px; padding: 0.125rem 0.5rem; white-space: nowrap; }
+.chip-ok { color: var(--verde); background: var(--verde-tenue); }
+.chip-pend { color: var(--ambar); background: var(--ambar-tenue); }
+
+/* Secciones */
+.seccion .marco { padding-block: 4rem; }
+.seccion h2 { font-size: clamp(1.625rem, 1.2vw + 1.2rem, 2.125rem); line-height: 1.2; letter-spacing: -0.01em; font-weight: 700; }
+.seccion .intro { margin-top: 0.75rem; color: var(--suave); max-width: 40rem; }
+
+.funciones {
+  list-style: none; margin: 2.5rem 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.25rem 2.5rem;
+}
+.funciones li { border-top: 2px solid var(--linea); padding-top: 1rem; }
+.funciones h3 { font-size: 1.125rem; font-weight: 650; margin-bottom: 0.375rem; }
+.funciones p { color: var(--suave); }
+
+.banda { background: var(--banda); color: var(--banda-texto); }
+.banda .marco { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; align-items: start; }
+.banda p { color: var(--banda-suave); font-size: 1.125rem; max-width: 34rem; margin-top: 0.75rem; }
+.hechos { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.hechos li { border-left: 2px solid var(--banda-suave); padding-left: 1rem; }
+.hechos strong { display: block; font-weight: 650; }
+.hechos span { color: var(--banda-suave); }
+
+.dos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; }
+.lista { margin: 1.25rem 0 0; padding-left: 1.25rem; display: grid; gap: 0.625rem; }
+.lista li::marker { color: var(--verde); }
+.contacto { margin-top: 1.25rem; }
+.correo { font-family: var(--mono); font-size: 1rem; }
+
+/* Pie */
+.pie { border-top: 1px solid var(--linea); font-size: 0.875rem; color: var(--suave); }
+.pie .marco { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-block: 1.5rem; }
+.pie a { color: var(--suave); }
+
+@media (max-width: 860px) {
+  .portada .marco { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; padding-block: 3rem; }
+  .funciones { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .banda .marco, .dos { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+}
+@media (max-width: 560px) {
+  .funciones { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; }
+  .seccion .marco { padding-block: 3rem; }
+  .entradilla { font-size: 1.125rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="marco">
+    <a class="marca" href="./"><img src="icono.png" alt="" width="32" height="32">VeriFree <span>Facturación</span></a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#funciones">Qué hace</a>
+      <a href="#datos">Tus datos</a>
+      <a href="#requisitos">Requisitos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="portada">
+    <div class="marco">
+      <div>
+        <h1>Facturación con <span class="vf">VERI*FACTU</span>, en tu ordenador</h1>
+        <p class="entradilla">Programa de facturación para autónomos y pymes. Sin nube y sin cuentas: tus facturas se quedan en tu equipo.</p>
+        <p class="estado-programa">En fase de pruebas: todavía no se distribuye.</p>
+      </div>
+
+      <figure class="registros" aria-label="Ejemplo de tres registros de facturación encadenados">
+        <figcaption><span>Registros de facturación</span><span>Ejemplo</span></figcaption>
+        <ol>
+          <li class="registro">
+            <div class="reg-cab"><span class="reg-num">F2026-0041</span><span class="chip chip-ok">Enviado a la AEAT</span></div>
+            <div class="reg-dato">14/10/2026 · 1.210,00 €</div>
+            <dl class="huellas">
+              <dt>Huella</dt><dd><span class="par">3F9A…C21E</span></dd>
+            </dl>
+          </li>
+          <li class="registro">
+            <div class="reg-cab"><span class="reg-num">F2026-0042</span><span class="chip chip-ok">Enviado a la AEAT</span></div>
+            <div class="reg-dato">15/10/2026 · 484,00 €</div>
+            <dl class="huellas">
+              <dt>Anterior</dt><dd><span class="par">3F9A…C21E</span></dd>
+              <dt>Huella</dt><dd>8B07…5D4A</dd>
+            </dl>
+          </li>
+          <li class="registro">
+            <div class="reg-cab"><span class="reg-num">F2026-0043</span><span class="chip chip-pend">Pendiente de envío</span></div>
+            <div class="reg-dato">16/10/2026 · 2.662,00 €</div>
+            <dl class="huellas">
+              <dt>Anterior</dt><dd>8B07…5D4A</dd>
+              <dt>Huella</dt><dd>E1C3…07B9</dd>
+            </dl>
+          </li>
+        </ol>
+      </figure>
+    </div>
+  </section>
+
+  <section class="seccion" id="funciones">
+    <div class="marco">
+      <h2>Qué hace</h2>
+      <ul class="funciones">
+        <li>
+          <h3>Facturas con VERI*FACTU</h3>
+          <p>Facturas, rectificativas y anulaciones, cada una con su registro encadenado. El PDF lleva el código QR y la frase «Factura verificable en la sede electrónica de la AEAT».</p>
+        </li>
+        <li>
+          <h3>Envío a la AEAT</h3>
+          <p>Envía los registros con tu certificado digital. Si alguno no llega, lo vuelve a intentar y te avisa de lo que queda pendiente.</p>
+        </li>
+        <li>
+          <h3>Borradores</h3>
+          <p>Prepara y revisa cada factura antes de emitirla. Lo emitido ya no se modifica: se corrige con una rectificativa.</p>
+        </li>
+        <li>
+          <h3>Factura electrónica</h3>
+          <p>Genera la factura en formato UBL, firmada con tu certificado.</p>
+        </li>
+        <li>
+          <h3>Libros registro</h3>
+          <p>Exporta el libro registro de IVA e IRPF en el formato de la AEAT.</p>
+        </li>
+        <li>
+          <h3>Varias empresas</h3>
+          <p>Lleva la facturación de varias empresas desde el mismo programa, cada una con sus datos por separado.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion banda" id="datos">
+    <div class="marco">
+      <div>
+        <h2>Tus datos, en tu equipo</h2>
+        <p>VeriFree guarda las facturas en tu ordenador. Funciona sin conexión salvo para enviar los registros a la AEAT.</p>
+      </div>
+      <ul class="hechos">
+        <li><strong>Sin cuenta</strong><span>No hay que registrarse ni iniciar sesión.</span></li>
+        <li><strong>Sin servidores propios</strong><span>Las facturas no pasan por ningún servidor de VeriFree.</span></li>
+        <li><strong>Solo envía a la AEAT</strong><span>Lo único que el programa envía son los registros que exige VERI*FACTU.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="marco dos">
+      <div id="requisitos">
+        <h2>Requisitos</h2>
+        <ul class="lista">
+          <li>Windows de 64 bits.</li>
+          <li><a href="https://dotnet.microsoft.com/es-es/download/dotnet/10.0">.NET 10 Desktop Runtime</a>, gratuito, de Microsoft.</li>
+          <li>Un certificado digital para enviar los registros a la AEAT y firmar la factura electrónica.</li>
+        </ul>
+      </div>
+      <div id="contacto">
+        <h2>Soporte y contacto</h2>
+        <p class="intro">La asistencia técnica la presta el autor del programa.</p>
+        <p class="contacto">Escribe a <a class="correo" href="mailto:contacto@verifree.es">contacto@verifree.es</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="marco">
+    <span>© 2026 César Morillas</span>
+  </div>
+</footer>
+
+</body>
+</html>
