@@ -2170,7 +2170,7 @@ p.aviso {
     mask-repeat: no-repeat;
     mask-position: center;
     mask-composite: intersect;
-    animation: grabado 2.6s var(--curva) 0.1s both, girar-centrado 90s linear infinite;
+    animation: grabado 4.2s var(--curva) 1.2s both, girar-centrado 120s linear 1.2s infinite;
   }
 
   .sello g[stroke-width=".55"] {
