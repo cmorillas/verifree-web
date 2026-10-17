@@ -321,7 +321,7 @@
       <div class="cabecera-seccion">
         <span class="eyebrow">Ingeniería sólida</span>
         <h2>Todo lo que exige la ley, sin complicaciones</h2>
-        <p>Cumple con VERI*FACTU y con la factura electrónica entre empresas sin que tengas que saber cómo funcionan por dentro.</p>
+        <p>Cumple con VERI*FACTU y con la factura electrónica obligatoria (Ley Crea y Crece) tanto si eres autónomo como pyme, sin complicaciones técnicas.</p>
       </div>
 
       <div class="bento-grid">
@@ -339,9 +339,9 @@
           <div class="bento-icono">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
           </div>
-          <h3>Factura Electrónica entre Empresas</h3>
+          <h3>Factura Electrónica Estructurada</h3>
           <p>
-            Cada factura tiene también su versión electrónica, en el formato europeo que usa la solución pública de la AEAT, firmada con tu certificado mientras sigues trabajando. Se guarda ordenada por año y mes.
+            Cada factura genera su versión electrónica en el estándar europeo oficial (UBL 2.1 con firma digital XAdES), válida para entregar a clientes autónomos, empresas o la administración pública según la Ley Crea y Crece, firmada en segundo plano con tu certificado mientras sigues trabajando.
           </p>
         </div>
 
@@ -417,7 +417,7 @@
           <li><strong>VERI*FACTU:</strong> registro de facturación encadenado con huella SHA-256 y enviado por el servicio web de la AEAT (SOAP con certificado, mTLS), con su control de flujo y reintentos.</li>
           <li><strong>Factura electrónica:</strong> UBL 2.1 según el anexo I de la Orden HAC/1028/2026, firmada con XAdES y validada contra los esquemas de OASIS.</li>
           <li><strong>Remesas:</strong> adeudos directos SEPA en formato pain.008.001.02.</li>
-          <li><strong>Actualizaciones:</strong> arquitectura modular para incorporar los futuros servicios telemáticos B2B de la AEAT sin comprometer el histórico local ni obligar a suscripciones forzosas.</li>
+          <li><strong>Actualizaciones:</strong> arquitectura modular para incorporar los futuros servicios telemáticos de factura electrónica de la AEAT sin comprometer el histórico local ni obligar a suscripciones forzosas.</li>
           <li><strong>Datos:</strong> una base de datos SQLite local por empresa.</li>
           <li><strong>Programa:</strong> aplicación nativa de Windows en .NET 10 y WPF.</li>
         </ul>
@@ -495,7 +495,7 @@
               VeriFree implementa el anexo I completo de la <strong>Orden HAC/1028/2026</strong>. Cada factura genera automáticamente su archivo XML UBL 2.1 estructurado, firmado digitalmente con XAdES en segundo plano sin ralentizar el uso del programa.
             </p>
             <p style="margin-top:1rem;">
-              Las facturas electrónicas firmadas se archivan de manera organizada por empresa, ejercicio y mes, listas para su intercambio comercial B2B o entrega a la administración pública.
+              Las facturas electrónicas firmadas se archivan de manera organizada por empresa, ejercicio y mes, listas para su entrega a clientes autónomos, empresas o a la administración pública.
             </p>
             <div style="margin-top:1.5rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
               <span class="garantia-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Validado contra esquemas OASIS</span>
@@ -646,7 +646,7 @@
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Adaptación asegurada a los futuros servicios de la solución pública de factura electrónica B2B.</span>
+              <span>Adaptación asegurada a los futuros servicios de la solución pública de factura electrónica (Ley Crea y Crece).</span>
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -852,7 +852,7 @@
             <ul style="margin-top:0.5rem; padding-left:1.25rem; display:grid; gap:0.4rem;">
               <li><strong>Si utilizas el repositorio libre (0 €):</strong> El código fuente en GitHub se publica con fines de transparencia, auditoría e independencia técnica bajo modelo «as-is». Las publicaciones son discrecionales y no conllevan compromiso de calendario, paridad inmediata con nuevas órdenes ministeriales ni soporte. Quien busca adaptación continua y garantizada a la normativa cuenta con la Licencia Oficial y el Plan Tranquilidad.</li>
               <li><strong>Si tienes la Licencia Oficial (89 €):</strong> Adquieres un producto terminado y legal para la normativa vigente, que no caduca ni exige suscripción. No incluye soporte técnico continuado ni futuras actualizaciones normativas de la AEAT, las cuales podrás contratar opcionalmente o tenerlas cubiertas mediante el Plan Tranquilidad.</li>
-              <li><strong>Si contratas el Plan Tranquilidad (9,90 €/mes):</strong> Tienes cubiertas al 100% todas las actualizaciones normativas y evolutivas futuras (2026–2028: nuevos requisitos de VERI*FACTU y factura electrónica B2B), recibiendo los nuevos ejecutables oficiales listos para usar sin coste adicional.</li>
+              <li><strong>Si contratas el Plan Tranquilidad (9,90 €/mes):</strong> Tienes cubiertas al 100% todas las actualizaciones normativas y evolutivas futuras (2026–2028: nuevos requisitos de VERI*FACTU y factura electrónica obligatoria), recibiendo los nuevos ejecutables oficiales listos para usar sin coste adicional.</li>
             </ul>
           </div>
         </details>
