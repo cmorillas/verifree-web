@@ -806,6 +806,35 @@ summary::-webkit-details-marker {
   text-align: right;
 }
 
+.es-libre {
+  background: rgba(255, 106, 0, 0.04);
+  border: 1px solid rgba(255, 106, 0, 0.12);
+  border-radius: 16px;
+}
+
+.es-libre .coste-nombre {
+  color: var(--tinta);
+  font-weight: 620;
+}
+
+.es-libre .coste-valor {
+  color: #d95a00;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.es-libre .coste-barra,
+.coste.preparado .es-libre .coste-barra {
+  bottom: auto;
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  border-radius: 50%;
+  background: var(--naranja);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 4px rgba(255, 122, 26, 0.2);
+}
+
 .es-verifree {
   background: var(--negro);
 }
@@ -2529,27 +2558,109 @@ p.aviso {
     grid-column: 1 / -1;
   }
 
+  /* Gráfico de costes compacto y refinado en móvil */
+  .coste {
+    padding: 1.35rem 0.875rem;
+    border-radius: 16px;
+  }
+
+  .coste-gancho {
+    margin-bottom: 0.35rem;
+  }
+
+  .coste-gancho b {
+    font-size: clamp(2.1rem, 8.5vw, 2.85rem);
+  }
+
+  .coste-titulo {
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+  }
+
   .coste-fila {
     grid-template-columns: minmax(0, 1fr) auto;
     grid-template-rows: auto auto;
-    row-gap: 0.5rem;
-    padding-block: 0.9rem;
+    row-gap: 0.35rem;
+    min-height: auto;
+    padding: 0.6rem 0.75rem;
+    border-radius: 12px;
+    margin-bottom: 0.25rem;
   }
 
-  .coste-nombre { grid-column: 1; grid-row: 1; }
-  .coste-valor { grid-column: 2; grid-row: 1; }
-  .coste-pista { grid-column: 1 / -1; grid-row: 2; }
+  .coste-nombre {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    align-self: center;
+    white-space: normal;
+  }
+
+  .coste-valor {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    white-space: nowrap;
+    align-self: center;
+    text-align: right;
+  }
+
+  .es-verifree .coste-valor,
+  .es-libre .coste-valor {
+    font-size: 0.9375rem;
+  }
+
+  .coste-pista {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    height: 0.625rem;
+    background: rgba(11, 11, 12, 0.05);
+    border-radius: 999px;
+    position: relative;
+    overflow: visible;
+  }
 
   .coste-pista::before {
-    inset: -0.35rem 0;
+    display: none;
+  }
+
+  .es-verifree .coste-pista {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .coste-barra {
+    height: 100%;
+    border-radius: 999px;
+  }
+
+  .es-libre .coste-barra,
+  .coste.preparado .es-libre .coste-barra {
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.25);
   }
 
   .coste-eje {
     grid-template-columns: minmax(0, 1fr);
+    padding-inline: 0.75rem;
+    margin-top: 0.4rem;
   }
 
   .coste-ticks {
     grid-column: 1;
+    font-size: 0.75rem;
+    color: var(--tinta-3);
+  }
+
+  .coste-ahorro {
+    gap: 0.75rem 1.5rem;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+  }
+
+  .coste-ahorro b {
+    font-size: 1.35rem;
   }
 
   .ficha {
@@ -2598,11 +2709,6 @@ p.aviso {
     padding-block: 0.45rem;
   }
 }
-
-/* Fila de «compilado por ti» en el gráfico */
-.es-libre .coste-nombre { color: var(--tinta); font-weight: 600; }
-.es-libre .coste-valor { color: #c2410c; }
-.es-libre .coste-barra, .coste.preparado .es-libre .coste-barra { bottom: auto; width: 10px; height: 10px; top: 50%; border-radius: 50%; background: var(--naranja); transform: translate(-50%, -50%); box-shadow: 0 0 0 5px rgba(255, 122, 26, 0.18); }
 
 /* Comunidad dentro de «Código a la vista» */
 .comunidad {
