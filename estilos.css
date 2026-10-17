@@ -34,6 +34,13 @@
   font-display: swap;
 }
 
+/* Ángulo del barrido dinámico con que se «graba» la roseta circular al cargar */
+@property --barrido {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 360deg;
+}
+
 :root {
   /* Superficies */
   --blanco: #ffffff;
@@ -2153,7 +2160,17 @@ p.aviso {
   }
 
   .portada::after {
-    animation: girar-centrado 140s linear infinite;
+    -webkit-mask-image: url("guilloche.svg"), conic-gradient(from -90deg, #000 var(--barrido), transparent 0);
+    -webkit-mask-size: contain, cover;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-composite: source-in;
+    mask-image: url("guilloche.svg"), conic-gradient(from -90deg, #000 var(--barrido), transparent 0);
+    mask-size: contain, cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-composite: intersect;
+    animation: grabado 2.6s var(--curva) 0.1s both, girar-centrado 90s linear infinite;
   }
 
   .sello g[stroke-width=".55"] {
@@ -2293,7 +2310,14 @@ p.aviso {
 }
 
 @keyframes girar { to { transform: rotate(360deg); } }
-@keyframes girar-centrado { to { transform: translateX(-50%) rotate(360deg); } }
+@keyframes girar-centrado {
+  from { transform: translateX(-50%) rotate(0deg); }
+  to { transform: translateX(-50%) rotate(360deg); }
+}
+@keyframes grabado {
+  from { --barrido: 0deg; }
+  to { --barrido: 360deg; }
+}
 @keyframes enfocar { from { opacity: 0; filter: blur(12px); transform: translateY(0.35em); } to { opacity: 1; filter: none; transform: none; } }
 @keyframes flotar { 50% { transform: translateY(-12px); } }
 @keyframes avance { to { width: 100%; } }
