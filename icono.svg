@@ -1,60 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <defs>
-    <!-- Background Gradient -->
+    <!-- Filtros de sombra y profundidad -->
+    <filter id="vf-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020617" flood-opacity="0.5"/>
+    </filter>
+    <filter id="vf-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Gradiente de fondo del contenedor (Dark Titanium / Navy profundo) -->
     <linearGradient id="vf-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090E1E"/>
-      <stop offset="50%" stop-color="#0F172A"/>
-      <stop offset="100%" stop-color="#141E36"/>
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="40%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
     </linearGradient>
 
-    <!-- Border Gradient -->
+    <!-- Gradiente del borde sutil -->
     <linearGradient id="vf-border" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#1E40AF" stop-opacity="0.2"/>
       <stop offset="100%" stop-color="#10B981" stop-opacity="0.4"/>
     </linearGradient>
 
-    <!-- Left Shield Facet (Electric Sapphire to Blue) -->
-    <linearGradient id="vf-blue" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="50%" stop-color="#2563EB"/>
-      <stop offset="100%" stop-color="#1E40AF"/>
+    <!-- Gradiente del brazo izquierdo (Veri / Solidez / Plata-Azulado) -->
+    <linearGradient id="vf-left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
     </linearGradient>
 
-    <!-- Right Shield Facet (Vivid Emerald to Mint) -->
-    <linearGradient id="vf-green" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#34D399"/>
-      <stop offset="50%" stop-color="#10B981"/>
-      <stop offset="100%" stop-color="#059669"/>
+    <!-- Gradiente del brazo derecho (Checkmark / Libertad / Esmeralda eléctrico) -->
+    <linearGradient id="vf-right" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="35%" stop-color="#10B981"/>
+      <stop offset="75%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#6EE7B7"/>
     </linearGradient>
 
-    <!-- Ambient Center Glow -->
-    <radialGradient id="vf-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.3"/>
-      <stop offset="60%" stop-color="#10B981" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    <!-- Resplandor esmeralda central -->
+    <radialGradient id="vf-ambient-glow" cx="50%" cy="55%" r="45%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
     </radialGradient>
-
-    <!-- Drop Shadow for Checkmark -->
-    <filter id="vf-check-shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.45"/>
-    </filter>
   </defs>
 
-  <!-- Container Squircle -->
-  <rect x="2" y="2" width="116" height="116" rx="28" fill="url(#vf-bg)"/>
-  <rect x="2" y="2" width="116" height="116" rx="28" fill="none" stroke="url(#vf-border)" stroke-width="1.2"/>
+  <!-- 1. Contenedor redondeado moderno (Squircle) -->
+  <rect x="16" y="16" width="224" height="224" rx="54" fill="url(#vf-bg)" filter="url(#vf-shadow)"/>
+  <rect x="16" y="16" width="224" height="224" rx="54" fill="none" stroke="url(#vf-border)" stroke-width="2.5"/>
 
-  <!-- Ambient Glow -->
-  <circle cx="60" cy="60" r="38" fill="url(#vf-glow)"/>
+  <!-- 2. Halo ambiental de luz interna -->
+  <circle cx="128" cy="138" r="85" fill="url(#vf-ambient-glow)"/>
 
-  <!-- Shield Left Facet -->
-  <path d="M 60,32 L 32,24 C 32,58 44,82 60,94 Z" fill="url(#vf-blue)"/>
+  <!-- 3. Isotipo VeriFree: Fusión geométrica de 'V' y Checkmark de Verificación -->
+  <g id="vf-symbol">
+    <!-- Brazo izquierdo ('V' anclada en plata pura) -->
+    <path d="M 74 88 
+             L 116 176" 
+          fill="none" 
+          stroke="url(#vf-left)" 
+          stroke-width="26" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
 
-  <!-- Shield Right Facet -->
-  <path d="M 60,32 L 88,24 C 88,58 76,82 60,94 Z" fill="url(#vf-green)"/>
+    <!-- Brazo derecho (Checkmark dinámico ascendente en verde esmeralda) -->
+    <path d="M 114 176 
+             L 194 72" 
+          fill="none" 
+          stroke="url(#vf-right)" 
+          stroke-width="26" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          filter="url(#vf-glow)"/>
 
-  <!-- Checkmark -->
-  <path d="M 43,56 L 55,68 L 77,42" fill="none" stroke="#FFFFFF" stroke-width="7.5"
-        stroke-linecap="round" stroke-linejoin="round" filter="url(#vf-check-shadow)"/>
+    <!-- Núcleo de vértice suave -->
+    <circle cx="115" cy="176" r="13" fill="#10B981"/>
+  </g>
 </svg>
