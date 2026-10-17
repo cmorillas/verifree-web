@@ -682,32 +682,12 @@ p {
   background: linear-gradient(135deg, rgba(30, 58, 138, 0.2) 0%, var(--superficie) 100%);
 }
 
-/* Módulos opcionales (se activan por empresa), debajo de la cuadrícula de funciones */
-.modulos-cabecera {
-  margin: 3rem 0 1.25rem;
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem 0.85rem;
-  flex-wrap: wrap;
+/* Ocupa dos columnas para cerrar la última fila de la cuadrícula de tres (en la de dos, una). */
+.bento-ancho {
+  grid-column: span 2;
 }
 
-.modulos-cabecera h3 {
-  font-size: 1.35rem;
-  margin: 0;
-}
-
-.modulos-cabecera p {
-  margin: 0;
-  color: var(--tinta-suave);
-  font-size: 0.9375rem;
-}
-
-.modulos-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-}
-
+/* Funciones aún no disponibles en el ejecutable */
 .etiqueta-proximamente {
   align-self: flex-start;
   margin-bottom: 1rem;
@@ -727,9 +707,9 @@ p {
   }
 }
 
-@media (max-width: 640px) {
-  .modulos-grid {
-    grid-template-columns: minmax(0, 1fr);
+@media (max-width: 980px) {
+  .bento-ancho {
+    grid-column: span 1;
   }
 }
 
