@@ -54,9 +54,9 @@
         <figcaption class="coste-titulo" id="coste-titulo">Coste acumulado a 3 años</figcaption>
         <div class="coste-grafico">
           <div class="coste-fila es-verifree">
-            <span class="coste-nombre">VeriFree Facturación</span>
-            <span class="coste-pista" aria-hidden="true"><span class="coste-barra" style="--desde: 0; --hasta: 89"></span></span>
-            <span class="coste-valor">0 € o 89 €</span>
+            <span class="coste-nombre">VeriFree Licencia Oficial</span>
+            <span class="coste-pista" aria-hidden="true"><span class="coste-barra" style="--desde: 119; --hasta: 237"></span></span>
+            <span class="coste-valor">119 € a 237 €</span>
           </div>
           <div class="coste-fila">
             <span class="coste-nombre">Plataformas Cloud</span>
@@ -77,6 +77,7 @@
             <span class="coste-ticks"><span style="--en: 0">0 €</span><span style="--en: 500">500 €</span><span style="--en: 1000">1.000 €</span><span style="--en: 1500">1.500 €</span></span>
           </div>
         </div>
+              <p class="coste-nota">VeriFree: 119 € de licencia con el primer año de actualizaciones incluido, y 59 € al año a partir del segundo solo si quieres seguir recibiéndolas. Los precios de otras soluciones son orientativos (rangos habituales del mercado) y pueden variar según el proveedor y el plan.</p>
       </figure>
       <div class="bloque">
         <h2 class="bloque-titulo">Ver comparativa completa</h2>
@@ -110,7 +111,7 @@
                 <tr>
                   <td><strong>Precio de adquisición</strong></td>
                   <td class="col-destacada">
-                    <span class="icono-si">0 €</span> (código libre) o <span class="icono-si">89 €</span> (pago único)
+                    <span class="icono-si">119 €</span> (pago único, primer año de actualizaciones incluido)
                   </td>
                   <td>15 € a 40 € / mes <br><small>(lo habitual; los planes gratis suelen ser muy recortados)</small></td>
                   <td>240 € a 580 € / año <br><small>(mantenimiento habitual para tener Veri*Factu)</small></td>
@@ -119,7 +120,7 @@
                 <tr>
                   <td><strong>Coste acumulado a 3 años</strong></td>
                   <td class="col-destacada">
-                    <span class="icono-si"><strong>0 € o 89 €</strong></span>
+                    <span class="icono-si"><strong>119 € a 237 €</strong></span>
                   </td>
                   <td><span class="icono-no">540 € a 1.440 €</span></td>
                   <td><span class="icono-no">720 € a 1.740 €</span></td>
@@ -129,7 +130,7 @@
                   <td><strong>Límite de facturas gratis</strong></td>
                   <td class="col-destacada"><span class="icono-si">ILIMITADAS</span></td>
                   <td><span class="icono-no">Unas pocas al mes</span></td>
-                  <td><span class="icono-no">Sin soporte ni Veri*Factu</span></td>
+                  <td><span class="icono-no">Según versión y contrato</span></td>
                   <td>Ilimitadas (manual)</td>
                 </tr>
                 <tr>
@@ -143,7 +144,7 @@
                   <td><strong>Actualizaciones normativas ante cambios legales</strong></td>
                   <td class="col-destacada">
                     <span class="icono-si"><i class="m-si" aria-hidden="true"></i>Opcionales y sin cuotas forzosas</span>
-                    <br><small>(sin alquiler forzoso; Plan Tranquilidad opcional)</small>
+                    <br><small>(sin alquiler forzoso; actualizaciones opcionales tras el primer año)</small>
                   </td>
                   <td><span class="icono-alerta">Alquiler mensual forzoso</span> <br><small>(180 € a 480 €/año; si dejas de pagar, pierdes el acceso)</small></td>
                   <td><span class="icono-no">Mantenimiento anual obligatorio</span> <br><small>(240 € a 580 €/año para tener versiones legales)</small></td>
@@ -226,7 +227,7 @@
                 <tr>
                   <td><strong>Multiempresa y multiautónomo</strong></td>
                   <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Ilimitadas sin recargo</span></td>
-                  <td><span class="icono-no">Pago extra por cada NIF</span></td>
+                  <td><span class="icono-no">Suele cobrarse por cada NIF</span></td>
                   <td><span class="icono-alerta">Según versión adquirida</span></td>
                   <td>Cambio manual de certificado</td>
                 </tr>
@@ -337,6 +338,7 @@
           <li><a href="garantia.html">Garantía Legal</a></li>
           <li><a href="preguntas.html">Preguntas</a></li>
           <li><a href="manual.html">Manual de uso</a></li>
+          <li><a href="descargas.html">Descargas</a></li>
           <li><a href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">Código en GitHub</a></li>
         </ul>
       </div>
@@ -370,7 +372,7 @@
 
     <div class="pie-legal">
       <span>© 2026 Telytec Ingenieros, S.L. Todos los derechos reservados. Información general en cumplimiento del art. 10 de la Ley 34/2002 (LSSI-CE).</span>
-      <span>Web 100% privada: libre de cookies de terceros y libre de rastreo.</span>
+      <span>Web 100% privada: libre de cookies de terceros y libre de rastreo. <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a></span>
     </div>
   </div>
 </footer>
@@ -392,29 +394,6 @@ function cambiarTab(tabId, btn) {
   }
 }
 
-function cambiarFacturacion(modo) {
-  var btnMensual = document.getElementById('btn-mensual');
-  var btnAnual = document.getElementById('btn-anual');
-  var cifra = document.getElementById('precio-mantenimiento-cifra');
-  var periodo = document.getElementById('precio-mantenimiento-periodo');
-  var nota = document.getElementById('precio-mantenimiento-nota');
-  var anual = modo === 'anual';
-
-  btnAnual.classList.toggle('activo', anual);
-  btnMensual.classList.toggle('activo', !anual);
-  btnAnual.setAttribute('aria-pressed', anual ? 'true' : 'false');
-  btnMensual.setAttribute('aria-pressed', anual ? 'false' : 'true');
-
-  if (anual) {
-    cifra.textContent = '99 €';
-    periodo.textContent = '/ año + IVA';
-    nota.textContent = 'Equivale a 8,25 € / mes (ahorras 2 meses completos) · Facturación anual';
-  } else {
-    cifra.textContent = '9,90 €';
-    periodo.textContent = '/ mes + IVA';
-    nota.textContent = 'Facturación mensual · Cancela cuando quieras';
-  }
-}
 
 /* El gráfico de costes se dibuja al llegar a él */
 (function () {

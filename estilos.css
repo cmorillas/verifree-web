@@ -2627,3 +2627,9 @@ body { background: #fff; }
   86% { transform: rotate(6deg); }
   92% { transform: rotate(-3deg); }
 }
+
+.coste-nota { max-width: 46rem; margin: 1.5rem auto 0; color: var(--tinta-3); font-size: 0.8125rem; text-align: center; }
+.precios-extra > div { grid-column: span 4; }
+.texto-pagina { margin-inline: auto; }
+.texto-pagina .btn { margin-top: 0.5rem; }
+@media (max-width: 760px) { .precios-extra > div { grid-column: 1 / -1; } }
