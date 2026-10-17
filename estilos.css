@@ -2270,3 +2270,173 @@ kbd, .ruta { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255,
 .cierre .btn-secundario:hover {
   color: #fff;
 }
+
+/* ==========================================================================
+   Versión clara cálida: negro solo en portada, cabeceras, cierre y pie
+   ========================================================================== */
+:root {
+  --blanco: #ffffff;
+  --gris: #f7f5f1;
+  --gris-2: #efece6;
+  --gris-3: #e7e3dc;
+  --tinta: #0b0b0c;
+  --tinta-2: #4a4a50;
+  --tinta-3: #6b6b72;
+  --borde: rgba(11, 11, 12, 0.08);
+  --borde-2: rgba(11, 11, 12, 0.14);
+  --borde-control: rgba(11, 11, 12, 0.3);
+  --accion: #d9480f;
+  --marca: #0b0b0c;
+  --sombra-captura: 0 1px 2px rgba(0, 0, 0, 0.06), 0 30px 80px -30px rgba(40, 30, 20, 0.35);
+  color-scheme: light;
+}
+
+html { scrollbar-color: #cfcac2 #f7f5f1; }
+body { background: var(--gris); color: var(--tinta); }
+
+/* Zonas negras: redefinen la paleta localmente */
+.cabecera, .portada, .pagina-cabecera, .cierre, .pie, .explorador-panel {
+  --tinta: #ffffff;
+  --tinta-2: #b6b6c0;
+  --tinta-3: #8c8c97;
+  --borde: rgba(255, 255, 255, 0.09);
+  --borde-2: rgba(255, 255, 255, 0.16);
+  --accion: #ff8a3d;
+  color-scheme: dark;
+}
+.cabecera { background: #000; backdrop-filter: none; }
+
+.seccion, .seccion-gris { background: var(--gris); }
+.seccion:not(.seccion-gris) + .seccion:not(.seccion-gris) { border-top: 0; }
+.seccion-cabecera, .seccion-cabecera h2, .resumen h2 { color: var(--tinta); }
+
+/* Titulares de sección centrados, como frases */
+.seccion > .marco > .seccion-cabecera {
+  max-width: 54rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.seccion > .marco > .seccion-cabecera > p { margin-inline: auto; }
+.seccion-cabecera h2 { font-weight: 560; letter-spacing: -0.035em; }
+#capturas .selector, .modalidad { justify-content: center; }
+#capturas .marco { text-align: center; }
+#capturas .tab-contenido, #capturas .captura-detalle { text-align: left; }
+#capturas .captura-pie { margin-inline: auto; text-align: center; }
+.seguir { display: flex; justify-content: center; }
+.faq .seguir, .resumen .seguir { justify-content: flex-start; }
+
+/* Pestañas en píldora: activa gris, el resto blancas */
+.selector { gap: 0.6rem; padding: 0; background: none; }
+.selector button { height: 3rem; padding: 0 1.5rem; background: #fff; color: var(--tinta); font-size: 1rem; font-weight: 500; }
+.selector button:hover { background: #fbfaf8; color: var(--tinta); }
+.selector button.activo { background: var(--gris-3); color: var(--tinta); box-shadow: none; }
+.selector svg, .selector .activo svg { color: var(--tinta-2); }
+.selector button.activo .ahorro { color: var(--accion); }
+.ahorro { color: var(--accion); }
+
+/* Superficies blancas redondeadas */
+.coste, .planes, .panel, .contenedor-tabla, .sanciones li, .prueba {
+  background: #fff;
+  border: 0;
+  border-radius: 24px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+.prueba { background: #fff; }
+.planes { overflow: hidden; }
+.plan + .plan { border-left-color: var(--borde); }
+.plan-destacado { background: #0b0b0c; box-shadow: none; --tinta: #fff; --tinta-2: #c4c4cc; --tinta-3: #9a9aa3; --borde: rgba(255,255,255,.12); }
+.plan-destacado h3, .plan-destacado .plan-cifra, .plan-destacado strong { color: #fff; }
+.plan-lema { color: #ff8a3d; }
+.plan-destacado .plan-beneficios svg { color: #ff8a3d; }
+.captura-marco img, .legal-factura img { border-radius: 18px; }
+.btn-secundario { color: var(--tinta); border-color: var(--borde-control); }
+.btn-secundario:hover { color: var(--tinta); border-color: var(--tinta); background: #fff; }
+.btn-primario { background: #ff7a1a; color: #0b0b0b; }
+.btn-primario:hover { background: #ff9447; color: #0b0b0b; }
+.portada .btn-secundario, .cierre .btn-secundario, .portada .btn-secundario:hover, .cierre .btn-secundario:hover { color: #fff; border-color: rgba(255,255,255,.3); background: transparent; }
+.faq-item:first-child, .explorador-lista { border-top-color: var(--tinta); }
+.tabla .col-destacada { background: rgba(255, 122, 26, 0.07); }
+
+/* Portada: captura con tarjetas flotantes */
+.escenario { position: relative; }
+.flotante {
+  position: absolute;
+  z-index: 2;
+  padding: 1.25rem 1.4rem;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 22px;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.6);
+  color: #0b0b0c;
+  text-align: left;
+}
+.flotante strong { display: block; color: #0b0b0c; font-size: 1.375rem; font-weight: 560; letter-spacing: -0.03em; line-height: 1.1; }
+.flotante span { display: block; margin-top: 0.35rem; color: #6b6b72; font-size: 0.8125rem; }
+.flotante-izq { left: -2%; bottom: 14%; max-width: 15rem; }
+.flotante-der { right: -3%; top: 34%; width: 15rem; padding: 0.6rem; }
+.flotante-der img { border-radius: 14px; }
+.flotante-der strong { padding: 0.7rem 0.6rem 0.4rem; font-size: 1.125rem; }
+@media (prefers-reduced-motion: no-preference) {
+  .flotante { animation: flotar 6s ease-in-out infinite; }
+  .flotante-der { animation-delay: -3s; }
+}
+@keyframes flotar { 50% { transform: translateY(-12px); } }
+@media (max-width: 980px) { .flotante { display: none; } }
+
+/* Aparición escalonada */
+@media (prefers-reduced-motion: no-preference) {
+  .revelar { opacity: 0; transform: translateY(40px) scale(0.985); transition: opacity 1s var(--curva), transform 1s var(--curva); }
+  .revelar.visto { opacity: 1; transform: none; }
+  .planes.revelar .plan, .explorador.revelar .explorador-opcion { opacity: 0; transform: translateY(20px); transition: opacity .7s var(--curva), transform .7s var(--curva); }
+  .planes.visto .plan, .explorador.visto .explorador-opcion { opacity: 1; transform: none; }
+  .planes.visto .plan:nth-child(2) { transition-delay: .1s; }
+  .planes.visto .plan:nth-child(3) { transition-delay: .2s; }
+  .explorador.visto .explorador-opcion:nth-child(2) { transition-delay: .05s; }
+  .explorador.visto .explorador-opcion:nth-child(3) { transition-delay: .1s; }
+  .explorador.visto .explorador-opcion:nth-child(4) { transition-delay: .15s; }
+  .explorador.visto .explorador-opcion:nth-child(5) { transition-delay: .2s; }
+  .explorador.visto .explorador-opcion:nth-child(6) { transition-delay: .25s; }
+  .explorador.visto .explorador-opcion:nth-child(7) { transition-delay: .3s; }
+  .explorador.visto .explorador-opcion:nth-child(8) { transition-delay: .35s; }
+}
+
+/* Explorador sobre fondo claro */
+.explorador-opcion { color: #9a978f; }
+.explorador-opcion:hover, .explorador-opcion.activo { color: var(--tinta); }
+.explorador-panel { border: 0; border-radius: 28px; background: radial-gradient(120% 90% at 100% 0%, rgba(255, 122, 26, 0.28), transparent 55%), #0b0b0c; }
+
+/* ==========================================================================
+   Gráfico de coste a 3 años, más grande y legible
+   ========================================================================== */
+.coste { padding: clamp(1.75rem, 4vw, 3.5rem); }
+.coste-titulo { margin-bottom: 2.5rem; font-size: 1.5rem; font-weight: 560; letter-spacing: -0.025em; text-align: center; }
+.coste-fila { min-height: 4.75rem; grid-template-columns: 13rem minmax(0, 1fr) 10rem; border-radius: 16px; padding-inline: 1rem; }
+.coste-eje { grid-template-columns: 13rem minmax(0, 1fr) 10rem; padding-inline: 1rem; }
+.coste-pista { height: 2.25rem; }
+.coste-pista::before { inset: -1.25rem 0; }
+.coste-barra { border-radius: 999px !important; background: #d9d5ce; }
+.coste-nombre { font-size: 1rem; color: var(--tinta-2); }
+.coste-valor { font-size: 1.125rem; font-weight: 600; }
+.es-verifree { background: #0b0b0c; }
+.es-verifree .coste-nombre { color: #fff; }
+.es-verifree .coste-valor { color: #ff8a3d; font-size: 1.375rem; }
+.es-verifree .coste-barra { background: #ff7a1a; box-shadow: 0 0 0 4px rgba(255, 122, 26, 0.2); }
+.es-verifree .coste-pista::before { opacity: 0.25; }
+.coste-ahorro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 2.5rem;
+  margin-top: 2.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--borde);
+  text-align: center;
+}
+.coste-ahorro div { color: var(--tinta-3); font-size: 0.875rem; }
+.coste-ahorro b { display: block; color: var(--tinta); font-size: clamp(1.75rem, 2vw + 1rem, 2.5rem); font-weight: 560; letter-spacing: -0.035em; }
+@media (max-width: 760px) {
+  .coste-fila { grid-template-columns: minmax(0, 1fr) auto; padding-block: 0.9rem; }
+  .coste-eje { grid-template-columns: minmax(0, 1fr); }
+}
+
+.seccion > .faq > .seccion-cabecera { margin-inline: 0; text-align: left; }
+.seccion > .faq > .seccion-cabecera > p { margin-inline: 0; }
