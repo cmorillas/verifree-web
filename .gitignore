@@ -1,0 +1,7 @@
+# Archivos y notas privadas locales (excluidos de git)
+PRIVADO.md
+AGENTS.md
+*.tmp
+*.log
+.vscode/
+.idea/
