@@ -2642,3 +2642,46 @@ body { background: #fff; }
 .portada-texto { max-width: 72rem; }
 .portada h1 { font-size: clamp(2.5rem, 3.6vw + 1rem, 4.6rem); line-height: 1.02; text-wrap: initial; }
 @media (max-width: 900px) { .portada h1 .corte { display: none; } .portada h1 { text-wrap: balance; } }
+
+/* ==========================================================================
+   Código a la vista
+   ========================================================================== */
+.codigo { background: #0b0b0c !important; --tinta: #fff; --tinta-2: #c4c4cc; --tinta-3: #9a9aa3; --borde: rgba(255,255,255,.12); --accion: #ff8a3d; color-scheme: dark; }
+.codigo .seccion-cabecera h2 { color: #fff; }
+.manifiesto {
+  max-width: 52rem;
+  margin: 0 auto clamp(3rem, 6vw, 4.5rem);
+  text-align: center;
+}
+.manifiesto p {
+  color: #fff;
+  font-size: clamp(1.25rem, 1vw + 1rem, 1.75rem);
+  font-weight: 450;
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+}
+.manifiesto footer { margin-top: 1.25rem; color: #ff8a3d; font-size: 0.9375rem; font-weight: 600; }
+.codigo-rejilla { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--hueco); }
+.codigo-bloque { padding: clamp(1.75rem, 3vw, 2.5rem); background: #151519; border: 1px solid rgba(255,255,255,.08); border-radius: 24px; }
+.codigo-bloque h3 { color: #fff; font-size: 1.375rem; letter-spacing: -0.02em; }
+.codigo .lista-check { gap: 1rem; }
+.codigo .lista-check li { align-items: flex-start; color: #c4c4cc; font-weight: 400; }
+.codigo .lista-check svg { margin-top: 0.2rem; color: #ff8a3d; }
+.codigo .lista-check strong { color: #fff; }
+.codigo-pasos ol { display: grid; gap: 1rem; margin-top: 1.5rem; list-style: none; counter-reset: paso; }
+.codigo-pasos li { display: grid; grid-template-columns: 2.25rem 1fr; align-items: baseline; color: #c4c4cc; counter-increment: paso; }
+.codigo-pasos li::before { content: counter(paso); display: grid; place-items: center; width: 1.75rem; height: 1.75rem; border-radius: 50%; background: #ff7a1a; color: #0b0b0c; font-size: 0.875rem; font-weight: 700; }
+.codigo-pasos b { color: #fff; font-weight: 600; }
+.codigo-aviso { margin: 1.5rem 0; padding: 1rem 1.1rem; background: rgba(255,138,61,.08); border: 1px solid rgba(255,138,61,.25); border-radius: 14px; color: #d9d9df; font-size: 0.875rem; line-height: 1.55; }
+.codigo .btn-secundario, .codigo .btn-secundario:hover { color: #fff; border-color: rgba(255,255,255,.3); background: transparent; }
+@media (max-width: 860px) { .codigo-rejilla { grid-template-columns: 1fr; } }
+
+/* Cuatro planes */
+.planes { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.plan-libre .plan-lema { color: var(--tinta-3); }
+@media (max-width: 1180px) { .planes { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; } .plan { display: flex; flex-direction: column; grid-row: auto; } .plan > .btn { margin-top: auto; } .plan:nth-child(3) { border-left: 0; } .plan:nth-child(n+3) { border-top: 1px solid var(--borde); } }
+
+.codigo .lista-check svg { width: 16px; height: 16px; flex-shrink: 0; }
+.codigo-pasos li { display: block; position: relative; padding-left: 2.6rem; min-height: 1.75rem; line-height: 1.75rem; }
+.codigo-pasos li::before { position: absolute; left: 0; top: 0; }
+.plan-beneficios svg { width: 16px; height: 16px; }
