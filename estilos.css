@@ -738,6 +738,70 @@ p {
   margin-bottom: 0.35rem;
 }
 
+.contacto-comercial-box {
+  margin-top: 1.5rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: 14px;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  max-width: 46rem;
+  margin-inline: auto;
+  box-shadow: var(--sombra-sm);
+}
+
+.caja-empresa {
+  margin-top: 1.5rem;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.caja-empresa h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+  color: var(--tinta);
+}
+
+.caja-empresa .empresa-sub {
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+  color: var(--tinta-suave);
+  line-height: 1.5;
+}
+
+.empresa-datos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.55rem;
+  font-size: 0.875rem;
+  color: var(--tinta-suave);
+}
+
+.empresa-datos li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.empresa-datos li svg {
+  color: var(--azul-primario);
+  flex-shrink: 0;
+}
+
+.empresa-datos a {
+  color: var(--tinta);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.empresa-datos a:hover {
+  color: var(--azul-primario);
+  text-decoration: underline;
+}
+
 /* ==========================================================================
    Garantía Legal del Productor
    ========================================================================== */
@@ -1230,6 +1294,89 @@ p {
   padding-top: 1.5rem;
   font-size: 0.8125rem;
   color: var(--tinta-tenue);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pie-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1.3fr 1.4fr;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 820px) {
+  .pie-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.pie-col h5 {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--tinta);
+  margin-bottom: 0.85rem;
+}
+
+.pie-col p {
+  font-size: 0.875rem;
+  color: var(--tinta-suave);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.pie-col-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1rem;
+}
+
+.pie-col-links a {
+  color: var(--tinta-suave);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.pie-col-links a:hover {
+  color: var(--tinta);
+}
+
+.pie-contacto-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--tinta-suave);
+}
+
+.pie-contacto-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pie-contacto-list li svg {
+  color: var(--azul-primario);
+  flex-shrink: 0;
+}
+
+.pie-contacto-list a {
+  color: var(--tinta);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pie-contacto-list a:hover {
+  color: var(--azul-primario);
+  text-decoration: underline;
 }
 
 /* ==========================================================================
