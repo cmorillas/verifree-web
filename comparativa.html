@@ -28,6 +28,7 @@
     <nav class="menu" aria-label="Navegación principal">
       <a href="index.html#funciones">Funciones</a>
       <a href="index.html#precios">Precios</a>
+      <a href="index.html#codigo">Código abierto</a>
       <a href="comparativa.html" aria-current="page">Comparativa</a>
       <a href="garantia.html">Garantía legal</a>
       <a href="preguntas.html">Preguntas</a>
@@ -59,6 +60,11 @@
             <span class="coste-pista" aria-hidden="true"><span class="coste-barra" style="--desde: 119; --hasta: 237"></span></span>
             <span class="coste-valor">119 € a 237 €</span>
           </div>
+          <div class="coste-fila es-libre">
+            <span class="coste-nombre">Compilado por ti, como productor</span>
+            <span class="coste-pista" aria-hidden="true"><span class="coste-barra" style="--desde: 0; --hasta: 0"></span></span>
+            <span class="coste-valor">0 €</span>
+          </div>
           <div class="coste-fila">
             <span class="coste-nombre">Plataformas Cloud</span>
             <span class="coste-pista" aria-hidden="true"><span class="coste-barra" style="--desde: 540; --hasta: 1440"></span></span>
@@ -78,7 +84,7 @@
             <span class="coste-ticks"><span style="--en: 0">0 €</span><span style="--en: 500">500 €</span><span style="--en: 1000">1.000 €</span><span style="--en: 1500">1.500 €</span></span>
           </div>
         </div>
-              <p class="coste-nota">VeriFree: 119 € de licencia con el primer año de actualizaciones incluido, y 59 € al año a partir del segundo solo si quieres seguir recibiéndolas. Los precios de otras soluciones son orientativos (rangos habituales del mercado) y pueden variar según el proveedor y el plan.</p>
+              <p class="coste-nota">VeriFree: 119 € de licencia con el primer año de actualizaciones incluido, y 59 € al año a partir del segundo solo si quieres seguir recibiéndolas. Si lo compilas tú y te haces responsable como productor, 0 €. Los precios de otras soluciones son orientativos (rangos habituales del mercado) y pueden variar según el proveedor y el plan.</p>
       </figure>
       <div class="bloque">
         <h2 class="bloque-titulo">Ver comparativa completa</h2>
@@ -112,7 +118,7 @@
                 <tr>
                   <td><strong>Precio de adquisición</strong></td>
                   <td class="col-destacada">
-                    <span class="icono-si">119 €</span> (pago único, primer año de actualizaciones incluido)
+                    <span class="icono-si">119 €</span> (pago único, primer año de actualizaciones incluido)<br><small>o 0 € si lo compilas tú y te haces responsable como productor</small>
                   </td>
                   <td>15 € a 40 € / mes <br><small>(lo habitual; los planes gratis suelen ser muy recortados)</small></td>
                   <td>240 € a 580 € / año <br><small>(mantenimiento habitual para tener Veri*Factu)</small></td>
@@ -121,7 +127,7 @@
                 <tr>
                   <td><strong>Coste acumulado a 3 años</strong></td>
                   <td class="col-destacada">
-                    <span class="icono-si"><strong>119 € a 237 €</strong></span>
+                    <span class="icono-si"><strong>119 € a 237 €</strong></span><br><small>0 € si lo compilas y eres el productor</small>
                   </td>
                   <td><span class="icono-no">540 € a 1.440 €</span></td>
                   <td><span class="icono-no">720 € a 1.740 €</span></td>
@@ -378,60 +384,7 @@
   </div>
 </footer>
 
-<script>
-function cambiarTab(tabId, btn) {
-  document.querySelectorAll('.tab-btn').forEach(function(b) {
-    b.classList.remove('activo');
-    b.setAttribute('aria-selected', 'false');
-  });
-  document.querySelectorAll('.tab-contenido').forEach(function(c) {
-    c.classList.remove('activo');
-  });
-  btn.classList.add('activo');
-  btn.setAttribute('aria-selected', 'true');
-  var target = document.getElementById(tabId);
-  if (target) {
-    target.classList.add('activo');
-  }
-}
 
-
-/* El gráfico de costes se dibuja al llegar a él */
-(function () {
-  var coste = document.querySelector('.coste');
-  if (!coste || !('IntersectionObserver' in window)) return;
-  coste.classList.add('preparado');
-  var observador = new IntersectionObserver(function (entradas) {
-    entradas.forEach(function (entrada) {
-      if (entrada.isIntersecting) {
-        coste.classList.add('visible');
-        observador.disconnect();
-      }
-    });
-  }, { threshold: 0.35 });
-  observador.observe(coste);
-})();
-
-/* Captura que se endereza al bajar y aparición de bloques al hacer scroll */
-(function () {
-  var img = document.querySelector('.escenario img');
-  if (img && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var f = function () {
-      var r = img.getBoundingClientRect(), p = Math.min(1, Math.max(0, 1 - r.top / innerHeight));
-      img.style.setProperty('--inclinacion', (18 * (1 - p)).toFixed(2) + 'deg');
-      img.style.setProperty('--escala', (0.92 + 0.08 * p).toFixed(3));
-    };
-    addEventListener('scroll', f, { passive: true });
-    f();
-  }
-  if (!('IntersectionObserver' in window)) return;
-  var sel = '.seccion-cabecera, .coste, .explorador, .captura-marco, .prueba, .planes, .precios-extra, .resumen, .faq-lista, .cierre .marco, .bloque, .legal-texto, .legal-lateral';
-  var obs = new IntersectionObserver(function (es) {
-    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visto'); obs.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll(sel).forEach(function (el) { el.classList.add('revelar'); obs.observe(el); });
-})();
-</script>
-
+<script src="verifree.js" defer></script>
 </body>
 </html>

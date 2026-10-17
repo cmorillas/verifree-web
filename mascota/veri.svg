@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Veri, la mascota de VeriFree">
+  <style>
+    .ala { transform-box: fill-box; transform-origin: 10% 90%; }
+    .parpado { transform-box: fill-box; transform-origin: 50% 0%; transform: scaleY(0); }
+    @media (prefers-reduced-motion: no-preference) {
+      .ala { animation: saludo 4.5s ease-in-out infinite; }
+      .parpado { animation: parpadeo 5s ease-in-out infinite; }
+      .cuerpo-veri { animation: respirar 4.5s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+    }
+    @keyframes saludo { 0%, 60%, 100% { transform: rotate(0deg); } 68% { transform: rotate(-14deg); } 76% { transform: rotate(8deg); } 84% { transform: rotate(-10deg); } 92% { transform: rotate(4deg); } }
+    @keyframes parpadeo { 0%, 92%, 100% { transform: scaleY(0); } 95% { transform: scaleY(1); } }
+    @keyframes respirar { 50% { transform: scale(1.015, 0.99); } }
+  </style>
+  <defs>
+    <radialGradient id="vf-cuerpo" cx="38%" cy="28%" r="80%">
+      <stop offset="0" stop-color="#3b3b45"/>
+      <stop offset="0.55" stop-color="#17171c"/>
+      <stop offset="1" stop-color="#08080a"/>
+    </radialGradient>
+    <radialGradient id="vf-barriga" cx="45%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#fffaf3"/>
+      <stop offset="1" stop-color="#ffd7b0"/>
+    </radialGradient>
+    <linearGradient id="vf-naranja" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffa257"/>
+      <stop offset="1" stop-color="#ff6a00"/>
+    </linearGradient>
+    <radialGradient id="vf-ojo" cx="40%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#ece5dc"/>
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="120" cy="226" rx="62" ry="7" fill="#000" opacity="0.14"/>
+
+  <g class="cuerpo-veri">
+    <!-- Patas -->
+    <path d="M92 208c-6 0-12 6-12 12h26c0-6-6-12-14-12z" fill="url(#vf-naranja)"/>
+    <path d="M148 208c-8 0-14 6-14 12h26c0-6-6-12-12-12z" fill="url(#vf-naranja)"/>
+
+    <!-- Orejas -->
+    <path d="M66 66 52 22l46 28z" fill="#1c1c22"/>
+    <path d="M174 66 188 22l-46 28z" fill="#1c1c22"/>
+
+    <!-- Cuerpo -->
+    <path d="M120 38c56 0 80 50 78 100-2 56-38 78-78 78s-76-22-78-78c-2-50 22-100 78-100z" fill="url(#vf-cuerpo)"/>
+    <ellipse cx="86" cy="62" rx="24" ry="9" fill="#fff" opacity="0.09" transform="rotate(-22 86 62)"/>
+
+    <!-- Ala izquierda -->
+    <path d="M46 128c-16 20-14 58 12 70 4-28 2-50-12-70z" fill="#121216"/>
+
+    <!-- Barriga con el check de VeriFree -->
+    <ellipse cx="120" cy="172" rx="50" ry="40" fill="url(#vf-barriga)"/>
+    <path d="M98 172l15 15 30-31" fill="none" stroke="url(#vf-naranja)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Ojos -->
+    <circle cx="88" cy="100" r="33" fill="url(#vf-ojo)"/>
+    <circle cx="152" cy="100" r="33" fill="url(#vf-ojo)"/>
+    <circle cx="90" cy="102" r="20" fill="url(#vf-naranja)"/>
+    <circle cx="150" cy="102" r="20" fill="url(#vf-naranja)"/>
+    <circle cx="91" cy="103" r="11" fill="#0b0b0c"/>
+    <circle cx="149" cy="103" r="11" fill="#0b0b0c"/>
+    <circle cx="86" cy="97" r="4.5" fill="#fff"/>
+    <circle cx="144" cy="97" r="4.5" fill="#fff"/>
+    <ellipse class="parpado" cx="88" cy="100" rx="34" ry="34" fill="#1a1a20"/>
+    <ellipse class="parpado" cx="152" cy="100" rx="34" ry="34" fill="#1a1a20"/>
+
+    <!-- Pico -->
+    <path d="M120 120l-10 12 10 15 10-15z" fill="url(#vf-naranja)"/>
+  </g>
+
+  <!-- Ala derecha, saludando -->
+  <path class="ala" d="M190 132c20-12 32-36 28-58-18 10-32 30-36 54z" fill="#121216"/>
+</svg>
