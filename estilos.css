@@ -2440,3 +2440,73 @@ body { background: var(--gris); color: var(--tinta); }
 
 .seccion > .faq > .seccion-cabecera { margin-inline: 0; text-align: left; }
 .seccion > .faq > .seccion-cabecera > p { margin-inline: 0; }
+
+/* ==========================================================================
+   Portada clara con fondo translúcido y cabecera de cristal
+   ========================================================================== */
+.cabecera, .portada, .pagina-cabecera {
+  --tinta: #0b0b0c;
+  --tinta-2: #4a4a50;
+  --tinta-3: #6b6b72;
+  --borde: rgba(11, 11, 12, 0.08);
+  --accion: #d9480f;
+  color-scheme: light;
+}
+.cabecera {
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  border-bottom: 1px solid rgba(11, 11, 12, 0.06);
+}
+.marca, .marca:hover { color: #0b0b0c; }
+
+.portada, .pagina-cabecera {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(42rem 30rem at 18% 8%, rgba(255, 122, 26, 0.28), transparent 70%),
+    radial-gradient(38rem 28rem at 86% 18%, rgba(80, 120, 255, 0.22), transparent 70%),
+    radial-gradient(50rem 30rem at 50% 100%, rgba(255, 190, 120, 0.25), transparent 70%),
+    #fbfaf7;
+}
+/* Rejilla tenue que se desvanece hacia abajo */
+.portada::before, .pagina-cabecera::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(11, 11, 12, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 11, 12, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: linear-gradient(#000 0%, transparent 75%);
+  mask-image: linear-gradient(#000 0%, transparent 75%);
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .portada { background-size: 140% 140%, 140% 140%, 100% 100%, auto; animation: luces 18s ease-in-out infinite alternate; }
+}
+@keyframes luces {
+  from { background-position: 0% 0%, 100% 0%, 50% 100%, 0 0; }
+  to { background-position: 30% 20%, 70% 30%, 50% 100%, 0 0; }
+}
+
+.portada h1, .portada strong, .pagina-cabecera h1 { color: #0b0b0c; }
+.portada .subtitulo, .portada .nota, .pagina-cabecera p, .volver { color: #4a4a50; }
+.volver:hover { color: #0b0b0c; }
+.portada .nota a, .portada .desplegar { color: #0b0b0c; }
+.portada h1 .destacado { color: #ff6a00; }
+.portada .btn-primario { background: #0b0b0c; color: #fff; }
+.portada .btn-primario:hover { background: #ff7a1a; color: #0b0b0c; }
+.portada .btn-secundario, .portada .btn-secundario:hover { color: #0b0b0c; border-color: rgba(11, 11, 12, 0.2); background: rgba(255, 255, 255, 0.55); backdrop-filter: blur(8px); }
+.portada .huella-cuerpo { background: rgba(255, 255, 255, 0.6); border-color: rgba(11, 11, 12, 0.08); backdrop-filter: blur(10px); }
+.portada .huella-titulo, .portada .huella-valor, .portada .huella-comando code { color: #0b0b0c; }
+.portada .huella-comando { color: #4a4a50; }
+.portada .huella-comando code { background: rgba(11, 11, 12, 0.06); }
+.portada :focus-visible, .pagina-cabecera :focus-visible { outline-color: #d9480f; }
+.flotante { background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(16px) saturate(160%); -webkit-backdrop-filter: blur(16px) saturate(160%); box-shadow: 0 30px 60px -24px rgba(60, 40, 20, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.8); }
+.escenario img { box-shadow: 0 0 0 1px rgba(11, 11, 12, 0.06), 0 50px 100px -40px rgba(60, 40, 20, 0.45); }
+.pagina-cabecera { border-bottom: 0; }
+.seccion, .seccion-gris { background: #ffffff; }
+.seccion-gris { background: #faf9f6; }
+body { background: #fff; }
