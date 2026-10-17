@@ -2135,3 +2135,138 @@ p.aviso {
   .explorador-panel svg { width: 40px; height: 40px; margin-bottom: 0; }
   .explorador-panel h3 { margin-top: 1.5rem; }
 }
+
+/* ==========================================================================
+   Tema oscuro de toda la web (estilo cinematográfico)
+   ========================================================================== */
+:root {
+  --blanco: #000000;
+  --gris: #0a0a0c;
+  --gris-2: #111115;
+  --gris-3: #1b1b21;
+  --tinta: #f5f5f7;
+  --tinta-2: #b6b6c0;
+  --tinta-3: #8c8c97;
+  --borde: rgba(255, 255, 255, 0.09);
+  --borde-2: rgba(255, 255, 255, 0.16);
+  --borde-control: rgba(255, 255, 255, 0.34);
+  --marca: #ff8a3d;
+  --accion: #ff8a3d;
+  --marca-tenue: rgba(255, 138, 61, 0.12);
+  --senal: #ff7a1a;
+  --senal-2: #ff9447;
+  --noche: #000000;
+  --noche-2: #000000;
+  --noche-texto: #b6b6c0;
+  --noche-tenue: #8c8c97;
+  --sombra-captura: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 40px 120px -40px rgba(255, 122, 26, 0.25), 0 30px 80px -30px rgba(0, 0, 0, 0.9);
+  color-scheme: dark;
+}
+
+html { scrollbar-color: #2a2a31 #000; }
+body { background: #000; }
+::selection { background: rgba(255, 122, 26, 0.35); color: #fff; }
+
+.cabecera { background: rgba(0, 0, 0, 0.72); backdrop-filter: saturate(160%) blur(16px); -webkit-backdrop-filter: saturate(160%) blur(16px); border-bottom-color: rgba(255, 255, 255, 0.07); }
+.marca, .marca:hover, .portada h1, .portada strong, .pagina-cabecera h1, .cierre h2, .explorador-panel h3, .pie .marca, .pie h5, .pie-contacto strong, .pie a:hover, .volver:hover { color: #fff; }
+.portada .nota a, .portada .desplegar { color: #fff; }
+.btn-primario, .btn-primario:hover { color: #0b0b0b; }
+
+/* Botones en píldora */
+.btn { border-radius: 999px; padding: 0 1.4rem; }
+.btn-sm { padding: 0 1rem; }
+.btn-secundario { background: transparent; border-color: rgba(255, 255, 255, 0.22); color: #fff; }
+.btn-secundario:hover { background: rgba(255, 255, 255, 0.06); border-color: #fff; color: #fff; }
+.portada .btn-primario, .cierre .btn-primario { background: #fff; color: #000; }
+.portada .btn-primario:hover, .cierre .btn-primario:hover { background: var(--senal); color: #000; }
+
+.selector { background: rgba(255, 255, 255, 0.06); border-radius: 999px; }
+.selector button { border-radius: 999px; }
+.selector button.activo { background: #fff; color: #000; box-shadow: none; }
+.selector .activo svg { color: var(--senal); }
+.ahorro { color: var(--senal); }
+.selector button.activo .ahorro { color: #c2410c; }
+
+/* Portada centrada y captura flotando con perspectiva */
+.portada { padding-block: clamp(5rem, 11vw, 9rem) clamp(4rem, 8vw, 7rem); overflow: hidden; }
+.portada-texto { margin-inline: auto; text-align: center; }
+.portada h1 { font-size: clamp(2.75rem, 5.4vw + 1rem, 6.25rem); }
+.portada .subtitulo, .portada .nota, .portada .huella { margin-inline: auto; }
+.portada .acciones { justify-content: center; }
+.huella-cuerpo { text-align: left; }
+.escenario { margin-top: clamp(3.5rem, 7vw, 6rem); padding: 0; background: none; perspective: 1600px; overflow: visible; }
+.escenario img {
+  border-radius: 14px;
+  transform: rotateX(var(--inclinacion, 18deg)) scale(var(--escala, 0.92));
+  transform-origin: 50% 0;
+  transition: transform 0.1s linear;
+}
+
+.seccion-gris { background: #070709; }
+.seccion:not(.seccion-gris) + .seccion:not(.seccion-gris) { border-top-color: rgba(255, 255, 255, 0.06); }
+.seccion-cabecera h2, .resumen h2 { color: #fff; }
+
+.coste, .planes, .panel, .contenedor-tabla, .sanciones li { background: #0a0a0c; border-color: rgba(255, 255, 255, 0.09); }
+.prueba { background: linear-gradient(120deg, rgba(255, 122, 26, 0.14), rgba(255, 122, 26, 0.02) 60%), #0a0a0c; border: 1px solid rgba(255, 122, 26, 0.25); }
+.plan-destacado { background: #111115; box-shadow: inset 0 2px 0 var(--senal); }
+.plan-lema { color: var(--senal); }
+.coste-barra { background: #3a3a44; }
+.es-verifree .coste-barra { background: var(--senal); }
+.es-verifree .coste-valor { color: var(--senal); }
+.tabla .col-destacada { background: rgba(255, 122, 26, 0.06); }
+.tabla .categoria-fila td { background: transparent; }
+.faq-item:first-child, .explorador-lista { border-top-color: rgba(255, 255, 255, 0.3); }
+.funcion-destacada { border-top-color: #fff; }
+.aviso { background: rgba(255, 170, 60, 0.08); border-color: rgba(255, 170, 60, 0.3); }
+.pie { border-top: 1px solid rgba(255, 255, 255, 0.07); }
+.pagina-cabecera { border-bottom: 1px solid rgba(255, 255, 255, 0.07); }
+code { background: rgba(255, 255, 255, 0.08); }
+kbd, .ruta { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.14); }
+
+/* Explorador: número gigante, luz de acento y barra de avance */
+.explorador-panel {
+  position: relative;
+  overflow: hidden;
+  min-height: 30rem;
+  background: radial-gradient(120% 90% at 100% 0%, rgba(255, 122, 26, 0.22), transparent 55%), #0e0e12;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.explorador-panel::before {
+  content: attr(data-num);
+  position: absolute;
+  top: -0.12em;
+  right: 0.08em;
+  color: rgba(255, 255, 255, 0.05);
+  font-size: clamp(9rem, 16vw, 15rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  pointer-events: none;
+}
+.explorador-opcion { position: relative; color: #6f6f7a; font-size: 1.1875rem; }
+.explorador-opcion:hover, .explorador-opcion.activo { color: #fff; }
+.explorador-opcion.activo { box-shadow: none; }
+.explorador-opcion::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 0; height: 2px; background: var(--senal); }
+.explorador-opcion.activo::after { animation: avance 6s linear forwards; }
+.explorador.pausado .explorador-opcion.activo::after { animation-play-state: paused; }
+@keyframes avance { to { width: 100%; } }
+
+/* Aparición al hacer scroll */
+@media (prefers-reduced-motion: no-preference) {
+  .revelar { opacity: 0; transform: translateY(28px); transition: opacity 0.8s var(--curva), transform 0.8s var(--curva); }
+  .revelar.visto { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .escenario img { transform: none; }
+}
+@media (max-width: 980px) {
+  .explorador-panel { min-height: 0; }
+  .escenario img { transform: none; }
+}
+
+.portada .btn-secundario,
+.cierre .btn-secundario,
+.portada .btn-secundario:hover,
+.cierre .btn-secundario:hover {
+  color: #fff;
+}

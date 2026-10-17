@@ -431,6 +431,26 @@ function cambiarFacturacion(modo) {
   }, { threshold: 0.35 });
   observador.observe(coste);
 })();
+
+/* Captura que se endereza al bajar y aparición de bloques al hacer scroll */
+(function () {
+  var img = document.querySelector('.escenario img');
+  if (img && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var f = function () {
+      var r = img.getBoundingClientRect(), p = Math.min(1, Math.max(0, 1 - r.top / innerHeight));
+      img.style.setProperty('--inclinacion', (18 * (1 - p)).toFixed(2) + 'deg');
+      img.style.setProperty('--escala', (0.92 + 0.08 * p).toFixed(3));
+    };
+    addEventListener('scroll', f, { passive: true });
+    f();
+  }
+  if (!('IntersectionObserver' in window)) return;
+  var sel = '.seccion-cabecera, .coste, .explorador, .captura-marco, .prueba, .planes, .precios-extra, .resumen, .faq-lista, .cierre .marco, .bloque, .legal-texto, .legal-lateral';
+  var obs = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visto'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(sel).forEach(function (el) { el.classList.add('revelar'); obs.observe(el); });
+})();
 </script>
 
 </body>
