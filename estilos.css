@@ -375,20 +375,20 @@ details[open] > summary.desplegar .chevron {
 .portada {
   padding-top: clamp(4rem, 9vw, 7.5rem);
   background: var(--noche-2);
-  color: var(--blanco);
+  color: #fff;
 }
 
-.portada h1 { color: var(--blanco); }
+.portada h1 { color: #fff; }
 .portada .subtitulo, .portada .nota { color: var(--noche-texto); }
-.portada strong { color: var(--blanco); }
-.portada .nota a, .portada .desplegar { color: var(--blanco); }
-.portada .btn-secundario { background: transparent; border-color: rgba(255,255,255,.3); color: var(--blanco); }
-.portada .btn-secundario:hover { border-color: var(--blanco); background: rgba(255,255,255,.06); }
+.portada strong { color: #fff; }
+.portada .nota a, .portada .desplegar { color: #fff; }
+.portada .btn-secundario { background: transparent; border-color: rgba(255,255,255,.3); color: #fff; }
+.portada .btn-secundario:hover { border-color: #fff; background: rgba(255,255,255,.06); }
 .portada .huella-cuerpo { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.12); }
-.portada .huella-titulo, .portada .huella-valor { color: var(--blanco); }
+.portada .huella-titulo, .portada .huella-valor { color: #fff; }
 .portada .huella-comando { color: var(--noche-texto); }
-.portada .huella-comando code { background: rgba(255,255,255,.08); color: var(--blanco); box-shadow: none; }
-.portada :focus-visible { outline-color: var(--blanco); }
+.portada .huella-comando code { background: rgba(255,255,255,.08); color: #fff; box-shadow: none; }
+.portada :focus-visible { outline-color: #fff; }
 
 .portada-texto {
   max-width: 62rem;
@@ -1439,7 +1439,7 @@ details[open] > summary.desplegar .chevron {
 
 .cierre h2 {
   grid-column: 1 / span 8;
-  color: var(--blanco);
+  color: #fff;
   font-size: clamp(1.875rem, 1.6vw + 1.3rem, 2.875rem);
   line-height: 1.1;
   letter-spacing: -0.028em;
@@ -1466,17 +1466,17 @@ details[open] > summary.desplegar .chevron {
 .cierre .btn-secundario {
   background: transparent;
   border-color: rgba(255, 255, 255, 0.28);
-  color: var(--blanco);
+  color: #fff;
 }
 
 .cierre .btn-secundario:hover {
   background: rgba(255, 255, 255, 0.06);
-  border-color: var(--blanco);
+  border-color: #fff;
 }
 
 .cierre :focus-visible,
 .pie :focus-visible {
-  outline-color: var(--blanco);
+  outline-color: #fff;
 }
 
 /* ==========================================================================
@@ -1503,7 +1503,7 @@ details[open] > summary.desplegar .chevron {
 
 .pie .marca {
   margin-bottom: 1rem;
-  color: var(--blanco);
+  color: #fff;
 }
 
 .pie .marca span {
@@ -1527,7 +1527,7 @@ details[open] > summary.desplegar .chevron {
 
 .pie h5 {
   margin-bottom: 1rem;
-  color: var(--blanco);
+  color: #fff;
   font-size: 0.875rem;
   font-weight: 620;
   letter-spacing: 0;
@@ -1539,7 +1539,7 @@ details[open] > summary.desplegar .chevron {
 }
 
 .pie a:hover {
-  color: var(--blanco);
+  color: #fff;
 }
 
 .pie-enlaces {
@@ -1567,7 +1567,7 @@ details[open] > summary.desplegar .chevron {
 }
 
 .pie-contacto strong {
-  color: var(--blanco);
+  color: #fff;
 }
 
 .pie-contacto .pie-cif {
@@ -1962,7 +1962,7 @@ p.aviso {
 .pagina-cabecera h1 {
   max-width: 22ch;
   margin-top: 1.5rem;
-  color: var(--blanco);
+  color: #fff;
   font-size: clamp(2.5rem, 3.5vw + 1rem, 4.5rem);
   font-weight: 720;
   line-height: 1;
@@ -1984,11 +1984,11 @@ p.aviso {
 }
 
 .volver:hover {
-  color: var(--blanco);
+  color: #fff;
 }
 
 .pagina-cabecera :focus-visible {
-  outline-color: var(--blanco);
+  outline-color: #fff;
 }
 
 .bloque {
@@ -2082,7 +2082,7 @@ p.aviso {
   padding: clamp(2rem, 4vw, 3.5rem);
   background: var(--noche-2);
   border-radius: var(--radio-panel);
-  color: var(--blanco);
+  color: #fff;
 }
 
 .explorador-panel.activo {
@@ -2114,7 +2114,7 @@ p.aviso {
 
 .explorador-panel h3 {
   margin-top: 3rem;
-  color: var(--blanco);
+  color: #fff;
   font-size: clamp(1.75rem, 1.5vw + 1.2rem, 2.5rem);
   font-weight: 700;
   line-height: 1.05;
