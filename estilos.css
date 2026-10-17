@@ -2488,3 +2488,22 @@ p.aviso {
 .es-libre .coste-nombre { color: var(--tinta); font-weight: 600; }
 .es-libre .coste-valor { color: #c2410c; }
 .es-libre .coste-barra, .coste.preparado .es-libre .coste-barra { bottom: auto; width: 10px; height: 10px; top: 50%; border-radius: 50%; background: var(--naranja); transform: translate(-50%, -50%); box-shadow: 0 0 0 5px rgba(255, 122, 26, 0.18); }
+
+/* Comunidad dentro de «Código a la vista» */
+.comunidad {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 3rem;
+  margin-top: var(--hueco);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px dashed var(--borde-2);
+  border-radius: var(--radio-panel);
+}
+.comunidad > div:first-child { max-width: 34rem; }
+.comunidad h3 { font-size: 1.25rem; }
+.comunidad p { margin-top: 0.4rem; font-size: 0.9375rem; }
+.manifiesto footer a { color: inherit; }
+.codigo-pasos .btn + .btn { margin-left: 0.5rem; }
+.texto-pagina .veri { margin: 0 0 2rem; }
