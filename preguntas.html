@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Preguntas frecuentes · VeriFree Facturación</title>
+<meta name="description" content="Programa de facturación para Windows adaptado al Reglamento VERI*FACTU y la Ley Crea y Crece. 100% privado, en tu ordenador, sin servidores en la nube ni cuotas obligatorias.">
+<meta property="og:title" content="VeriFree Facturación - VERI*FACTU y Factura Electrónica">
+<meta property="og:description" content="Facturación legal para autónomos y pymes en tu propio equipo. Sin nube, sin suscripciones obligatorias y con total control de tus datos.">
+<meta property="og:image" content="https://verifree.es/icono.png">
+<meta property="og:url" content="https://verifree.es/">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/svg+xml" href="icono.svg">
+<link rel="alternate icon" type="image/png" href="icono.png">
+<link rel="apple-touch-icon" href="icono.png">
+<link rel="preload" href="fuentes/mona-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="marco">
+    <a class="marca" href="./">
+      <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
+      VeriFree <span>Facturación</span>
+    </a>
+    <nav class="menu" aria-label="Navegación principal">
+      <a href="index.html#funciones">Funciones</a>
+      <a href="index.html#precios">Precios</a>
+      <a href="comparativa.html">Comparativa</a>
+      <a href="garantia.html">Garantía legal</a>
+      <a href="preguntas.html" aria-current="page">Preguntas</a>
+      <a href="manual.html">Manual</a>
+    </nav>
+    <a class="btn btn-primario btn-sm cabecera-accion" href="descargas/VeriFree.exe" download>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Probar Demo
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="pagina-cabecera">
+    <div class="marco">
+      <a class="volver" href="./">← Volver al inicio</a>
+      <h1>Preguntas Frecuentes</h1>
+      <p>Todo lo que necesitas saber sobre el funcionamiento legal y técnico de VeriFree.</p>
+    </div>
+  </section>
+  <section class="seccion seccion-pagina">
+    <div class="marco">
+      <div class="faq-lista faq-lista-completa">
+        <details class="faq-item" open>
+          <summary>
+            <span>¿Por qué no regaláis el ejecutable ya compilado gratis en vez de pedir compilarlo?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Por imperativo legal. El Reglamento VERI*FACTU (RD 1007/2023) exige que cada ejecutable lleve incrustados los datos del productor responsable que garantiza bajo su firma que el programa cumple la ley. Si repartiéramos un ejecutable precompilado con nuestros datos a todo el mundo de forma anónima, estaríamos asumiendo la responsabilidad legal y las sanciones tributarias (multas fijas de 150.000 € por ejercicio y tipo de sistema, art. 201 bis LGT) de miles de instalaciones fuera de nuestro control. Por eso, el código está libre en GitHub para que quien quiera compilarlo gratis se registre como su propio productor.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Qué ocurre si compilo el código libre sin cambiar los datos de prueba del productor?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            El código en GitHub viene configurado con un NIF ficticio de prueba (89890001K) para evitar envíos involuntarios. Si intentas enviar facturas a la AEAT con ese NIF de prueba, la Agencia Tributaria rechaza el envío con el error 1110 («El NIF del productor no está identificado en el censo»). Para que la versión libre funcione, debes compilarla obligatoriamente con tu propio NIF censado como productor.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>Si compilo el código de GitHub, ¿puedo distribuirlo a terceros, revenderlo o cobrar por dar soporte?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Rotundamente no. La licencia de VeriFree es de código visible (<em>Source-Available</em>) concebida para la transparencia técnica, la auditoría pública y el <strong>uso interno exclusivo</strong>. Cualquier autónomo, empresa o despacho profesional tiene derecho a compilar y utilizar el programa gratis para gestionar de forma directa su propia facturación o la de sus clientes, pero <strong>la licencia prohíbe terminantemente la reventa, la distribución de copias o instaladores a terceros, la marca blanca y la comercialización de paquetes de soporte técnico o mantenimiento</strong>. Todos los derechos de distribución oficial y contratos de soporte están legalmente reservados en exclusiva a Telytec Ingenieros, S.L.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Cómo se garantiza la integridad del programa y que nadie ha alterado el código?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Mediante verificación criptográfica. Cada ejecutable oficial distribuido cuenta con su huella SHA-256 pública. Si un tercero descargase el código fuente libre o manipulase el ejecutable para cometer fraude o alterar registros, la huella SHA-256 cambia de forma matemática e inmediata y cualquier firma digital queda invalidada. Ante una inspección de la AEAT o un peritaje judicial, esto permite demostrar que el software ha sido modificado sin autorización y no se corresponde con el producto original certificado por el autor.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Por qué tener el código accesible en GitHub es una ventaja ante una inspección de Hacienda?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Porque elimina de raíz cualquier sospecha de «software de doble uso» o contabilidad paralela (sancionado con hasta 50.000 € por el art. 201 bis de la LGT). Mientras que el software comercial cerrado es una caja negra opaca donde ni el usuario ni los inspectores pueden auditar qué ocurre por dentro, el código de VeriFree está a la vista pública: cualquier perito informático, asesor fiscal o actuario de la Agencia Tributaria puede comprobar línea por línea que la base de datos es inalterable por triggers, que no existen cajas B ni funciones para ocultar facturas, y que el encadenamiento criptográfico cumple estrictamente con el Reglamento VERI*FACTU.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Qué ventajas tiene que el código sea público si yo no soy programador?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Mayor fiabilidad, seguridad y cero sorpresas. En el software privativo cerrado estás obligado a confiar a ciegas en un fabricante: si su programa contiene fallos de redondeo en el IVA, errores en el encadenamiento criptográfico o vulnerabilidades de seguridad, nadie externo puede advertirlo hasta que el problema ya te ha afectado o te llega un requerimiento de Hacienda. Al ser de código visible en GitHub, VeriFree está expuesto al escrutinio técnico continuo de peritos, desarrolladores y especialistas en ciberseguridad. Cualquier inconsistencia se detecta a la luz pública, lo que se traduce en un software mucho más robusto, depurado y contrastado para tu trabajo diario.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Es legal que mis facturas se queden en mi ordenador en lugar de la nube?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Completamente legal. La ley tributaria exige que el programa remita los registros de facturación a la AEAT (VERI*FACTU) y garantice la inalterabilidad de los datos; en ningún momento exige almacenar tus facturas en servidores de empresas externas.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Qué certificado digital necesito para enviar a la AEAT?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Cualquier certificado digital válido instalado en Windows: certificado de persona física (FNMT, DNIe), de representante de persona jurídica o el certificado de tu asesor o apoderado colegiado.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Qué ocurre si cambio de ordenador o quiero hacer una copia de seguridad?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            VeriFree no dispersa archivos por el registro de Windows. Todas tus bases de datos y configuraciones están en la carpeta <code>Empresas</code> junto a <code>VeriFree.exe</code>. Con copiar esa carpeta a un disco externo o a tu nube privada, tu respaldo está completo.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Cómo le entrego las facturas a mi asesoría contable?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            VeriFree incluye un botón directo de <strong>Exportar libro</strong> que genera el archivo Excel (.xlsx) oficial de la AEAT con todas las facturas y desgloses de IVA e IRPF del ejercicio, listo para entregar a tu asesoría.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Puedo probar el programa antes de comprar la Licencia Oficial?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Sí. Puedes descargar libremente el ejecutable <code>VeriFree.exe</code> desde esta misma web sin necesidad de registrarte ni facilitar datos de pago. Viene preconfigurado en Modo Pruebas con un productor de evaluación: te permite explorar todas las funciones, crear clientes, confeccionar borradores, emitir facturas simuladas con hash encadenado SHA-256, ver el PDF con código QR y exportar el libro oficial en Excel en tu propio PC. Para emitir facturas con validez fiscal real ante la AEAT en Producción, tan solo necesitarás adquirir la Licencia Oficial (donde Telytec Ingenieros, S.L. asume la responsabilidad como productor registrado) o compilar el código libre con tu propio NIF censado.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿De verdad no hay cuotas mensuales obligatorias si compro la Licencia Oficial?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Rotundamente no. La Licencia Oficial es de pago único (89 € + IVA una sola vez) y de uso perpetuo. A diferencia de las plataformas en la nube (SaaS) o los programas tradicionales que bloquean tu facturación si no pagas cada mes o cada año, VeriFree se ejecuta en tu ordenador y no caduca ni exige mensualidades para seguir emitiendo facturas. El «Plan Tranquilidad» es un servicio de suscripción opcional pensado exclusivamente para quien desee soporte telefónico/remoto prioritario y actualizaciones garantizadas ante futuras reformas normativas de la AEAT, pero nunca es obligatorio para seguir utilizando tu programa.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Cómo funcionan las actualizaciones cuando la AEAT o el BOE cambien la normativa?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Con total libertad y sin ataduras según la modalidad que elijas:
+            <ul>
+              <li><strong>Si utilizas el repositorio libre (0 €):</strong> El código fuente en GitHub se publica con fines de transparencia, auditoría e independencia técnica bajo modelo «as-is». Las publicaciones son discrecionales y no conllevan compromiso de calendario, paridad inmediata con nuevas órdenes ministeriales ni soporte. Quien busca adaptación continua y garantizada a la normativa cuenta con la Licencia Oficial y el Plan Tranquilidad.</li>
+              <li><strong>Si tienes la Licencia Oficial (89 €):</strong> Adquieres un producto terminado y legal para la normativa vigente, que no caduca ni exige suscripción. No incluye soporte técnico continuado ni futuras actualizaciones normativas de la AEAT, las cuales podrás contratar opcionalmente o tenerlas cubiertas mediante el Plan Tranquilidad.</li>
+              <li><strong>Si contratas el Plan Tranquilidad (9,90 €/mes):</strong> Tienes cubiertas al 100% todas las actualizaciones normativas y evolutivas futuras (2026–2028: nuevos requisitos de VERI*FACTU y factura electrónica obligatoria), recibiendo los nuevos ejecutables oficiales listos para usar sin coste adicional.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Por qué VeriFree utiliza exclusivamente la modalidad VERI*FACTU?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Porque VERI*FACTU es la modalidad más segura y económica para el usuario: la AEAT valida y custodia los registros con Código Seguro de Verificación (CSV), eximiendo de tener que firmar individualmente cada registro con firma electrónica avanzada XML-Dsig y de contratar costosos servicios externos de sellado de tiempo cualificado.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Puedo emitir facturas periódicas y generar remesas para el banco?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Sí. VeriFree permite guardar plantillas para generar facturas recurrentes por lotes sin duplicados y crear ficheros de adeudos directos SEPA (formato oficial pain.008.001.02) con sus mandatos y justificante en PDF para subirlos directamente a la banca online de tu entidad, sin intermediarios, sin comisiones por remesa y sin contratar módulos adicionales.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="marco">
+    <div class="pie-rejilla">
+      <div class="pie-col">
+        <div class="marca">
+          <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
+          VeriFree <span>Facturación</span>
+        </div>
+        <p>Software de facturación de escritorio para Windows adaptado al Reglamento VERI*FACTU y la Ley Crea y Crece.</p>
+        <p class="pie-nota">100% privado en tu equipo, sin servidores en la nube y con base de datos SQLite local inalterable.</p>
+      </div>
+
+      <div class="pie-col">
+        <h5>Navegación</h5>
+        <ul class="pie-enlaces">
+          <li><a href="index.html#ventajas">Ventajas</a></li>
+          <li><a href="comparativa.html">Comparativa</a></li>
+          <li><a href="index.html#funciones">Funciones</a></li>
+          <li><a href="index.html#capturas">Capturas</a></li>
+          <li><a href="index.html#precios">Precios</a></li>
+          <li><a href="garantia.html">Garantía Legal</a></li>
+          <li><a href="preguntas.html">Preguntas</a></li>
+          <li><a href="manual.html">Manual de uso</a></li>
+          <li><a href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">Código en GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="pie-col">
+        <h5>Sede y Titularidad Legal</h5>
+        <ul class="pie-contacto">
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M9 21V3h6v18"/></svg>
+            <span><strong>Telytec Ingenieros, S.L.</strong></span>
+          </li>
+          <li class="pie-cif">
+            <span></span>
+            <span>CIF: B53808739 · R. M. de Alicante</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>C/ Reyes Católicos, 24, 1º Izq. · 03003 Alicante</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Tel. <a href="tel:965134033">965 13 40 33</a> · <a href="tel:686600299">686 60 02 99</a></span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:contacto@verifree.es">contacto@verifree.es</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pie-legal">
+      <span>© 2026 Telytec Ingenieros, S.L. Todos los derechos reservados. Información general en cumplimiento del art. 10 de la Ley 34/2002 (LSSI-CE).</span>
+      <span>Web 100% privada: libre de cookies de terceros y libre de rastreo.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
