@@ -71,14 +71,14 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="flex-shrink:0; margin-top:0.1rem;"><polyline points="20 6 9 17 4 12"/></svg>
           <span>VeriFree.exe para Windows (14 MB) · 100% Funcional en Modo Pruebas · Sin registro ni tarjeta</span>
         </div>
-        <details class="verificacion-hash" style="margin-top:0.5rem; font-size:0.8125rem; color:var(--tinta-suave);">
-          <summary style="cursor:pointer; display:inline-flex; align-items:center; gap:0.35rem; color:var(--azul); font-weight:500;">
+        <details class="verificacion-hash" style="margin-top:0.5rem; font-size:0.8125rem; color:var(--tinta-suave); max-width:100%;">
+          <summary style="cursor:pointer; display:inline-flex; align-items:center; gap:0.35rem; color:var(--azul-primario); font-weight:500;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             Verificar huella de integridad SHA-256 del ejecutable
           </summary>
-          <div style="margin-top:0.45rem; padding:0.6rem 0.8rem; background:var(--superficie-elevada); border:1px solid var(--borde-suave); border-radius:6px; font-family:var(--fuente-mono); font-size:0.75rem; word-break:break-all;">
+          <div style="margin-top:0.45rem; padding:0.6rem 0.8rem; background:var(--fondo-alt); border:1px solid var(--borde-suave); border-radius:6px; font-family:var(--fuente-mono); font-size:0.75rem; word-break:break-all; max-width:100%;">
             <div style="color:var(--tinta); margin-bottom:0.25rem; font-family:var(--fuente); font-weight:600;">Huella SHA-256 oficial (versión de evaluación):</div>
-            <code style="display:block; padding:0.35rem 0.5rem; background:var(--superficie); border-radius:4px; border:1px solid var(--borde-suave); color:var(--destacado);">8F10E40D37F93DF9219DC0CC9BBC5F29D9377869100720CABC1709D7085F2FE4</code>
+            <code style="display:block; padding:0.35rem 0.5rem; background:var(--superficie); border-radius:4px; border:1px solid var(--borde-suave); color:var(--azul-primario); word-break:break-all;">8F10E40D37F93DF9219DC0CC9BBC5F29D9377869100720CABC1709D7085F2FE4</code>
             <div style="margin-top:0.4rem; color:var(--tinta-suave); font-family:var(--fuente);">Comprobar en PowerShell: <code>Get-FileHash .\VeriFree.exe -Algorithm SHA256</code></div>
           </div>
         </details>
