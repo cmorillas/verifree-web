@@ -58,6 +58,10 @@
         </ol>
         <p class="aviso">Si lo abres directamente desde un ZIP o desde un correo, el programa te avisa y no sigue: Windows lo ejecutaría desde una carpeta temporal y los datos se perderían.</p>
         <p>Los datos se guardan junto al programa, en la carpeta <span class="ruta">Empresas</span>, una carpeta por empresa.</p>
+        <h3>Comprobación de integridad (SHA-256)</h3>
+        <p>Para comprobar que el ejecutable descargado no ha sufrido alteraciones y coincide con el publicado por el autor, puedes verificar su huella digital en PowerShell:</p>
+        <p><code>Get-FileHash .\VeriFree.exe -Algorithm SHA256</code></p>
+        <p>La huella SHA-256 oficial de la versión de evaluación disponible en la web es:<br><code style="word-break:break-all; font-weight:600;">8F10E40D37F93DF9219DC0CC9BBC5F29D9377869100720CABC1709D7085F2FE4</code></p>
       </section>
 
       <section id="empresa">

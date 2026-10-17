@@ -71,6 +71,17 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
           <span>VeriFree.exe para Windows (14 MB) · 100% Funcional en Modo Pruebas · Sin registro ni tarjeta</span>
         </div>
+        <details class="verificacion-hash" style="margin-top:0.5rem; font-size:0.8125rem; color:var(--tinta-suave);">
+          <summary style="cursor:pointer; display:inline-flex; align-items:center; gap:0.35rem; color:var(--azul); font-weight:500;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Verificar huella de integridad SHA-256 del ejecutable
+          </summary>
+          <div style="margin-top:0.45rem; padding:0.6rem 0.8rem; background:var(--superficie-elevada); border:1px solid var(--borde-suave); border-radius:6px; font-family:var(--fuente-mono); font-size:0.75rem; word-break:break-all;">
+            <div style="color:var(--tinta); margin-bottom:0.25rem; font-family:var(--fuente); font-weight:600;">Huella SHA-256 oficial (versión de evaluación):</div>
+            <code style="display:block; padding:0.35rem 0.5rem; background:var(--superficie); border-radius:4px; border:1px solid var(--borde-suave); color:var(--destacado);">8F10E40D37F93DF9219DC0CC9BBC5F29D9377869100720CABC1709D7085F2FE4</code>
+            <div style="margin-top:0.4rem; color:var(--tinta-suave); font-family:var(--fuente);">Comprobar en PowerShell: <code>Get-FileHash .\VeriFree.exe -Algorithm SHA256</code></div>
+          </div>
+        </details>
 
         <div class="garantias-rapidas">
           <span class="garantia-item">
@@ -766,6 +777,16 @@
           </summary>
           <div class="faq-respuesta">
             El código en GitHub viene configurado con un NIF ficticio de prueba (89890001K) para evitar envíos involuntarios. Si intentas enviar facturas a la AEAT con ese NIF de prueba, la Agencia Tributaria rechaza el envío con el error 1110 («El NIF del productor no está identificado en el censo»). Para que la versión libre funcione, debes compilarla obligatoriamente con tu propio NIF censado como productor.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>¿Cómo se garantiza la integridad del programa y que nadie ha alterado el código?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Mediante verificación criptográfica. Cada ejecutable oficial distribuido cuenta con su huella SHA-256 pública y va firmado digitalmente. Si un tercero descargase el código fuente libre o manipulase el ejecutable para cometer fraude o alterar registros, la huella SHA-256 cambia de forma matemática e inmediata y cualquier firma digital queda invalidada. Ante cualquier inspección tributaria de la AEAT o peritaje judicial, esto constituye una prueba pericial plena (art. 179.2.d de la Ley General Tributaria) de que el software ha sido modificado sin autorización y no se corresponde con el producto original certificado por el autor.
           </div>
         </details>
 
