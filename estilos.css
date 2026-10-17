@@ -2624,5 +2624,5 @@ p.aviso {
 .comunidad h3 { font-size: 1.25rem; }
 .comunidad p { margin-top: 0.4rem; font-size: 0.9375rem; }
 .manifiesto footer a { color: inherit; }
-.codigo-pasos .btn + .btn { margin-left: 0.5rem; }
+.codigo-pasos .acciones { margin-top: 1.25rem; }
 .texto-pagina .veri { margin: 0 0 2rem; }
