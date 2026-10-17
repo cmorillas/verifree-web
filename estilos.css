@@ -2637,3 +2637,8 @@ body { background: #fff; }
 .coste-gancho { margin-bottom: 0.75rem; color: var(--tinta-2); font-size: 1rem; text-align: center; }
 .coste-gancho b { display: block; color: var(--tinta); font-size: clamp(3rem, 5vw + 1rem, 5.5rem); font-weight: 700; letter-spacing: -0.05em; line-height: 1; }
 .coste-gancho b { background: linear-gradient(90deg, #ff6a00, #ff9447); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* Titular de portada en dos líneas iguales */
+.portada-texto { max-width: 72rem; }
+.portada h1 { font-size: clamp(2.5rem, 3.6vw + 1rem, 4.6rem); line-height: 1.02; text-wrap: initial; }
+@media (max-width: 900px) { .portada h1 .corte { display: none; } .portada h1 { text-wrap: balance; } }
