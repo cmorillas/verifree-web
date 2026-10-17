@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>VeriFree Facturación</title>
-<meta name="description" content="Programa de facturación con VERI*FACTU para autónomos y pymes. Sin nube y sin cuentas: tus facturas se quedan en tu equipo.">
-<meta property="og:title" content="VeriFree Facturación">
-<meta property="og:description" content="Facturación con VERI*FACTU, en tu ordenador.">
+<title>VeriFree Facturación - Software VERI*FACTU y Factura Electrónica en tu PC</title>
+<meta name="description" content="Programa de facturación para Windows adaptado al Reglamento VERI*FACTU y la Ley Crea y Crece. 100% privado, en tu ordenador, sin servidores en la nube ni cuotas obligatorias.">
+<meta property="og:title" content="VeriFree Facturación - VERI*FACTU y Factura Electrónica">
+<meta property="og:description" content="Facturación legal para autónomos y pymes en tu propio equipo. Sin nube, sin suscripciones obligatorias y con total control de tus datos.">
 <meta property="og:image" content="https://verifree.es/icono.png">
 <meta property="og:url" content="https://verifree.es/">
 <meta property="og:locale" content="es_ES">
@@ -18,197 +18,497 @@
 
 <header class="cabecera">
   <div class="marco">
-    <a class="marca" href="./"><img src="icono.png" alt="" width="32" height="32">VeriFree <span>Facturación</span></a>
-    <nav class="menu" aria-label="Secciones">
-      <a href="#funciones">Qué hace</a>
+    <a class="marca" href="./">
+      <img src="icono.png" alt="Logotipo VeriFree" width="32" height="32">
+      VeriFree <span>Facturación</span>
+    </a>
+    <nav class="menu" aria-label="Navegación principal">
+      <a href="#ventajas">Por qué VeriFree</a>
+      <a href="#funciones">Funciones</a>
       <a href="#capturas">Capturas</a>
       <a href="#precios">Precios</a>
+      <a href="#productor">Garantía Legal</a>
+      <a href="#faq">Preguntas</a>
       <a href="manual.html">Manual</a>
-      <a href="#contacto">Contacto</a>
+      <a class="btn-menu" href="#precios">Elegir Plan</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section class="portada">
+  <!-- Hero Section Comercial -->
+  <section class="hero">
     <div class="marco">
-      <div>
-        <h1>Facturación con <span class="vf">VERI*FACTU</span>, en tu ordenador</h1>
-        <p class="entradilla">Programa de facturación para autónomos y pymes. Gratis, sin nube y sin cuentas: tus facturas se quedan en tu equipo.</p>
+      <div class="hero-texto">
+        <div class="pildora">
+          <span class="pildora-dot"></span>
+          <span>Cumple al 100 % con el RD 1007/2023 y la Orden HAC/1177/2024</span>
+        </div>
+        <h1>Facturación <span class="destacado">VERI*FACTU</span> y Electrónica en tu PC, sin pagarle a la nube</h1>
+        <p class="subtitulo">
+          El programa de escritorio para Windows que remite tus facturas a la AEAT, genera factura electrónica UBL 2.1 firmada y protege tu privacidad. Sin cuotas mensuales obligatorias, sin intermediarios y con tus datos a salvo en tu disco local.
+        </p>
+
         <div class="acciones">
-          <a class="boton" href="#precios">Ver precios</a>
-          <a class="boton boton-claro" href="manual.html">Leer el manual</a>
+          <a class="btn btn-primario" href="#precios">
+            <span>Ver planes y opciones</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="btn btn-secundario" href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>Código libre en GitHub</span>
+          </a>
         </div>
-        <p class="estado-programa">En fase de pruebas: todavía no se distribuye.</p>
+
+        <div class="garantias-rapidas">
+          <span class="garantia-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Código abierto y transparente
+          </span>
+          <span class="garantia-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            100% Datos en tu ordenador
+          </span>
+          <span class="garantia-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Declaración responsable oficial
+          </span>
+        </div>
       </div>
 
-      <figure class="registros" aria-label="Ejemplo de tres registros de facturación encadenados">
-        <figcaption><span>Registros de facturación</span><span>Ejemplo</span></figcaption>
-        <ol>
-          <li class="registro">
-            <div class="reg-cab"><span class="reg-num">A-2026-0041</span><span class="chip chip-ok">Enviado a la AEAT</span></div>
-            <div class="reg-dato">14/10/2026 · 1.210,00 €</div>
-            <dl class="huellas">
-              <dt>Huella</dt><dd><span class="par">3F9A…C21E</span></dd>
-            </dl>
-          </li>
-          <li class="registro">
-            <div class="reg-cab"><span class="reg-num">A-2026-0042</span><span class="chip chip-ok">Enviado a la AEAT</span></div>
-            <div class="reg-dato">15/10/2026 · 484,00 €</div>
-            <dl class="huellas">
-              <dt>Anterior</dt><dd><span class="par">3F9A…C21E</span></dd>
-              <dt>Huella</dt><dd>8B07…5D4A</dd>
-            </dl>
-          </li>
-          <li class="registro">
-            <div class="reg-cab"><span class="reg-num">A-2026-0043</span><span class="chip chip-pend">Pendiente de envío</span></div>
-            <div class="reg-dato">16/10/2026 · 2.662,00 €</div>
-            <dl class="huellas">
-              <dt>Anterior</dt><dd>8B07…5D4A</dd>
-              <dt>Huella</dt><dd>E1C3…07B9</dd>
-            </dl>
-          </li>
-        </ol>
-      </figure>
+      <!-- Tarjeta Interactiva Simulador VERI*FACTU -->
+      <div class="hero-visual">
+        <div class="tarjeta-simulador">
+          <div class="simulador-cabecera">
+            <span class="simulador-titulo">Cadena Criptográfica VERI*FACTU</span>
+            <span class="pildora" style="font-size:0.75rem; padding:0.2rem 0.6rem;">En vivo en tu PC</span>
+          </div>
+          <div class="cadena-items">
+            <div class="cadena-nodo">
+              <div class="nodo-top">
+                <span class="nodo-numero">Factura A-2026-0041</span>
+                <span class="chip-estado chip-correcto">AEAT: Correcto (CSV)</span>
+              </div>
+              <div class="nodo-meta">14/10/2026 · 1.210,00 € · Base 1.000 € · IVA 21%</div>
+              <div class="nodo-hash">
+                <span>Huella SHA-256:</span>
+                <code>3F9A4B8C1E70...92D1C21E</code>
+              </div>
+            </div>
+
+            <div class="cadena-nodo">
+              <div class="nodo-top">
+                <span class="nodo-numero">Factura A-2026-0042</span>
+                <span class="chip-estado chip-correcto">AEAT: Correcto (CSV)</span>
+              </div>
+              <div class="nodo-meta">15/10/2026 · 484,00 € · Encadenada a la anterior</div>
+              <div class="nodo-hash">
+                <span>Anterior:</span>
+                <code>3F9A4B8C1E70...92D1C21E</code>
+              </div>
+              <div class="nodo-hash">
+                <span>Huella:</span>
+                <code>8B072D4EF139...7A015D4A</code>
+              </div>
+            </div>
+
+            <div class="cadena-nodo">
+              <div class="nodo-top">
+                <span class="nodo-numero">Factura A-2026-0043</span>
+                <span class="chip-estado chip-encadenado">UBL 2.1 Firmada</span>
+              </div>
+              <div class="nodo-meta">16/10/2026 · 2.662,00 € · Lista con QR de cotejo</div>
+              <div class="nodo-hash">
+                <span>Huella:</span>
+                <code>E1C370B9A458...FF3007B9</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="seccion" id="funciones">
+  <!-- Sección Comparativa: Fin del abuso SaaS -->
+  <section class="seccion-comparativa" id="ventajas">
     <div class="marco">
-      <h2>Qué hace</h2>
-      <ul class="funciones">
-        <li>
-          <h3>Facturas con VERI*FACTU</h3>
-          <p>Facturas, rectificativas y anulaciones, cada una con su registro encadenado. El PDF lleva el código QR y la frase «Factura verificable en la sede electrónica de la AEAT».</p>
-        </li>
-        <li>
-          <h3>Envío a la AEAT</h3>
-          <p>Envía los registros con tu certificado digital. Si alguno no llega, lo vuelve a intentar y te avisa de lo que queda pendiente.</p>
-        </li>
-        <li>
-          <h3>Borradores</h3>
-          <p>Prepara y revisa cada factura antes de emitirla. Lo emitido ya no se modifica: se corrige con una rectificativa.</p>
-        </li>
-        <li>
-          <h3>Factura electrónica</h3>
-          <p>Genera la factura en formato UBL, firmada con tu certificado.</p>
-        </li>
-        <li>
-          <h3>Libros registro</h3>
-          <p>Exporta el libro registro de IVA e IRPF en el formato de la AEAT.</p>
-        </li>
-        <li>
-          <h3>Varias empresas</h3>
-          <p>Lleva la facturación de varias empresas desde el mismo programa, cada una con sus datos por separado.</p>
-        </li>
-      </ul>
+      <div class="cabecera-seccion">
+        <span class="eyebrow">Por qué cambiar el modelo</span>
+        <h2>¿Por qué pagar 30 € al mes para siempre por hacer cuatro facturas?</h2>
+        <p>Los programas de facturación en la nube te cobran alquiler eterno por acceder a tus propios datos. VeriFree te devuelve el control.</p>
+      </div>
+
+      <div class="tabla-comparativa">
+        <div class="tarjeta-comparacion mala">
+          <h3>Software en la Nube Tradicional</h3>
+          <div class="precio-comparacion">~360 € al año <small style="font-size:0.9rem; font-weight:400; color:var(--tinta-suave);">(más de 1.000 € en 3 años)</small></div>
+          <ul class="lista-puntos">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              <span><strong>Suscripción obligatoria:</strong> Si dejas de pagar, pierdes el acceso a consultar tus facturas pasadas.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              <span><strong>Tus datos en servidores ajenos:</strong> Tus clientes, NIFs, importes y cuentas bancarias viajan a la nube.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              <span><strong>Sin internet no facturas:</strong> Dependes al 100% de la disponibilidad de su servidor web.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tarjeta-comparacion buena">
+          <h3>VeriFree Facturación</h3>
+          <div class="precio-comparacion">Licencia única o Compilación Libre</div>
+          <ul class="lista-puntos">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Tuyo de por vida:</strong> Sin alquileres forzosos. Las facturas son tuyas y siempre accesibles en tu disco.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Privacidad radical:</strong> Base de datos local SQLite. Cero servidores intermediarios; solo conecta con la AEAT.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Funciona sin conexión:</strong> Emite facturas en cualquier momento; el envío a la AEAT se sincroniza en cuanto haya red.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="seccion seccion-papel" id="capturas">
+  <!-- Bento Grid de Funcionalidades -->
+  <section class="seccion-funciones" id="funciones">
     <div class="marco">
-      <h2>Así es VeriFree</h2>
-      <p class="intro">Capturas del programa en modo de pruebas, con una empresa y unos clientes inventados.</p>
-      <figure class="captura">
-        <img src="capturas/facturas.png" alt="Lista de facturas de VeriFree: totales del trimestre, buscador, cinco facturas emitidas y avisos de envío pendiente a la AEAT" width="1920" height="1140" loading="lazy">
-        <figcaption>Las facturas del trimestre con sus totales. Las bandas de arriba avisan de lo que falta por enviar a la AEAT.</figcaption>
-      </figure>
-      <div class="captura-doble">
-        <figure class="captura">
-          <img src="capturas/factura-pdf.png" alt="PDF de una factura emitida con el QR tributario, los datos del cliente, las líneas y el total" width="992" height="780" loading="lazy">
-        </figure>
+      <div class="cabecera-seccion">
+        <span class="eyebrow">Ingeniería sólida</span>
+        <h2>Todo lo que exige la ley, sin complicaciones</h2>
+        <p>Cumple con el Reglamento VERI*FACTU y la Ley de Factura Electrónica B2B con la máxima sencillez de uso.</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card bento-destacado">
+          <div class="bento-icono">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Remisión Automática VERI*FACTU a la AEAT</h3>
+          <p>
+            Cada factura, rectificativa y anulación genera en la misma transacción su registro encadenado con hash SHA-256 inmutable. Se envía directamente a la sede electrónica mediante tu certificado digital por SOAP/mTLS. Si no hay conexión o la AEAT tiene demoras, reintenta automáticamente con control de flujo legal y aviso visual de registros pendientes.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icono">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <h3>Factura Electrónica UBL 2.1</h3>
+          <p>
+            Genera facturas en formato europeo UBL conforme a la Orden HAC/1028/2026. Se firman con XAdES en segundo plano sin bloquear tu trabajo y se archivan automáticamente por año y mes.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icono">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <h3>Libro Registro Oficial en Excel</h3>
+          <p>
+            Exporta en un clic el libro registro de facturas expedidas en el formato exacto de la AEAT (.xlsx unificado para IVA e IRPF). Listo para entregar a tu asesoría o importar directamente en Pre303 y Renta Web.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icono">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+          </div>
+          <h3>Borradores con Autoguardado</h3>
+          <p>
+            Edita a pantalla completa. Los borradores se guardan automáticamente tras cada pausa y solo se bloquean si faltan datos al emitir. Revisa la vista previa del PDF con total seguridad antes de emitir.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icono">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <h3>Multiempresa Ilimitada</h3>
+          <p>
+            Gestiona la facturación de varias empresas o autónomos desde el mismo programa. Cada empresa tiene su propia base de datos SQLite aislada, sus series correlativas y su configuración independiente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase Visual / Capturas -->
+  <section class="seccion-showcase" id="capturas">
+    <div class="marco">
+      <div class="cabecera-seccion">
+        <span class="eyebrow">Interfaz limpia y accesible</span>
+        <h2>Diseñado para trabajar rápido en Windows</h2>
+        <p>Una aplicación de escritorio nativa (.NET 10 y WPF) sin tiempos de carga web ni distracciones.</p>
+      </div>
+
+      <div class="marco-ventana">
+        <div class="barra-ventana">
+          <span class="punto-control"></span>
+          <span class="punto-control"></span>
+          <span class="punto-control"></span>
+          <span class="titulo-ventana">VeriFree Facturación - Facturas emitidas</span>
+        </div>
+        <div class="captura-contenido">
+          <img src="capturas/facturas.png" alt="Pantalla principal de Facturas de VeriFree: totales del trimestre, filtros y avisos de remisión a la AEAT" width="1920" height="1140" loading="lazy">
+        </div>
+      </div>
+
+      <div class="showcase-detalles">
+        <div class="captura-pdf-wrapper">
+          <img src="capturas/factura-pdf.png" alt="Factura en PDF con código QR y leyenda oficial VERI*FACTU" width="992" height="780" style="border-radius:10px; border:1px solid var(--borde); box-shadow:var(--sombra-md);" loading="lazy">
+        </div>
         <div>
-          <h3>La factura en PDF</h3>
-          <p>Cada factura emitida lleva su QR tributario y la frase «Factura verificable en la sede electrónica de la AEAT». Quien la recibe puede comprobar con el QR que está registrada.</p>
-          <p>Esta es de pruebas: por eso lo dice arriba y su QR lleva al servicio de cotejo de pruebas de la AEAT.</p>
+          <h3>Facturas PDF con validez legal inmediata</h3>
+          <p style="margin-top:0.75rem;">
+            Cada factura emitida incorpora de forma nativa el código QR reglamentario y la leyenda obligatoria <em>«Factura verificable en la sede electrónica de la AEAT»</em>. Tus clientes pueden escanear el código y comprobar al instante que la factura está debidamente registrada en Hacienda.
+          </p>
+          <p style="margin-top:1rem;">
+            Incluye desglose por tipos de IVA, retención de IRPF configurable por línea, formas de pago (transferencia, Bizum, domiciliación) y leyendas personalizadas.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="seccion banda" id="datos">
+  <!-- Sección de Precios y Modelos de Negocio -->
+  <section class="seccion-precios" id="precios">
     <div class="marco">
-      <div>
-        <h2>Tus datos, en tu equipo</h2>
-        <p>VeriFree guarda las facturas en tu ordenador. Funciona sin conexión salvo para enviar los registros a la AEAT.</p>
+      <div class="cabecera-seccion">
+        <span class="eyebrow">Modelos de adquisición transparentes</span>
+        <h2>Tú eliges cómo usar VeriFree</h2>
+        <p>El código es libre y cualquiera puede tener el programa 100 % gratis si lo compila. Si prefieres no programar y tener el ejecutable oficial con garantía de productor registrado, tienes nuestra licencia oficial.</p>
       </div>
-      <ul class="hechos">
-        <li><strong>Sin cuenta</strong><span>No hay que registrarse ni iniciar sesión.</span></li>
-        <li><strong>Sin servidores propios</strong><span>Las facturas no pasan por ningún servidor de VeriFree.</span></li>
-        <li><strong>Solo envía a la AEAT</strong><span>Lo único que el programa envía son los registros que exige VERI*FACTU.</span></li>
-      </ul>
+
+      <div class="cuadricula-precios">
+        <!-- 1. Compilación Gratuita / Código Libre -->
+        <article class="tarjeta-precio">
+          <div class="precio-cabecera">
+            <h3>Compilación Comunitaria</h3>
+            <p class="precio-descripcion">Para desarrolladores y usuarios técnicos que quieren auditar y compilar el código gratis.</p>
+          </div>
+          <div class="precio-cifra">
+            0 €
+            <span class="precio-periodo">para siempre</span>
+          </div>
+          <div class="precio-iva">Código libre en GitHub · 100% Gratuito</div>
+          <div class="precio-divisor"></div>
+          <ul class="precio-beneficios">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Acceso al <strong>código fuente íntegro</strong> en GitHub.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Lo compilas tú mismo con el SDK de .NET 10.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Tú actúas como Productor del Software:</strong> Configuras tu propio NIF/nombre al compilar y emites tu propia declaración responsable ante la AEAT (RD 1007/2023).</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Acceso completo al manual de usuario online.</span>
+            </li>
+          </ul>
+          <a class="btn btn-secundario" href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">
+            <span>Ver código en GitHub ↗</span>
+          </a>
+        </article>
+
+        <!-- 2. Compra Puntual / Licencia Oficial (Destacada) -->
+        <article class="tarjeta-precio tarjeta-destacada">
+          <div class="badge-popular">OPCIÓN MÁS CÓMODA Y SEGURA</div>
+          <div class="precio-cabecera">
+            <h3>Licencia Oficial</h3>
+            <p class="precio-descripcion">Para autónomos y empresas que quieren descargar, hacer doble clic y facturar sin tocar código.</p>
+          </div>
+          <div class="precio-cifra">
+            89 €
+            <span class="precio-periodo">+ IVA (pago único)</span>
+          </div>
+          <div class="precio-iva">107,69 € con 21% IVA incluido · Sin cuotas mensuales</div>
+          <div class="precio-divisor"></div>
+          <ul class="precio-beneficios">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Ejecutable oficial precompilado</strong> (VeriFree.exe) firmado digitalmente.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>César Morillas como Productor Oficial registrado:</strong> Con NIF validado en el censo de la AEAT, asumiendo la responsabilidad técnica legal (RD 1007/2023 y LGT).</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Declaración Responsable Oficial</strong> incorporada en el programa, lista para cualquier inspección.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Uso <strong>perpetuo</strong> sin límite de facturas ni de empresas.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Garantía de puesta en marcha y corrección de incidencias.</span>
+            </li>
+          </ul>
+          <a class="btn btn-primario" href="mailto:contacto@verifree.es?subject=Comprar%20Licencia%20Oficial%20VeriFree">
+            <span>Comprar Licencia Oficial</span>
+          </a>
+        </article>
+
+        <!-- 3. Mantenimiento y Soporte Continuo -->
+        <article class="tarjeta-precio">
+          <div class="precio-cabecera">
+            <h3>Plan Tranquilidad</h3>
+            <p class="precio-descripcion">Mantenimiento continuo con todas las actualizaciones normativas y soporte experto.</p>
+          </div>
+          <div class="precio-cifra">
+            9,90 €
+            <span class="precio-periodo">/ mes + IVA</span>
+          </div>
+          <div class="precio-iva">O 99 € + IVA al año (ahorras 2 meses) · Cancela cuando quieras</div>
+          <div class="precio-divisor"></div>
+          <ul class="precio-beneficios">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Todas las actualizaciones normativas</strong> que publique la AEAT o el BOE (2026–2028).</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Adaptación asegurada a los futuros servicios de la solución pública de factura electrónica B2B.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Soporte prioritario</strong> por correo en menos de 24h laborables.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Ayuda por <strong>escritorio remoto</strong> con certificados digitales o rechazos de la AEAT.</span>
+            </li>
+          </ul>
+          <a class="btn btn-secundario" href="mailto:contacto@verifree.es?subject=Contratar%20Plan%20Tranquilidad%20VeriFree">
+            <span>Contratar Mantenimiento</span>
+          </a>
+        </article>
+      </div>
+
+      <!-- Servicios Profesionales Sueltos -->
+      <div class="servicios-sueltos-box">
+        <div class="servicio-item">
+          <h4>Puesta en Marcha Llave en Mano</h4>
+          <div class="precio-servicio">45 € + IVA (pago único)</div>
+          <p>Instalación remota de VeriFree, configuración de tu certificado digital FNMT/DNIe, datos fiscales, series y primera factura de prueba guiada paso a paso.</p>
+        </div>
+        <div class="servicio-item">
+          <h4>Plan para Asesorías y Gestorías</h4>
+          <div class="precio-servicio">240 € + IVA / año</div>
+          <p>Soporte completo y centralizado para todas las empresas gestionadas por tu despacho, sesión de formación por videollamada y resolución prioritaria de incidencias.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="seccion" id="precios">
+  <!-- Sección Garantía Legal del Productor y Régimen Sancionador -->
+  <section class="seccion-legal" id="productor">
     <div class="marco">
-      <h2>Precios</h2>
-      <p class="intro">El programa es gratuito y completo. Si quieres que alguien te ayude, puedes contratar soporte, pero no hace falta para usarlo.</p>
-      <div class="planes">
-        <article class="plan plan-gratis">
-          <h3>Gratis</h3>
-          <p class="precio">0 € <small>sin límite de tiempo</small></p>
-          <ul>
-            <li>Todas las funciones, sin límite de facturas ni de empresas.</li>
-            <li>Para tu propia actividad y, en asesorías y gestorías, para la facturación de sus clientes.</li>
-            <li>Las actualizaciones del programa.</li>
-            <li>El <a href="manual.html">manual de usuario</a>.</li>
+      <div class="legal-grid">
+        <div class="legal-texto">
+          <span class="eyebrow">Marco legal y tributario</span>
+          <h2>¿Qué exige la Agencia Tributaria sobre el «Productor del Software»?</h2>
+          <p style="margin-top:0.75rem;">
+            El Reglamento VERI*FACTU (RD 1007/2023, art. 13) establece una distinción fundamental: <strong>quien compila o desarrolla el software es legalmente su productor</strong>.
+          </p>
+          <p style="margin-top:0.75rem;">
+            La ley exige que en cada factura enviada a la AEAT figuren obligatoriamente el NIF y el nombre del productor (bloque <code>SistemaInformatico</code>), y la AEAT <strong>comprueba en su censo que dicho NIF exista y sea válido</strong>. Además, el productor debe emitir por escrito una <strong>Declaración Responsable</strong> certificando que el software no permite dobles contabilidades ni alteración de registros.
+          </p>
+          <p style="margin-top:0.75rem;">
+            <strong>El régimen sancionador de la Ley General Tributaria (art. 201 bis LGT):</strong>
+          </p>
+          <ul style="margin-top:0.5rem; padding-left:1.25rem; color:var(--tinta-suave); font-size:0.9375rem; display:grid; gap:0.4rem;">
+            <li><strong>Multa de 50.000 € por ejercicio</strong> para la empresa o autónomo que utilice sistemas de facturación que no cuenten con la debida declaración responsable del productor (art. 201 bis.3 LGT).</li>
+            <li><strong>Multa de 150.000 € por ejercicio</strong> para quien fabrique o comercialice sistemas que no cumplan con las especificaciones o permitan alterar registros (art. 201 bis.2 LGT).</li>
           </ul>
-        </article>
-        <article class="plan">
-          <h3>Soporte</h3>
-          <p class="precio">60 € <small>+ IVA al año, por empresa</small></p>
-          <p class="con-iva">72,60 € con IVA</p>
-          <ul>
-            <li>Respuesta por correo en un día laborable.</li>
-            <li>Ayuda con el certificado digital y con los avisos de la AEAT.</li>
-            <li>Asistencia por escritorio remoto cuando haga falta.</li>
+        </div>
+        <div class="caja-responsabilidad">
+          <h4>¿Cómo te afecta según la opción que elijas?</h4>
+          <ul class="lista-puntos" style="margin-top:1.25rem;">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Si compilas la versión libre (0 €):</strong> Eres totalmente libre de usarla gratis, pero tú asumes la condición de productor ante Hacienda. Debes configurar tu NIF en la compilación y emitir tu propia declaración responsable.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Si compras la Licencia Oficial (89 € + IVA):</strong> César Morillas figura y se responsabiliza como productor oficial ante la AEAT con NIF verificado en el censo. Incluye la declaración responsable oficial que te blinda jurídicamente frente al art. 201 bis de la LGT sin que tengas que programar ni asumir riesgos técnicos.</span>
+            </li>
           </ul>
-        </article>
-        <article class="plan">
-          <h3>Asesorías</h3>
-          <p class="precio">240 € <small>+ IVA al año</small></p>
-          <p class="con-iva">290,40 € con IVA</p>
-          <ul>
-            <li>El soporte para todas las empresas que lleve la asesoría.</li>
-            <li>Una sesión de formación de dos horas por videollamada.</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="sueltos">
-        <h3>Servicios sueltos</h3>
-        <table class="tabla-precios">
-          <tbody>
-            <tr>
-              <th scope="row">Puesta en marcha<span class="detalle">Instalación y configuración por escritorio remoto: programa, certificado, datos de la empresa y series. Hasta una hora.</span></th>
-              <td>45 € + IVA<span class="detalle">54,45 € con IVA</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Formación<span class="detalle">Por videollamada, a tu ritmo.</span></th>
-              <td>35 € + IVA la hora<span class="detalle">42,35 € con IVA</span></td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="nota">Precios sin IVA; debajo de cada uno, con el 21 % de IVA incluido. El programa funciona igual con soporte que sin él.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="seccion seccion-papel">
-    <div class="marco dos">
-      <div id="requisitos">
-        <h2>Requisitos</h2>
-        <ul class="lista">
-          <li>Windows de 64 bits.</li>
-          <li><a href="https://dotnet.microsoft.com/es-es/download/dotnet/10.0">.NET 10 Desktop Runtime</a>, gratuito, de Microsoft.</li>
-          <li>Un certificado digital para enviar los registros a la AEAT y firmar la factura electrónica.</li>
-        </ul>
+  <!-- Preguntas Frecuentes -->
+  <section class="seccion-faq" id="faq">
+    <div class="marco">
+      <div class="cabecera-seccion">
+        <span class="eyebrow">Dudas habituales</span>
+        <h2>Preguntas Frecuentes</h2>
+        <p>Todo lo que necesitas saber sobre el funcionamiento legal y técnico de VeriFree.</p>
       </div>
-      <div id="contacto">
-        <h2>Contacto</h2>
-        <p class="intro">Para dudas, avisos de errores o contratar el soporte, escribe al autor del programa.</p>
-        <p class="contacto"><a class="correo" href="mailto:contacto@verifree.es">contacto@verifree.es</a></p>
+
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h3>¿Por qué no regaláis el ejecutable ya compilado gratis en vez de pedir compilarlo?</h3>
+          <p>Por imperativo legal. El Reglamento VERI*FACTU (RD 1007/2023) exige que cada ejecutable lleve incrustados los datos del productor responsable que garantiza bajo su firma que el programa cumple la ley. Si repartiéramos un ejecutable precompilado con nuestros datos a todo el mundo de forma anónima, estaríamos asumiendo la responsabilidad legal y las sanciones tributarias (hasta 150.000 € según el art. 201 bis LGT) de miles de instalaciones fuera de nuestro control. Por eso, el código está libre en GitHub para que quien quiera compilarlo gratis se registre como su propio productor.</p>
+        </div>
+
+        <div class="faq-card">
+          <h3>¿Qué ocurre si compilo el código libre sin cambiar los datos de prueba del productor?</h3>
+          <p>El código en GitHub viene configurado con un NIF ficticio de prueba (89890001K) para evitar envíos involuntarios. Si intentas enviar facturas a la AEAT con ese NIF de prueba, la Agencia Tributaria rechaza el envío con el error 1110 («El NIF del productor no está identificado en el censo»). Para que la versión libre funcione, debes compilarla obligatoriamente con tu propio NIF censado como productor.</p>
+        </div>
+
+        <div class="faq-card">
+          <h3>¿Es legal que mis facturas se queden en mi ordenador en lugar de la nube?</h3>
+          <p>Completamente legal. La ley tributaria exige que el programa remita los registros de facturación a la AEAT (VERI*FACTU) y garantice la inalterabilidad de los datos; en ningún momento exige almacenar tus facturas en servidores de empresas externas.</p>
+        </div>
+
+        <div class="faq-card">
+          <h3>¿Qué certificado digital necesito para enviar a la AEAT?</h3>
+          <p>Cualquier certificado digital válido instalado en Windows: certificado de persona física (FNMT, DNIe), de representante de persona jurídica o el certificado de tu asesor o apoderado colegiado.</p>
+        </div>
+
+        <div class="faq-card">
+          <h3>¿Qué ocurre si cambio de ordenador o quiero hacer una copia de seguridad?</h3>
+          <p>VeriFree no dispersa archivos por el registro de Windows. Todas tus bases de datos y configuraciones están en la carpeta <code>Empresas</code> junto a <code>VeriFree.exe</code>. Con copiar esa carpeta a un disco externo o a tu nube privada, tu respaldo está completo.</p>
+        </div>
+
+        <div class="faq-card">
+          <h3>¿Cómo le entrego las facturas a mi asesoría contable?</h3>
+          <p>VeriFree incluye un botón directo de <strong>Exportar libro</strong> que genera el archivo Excel (.xlsx) oficial de la AEAT con todas las facturas y desgloses de IVA e IRPF del ejercicio, compatible con los programas de contabilidad y con Pre303.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="cta-final">
+    <div class="marco">
+      <div class="cta-box">
+        <h2>Empieza a facturar con la tranquilidad de cumplir la ley</h2>
+        <p>Sin alquileres en la nube, con tus datos bajo tu control y con el respaldo técnico que necesitas.</p>
+        <div class="acciones" style="justify-content:center;">
+          <a class="btn btn-primario" href="#precios">Elegir mi versión de VeriFree</a>
+          <a class="btn btn-secundario" href="manual.html">Consultar el Manual de Usuario</a>
+        </div>
       </div>
     </div>
   </section>
@@ -216,8 +516,26 @@
 
 <footer class="pie">
   <div class="marco">
-    <span>© 2026 César Morillas</span>
-    <a href="manual.html">Manual de usuario</a>
+    <div class="pie-top">
+      <div class="marca">
+        <img src="icono.png" alt="" width="28" height="28">
+        VeriFree <span>Facturación</span>
+      </div>
+      <ul class="pie-links">
+        <li><a href="#ventajas">Ventajas</a></li>
+        <li><a href="#funciones">Funciones</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#productor">Garantía Legal</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+        <li><a href="manual.html">Manual</a></li>
+        <li><a href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="mailto:contacto@verifree.es">contacto@verifree.es</a></li>
+      </ul>
+    </div>
+    <div class="pie-bottom">
+      <span>© 2026 César Morillas. Todos los derechos reservados.</span>
+      <span>Web 100% privada: libre de cookies de terceros y libre de rastreo.</span>
+    </div>
   </div>
 </footer>
 
