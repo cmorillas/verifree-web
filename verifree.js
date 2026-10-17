@@ -7,6 +7,42 @@
   var sinMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hayObservador = 'IntersectionObserver' in window;
 
+  /* Menú móvil hamburguesa */
+  var botonHamb = document.querySelector('.btn-hamburguesa');
+  var menuNav = document.getElementById('menu-principal') || document.querySelector('.menu');
+  if (botonHamb && menuNav) {
+    var alternarMenu = function (abrir) {
+      var estado = typeof abrir === 'boolean' ? abrir : !menuNav.classList.contains('abierto');
+      menuNav.classList.toggle('abierto', estado);
+      botonHamb.setAttribute('aria-expanded', estado ? 'true' : 'false');
+      botonHamb.setAttribute('aria-label', estado ? 'Cerrar menú' : 'Abrir menú');
+    };
+
+    botonHamb.addEventListener('click', function (e) {
+      e.stopPropagation();
+      alternarMenu();
+    });
+
+    menuNav.querySelectorAll('a').forEach(function (enlace) {
+      enlace.addEventListener('click', function () {
+        alternarMenu(false);
+      });
+    });
+
+    document.addEventListener('click', function (e) {
+      if (menuNav.classList.contains('abierto') && !menuNav.contains(e.target) && !botonHamb.contains(e.target)) {
+        alternarMenu(false);
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menuNav.classList.contains('abierto')) {
+        alternarMenu(false);
+        botonHamb.focus();
+      }
+    });
+  }
+
   /* Pestañas de capturas */
   var pestanas = document.querySelectorAll('.tab-btn');
   pestanas.forEach(function (boton) {

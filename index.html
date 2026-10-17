@@ -25,7 +25,7 @@
       <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
       VeriFree <span>Facturación</span>
     </a>
-    <nav class="menu" aria-label="Navegación principal">
+    <nav class="menu" id="menu-principal" aria-label="Navegación principal">
       <a href="index.html#funciones">Funciones</a>
       <a href="index.html#precios">Precios</a>
       <a href="filosofia.html">Código abierto</a>
@@ -34,10 +34,17 @@
       <a href="preguntas.html">Preguntas</a>
       <a href="manual.html">Manual</a>
     </nav>
-    <a class="btn btn-primario btn-sm cabecera-accion" href="descargas/VeriFree.exe" download>
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Probar Demo
-    </a>
+    <div class="cabecera-acciones">
+      <a class="btn btn-primario btn-sm cabecera-accion" href="descargas/VeriFree.exe" download>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Probar Demo
+      </a>
+      <button type="button" class="btn-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+        <span class="linea-hamb"></span>
+        <span class="linea-hamb"></span>
+        <span class="linea-hamb"></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -90,8 +97,8 @@
       </header>
 
       <blockquote class="manifiesto">
-        <p>En Telytec Ingenieros sabemos lo que vale tener opciones: preferir esforzarse un poco más antes que pagar. Por eso el código de VeriFree está a la vista. Si sabes compilarlo, compílalo con tu NIF, hazte responsable como productor ante Hacienda y no nos pagues nada. Y si prefieres que nos encarguemos nosotros, para eso está la Licencia Oficial.</p>
-        <footer>Telytec Ingenieros, S.L. · <a href="filosofia.html">Por qué lo hacemos así</a></footer>
+        <p>En Telytec Ingenieros creemos en el software libre, en la privacidad de tus datos y en las reglas claras. El código de VeriFree está publicado en GitHub para quien quiera auditarlo o compilarlo por su cuenta a coste cero. Y para quien prefiere la tranquilidad de un instalador firmado, garantía oficial ante Hacienda y soporte técnico directo, ofrecemos la Licencia Oficial con el respaldo de nuestra empresa.</p>
+        <footer>Telytec Ingenieros, S.L. · <a href="filosofia.html">Conoce nuestra filosofía al detalle</a></footer>
       </blockquote>
 
       <div class="codigo-rejilla">
@@ -119,13 +126,13 @@
       </div>
       <div class="comunidad">
         <div>
-          <h3>Un proyecto vivo, no solo código publicado</h3>
-          <p>¿Has encontrado un error o tienes una idea? Cuéntanoslo en GitHub. Cada aviso hace VeriFree mejor para todos, paguen o no.</p>
+          <h3>Comunidad y proyecto abierto</h3>
+          <p>¿Has encontrado un error o tienes una idea? Cuéntanoslo en GitHub. Cada sugerencia y cada aportación técnica ayudan a hacer VeriFree más robusto para todos.</p>
         </div>
         <div class="acciones">
           <a class="btn btn-secundario" href="https://github.com/cmorillas/verifree/issues" target="_blank" rel="noopener">Avisar de un error</a>
           <a class="btn btn-secundario" href="https://github.com/cmorillas/verifree/discussions" target="_blank" rel="noopener">Proponer una mejora</a>
-          <a class="btn btn-secundario" href="mailto:contacto@verifree.es?subject=Quiero%20apoyar%20VeriFree">Invítanos a un café</a>
+          <a class="btn btn-secundario" href="mailto:contacto@verifree.es?subject=Quiero%20apoyar%20el%20proyecto%20VeriFree">Colaborar con el proyecto</a>
         </div>
       </div>
     </div>
@@ -361,7 +368,7 @@
         </div>
         <a class="btn btn-primario" href="descargas/VeriFree.exe" download>
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span>Descargar VeriFree (Modo Pruebas)</span>
+          <span>Descargar Versión de Evaluación</span>
         </a>
       </div>
 
@@ -390,7 +397,7 @@
           <div class="plan-lema">Pago único · Sin cuotas mensuales</div>
           <div class="plan-cabecera">
             <h3>Licencia Oficial</h3>
-            <p>Para ti si prefieres que nos encarguemos nosotros. Y de paso, ayudas a que el código siga siendo gratis para quien sabe compilarlo.</p>
+            <p>Para ti si prefieres que nos encarguemos nosotros: ejecutable oficial firmado, condición de productor legal ante la AEAT y soporte directo sin cuotas periódicas obligatorias.</p>
           </div>
           <div class="plan-cifra">119 € <span class="plan-periodo">+ IVA (un solo pago)</span></div>
           <div class="plan-iva">143,99 € con IVA incluido · Primer año de actualizaciones incluido</div>
@@ -410,8 +417,8 @@
         <article class="plan">
           <div class="plan-lema"></div>
           <div class="plan-cabecera">
-            <h3>Actualizaciones y soporte</h3>
-            <p>Para seguir al día a partir del segundo año. Es opcional: si no lo renuevas, tu programa sigue funcionando.</p>
+            <h3>Soporte y actualizaciones</h3>
+            <p>Para mantener tu software al día de cada novedad normativa de la AEAT y contar con soporte prioritario a partir del segundo año. Totalmente opcional.</p>
           </div>
           <div class="plan-cifra">59 € <span class="plan-periodo">/ año + IVA</span></div>
           <div class="plan-iva">71,39 € con IVA incluido · Sin permanencia</div>
