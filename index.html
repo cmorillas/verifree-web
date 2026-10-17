@@ -10,11 +10,11 @@
 <meta property="og:image" content="https://verifree.es/icono.png">
 <meta property="og:url" content="https://verifree.es/">
 <meta property="og:locale" content="es_ES">
-<meta name="theme-color" content="#f4f6f1">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" type="image/svg+xml" href="icono.svg">
 <link rel="alternate icon" type="image/png" href="icono.png">
 <link rel="apple-touch-icon" href="icono.png">
-<link rel="preload" href="fuentes/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fuentes/mona-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
 <header class="cabecera">
   <div class="marco">
     <a class="marca" href="./">
-      <img src="icono.svg" alt="Logotipo VeriFree" width="32" height="32">
+      <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
       VeriFree <span>Facturación</span>
     </a>
     <nav class="menu" aria-label="Navegación principal">
@@ -34,7 +34,7 @@
       <a href="#productor">Garantía Legal</a>
       <a href="#faq">Preguntas</a>
       <a href="manual.html">Manual</a>
-      <a class="btn-menu" href="descargas/VeriFree.exe" download>
+      <a class="btn btn-primario btn-sm" href="descargas/VeriFree.exe" download>
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Probar Demo
       </a>
@@ -44,439 +44,433 @@
 
 <main>
   <!-- Portada -->
-  <section class="hero">
+  <section class="portada">
     <div class="marco">
-      <div class="hero-texto">
+      <div class="portada-texto">
         <h1>Facturación <span class="destacado">VERI*FACTU</span> en tu PC: Gratis o Pago Único, sin cuotas mensuales</h1>
+        <p class="subtitulo">
+          Haz tus facturas, envíalas a Hacienda y guárdalo todo en tu propio ordenador. <strong>Gratis si lo compilas tú</strong>, o <strong>89 € una sola vez</strong> con la Licencia Oficial.
+        </p>
 
-        <div class="hero-principal">
-          <p class="subtitulo">
-            Haz tus facturas, envíalas a Hacienda y guárdalo todo en tu propio ordenador. <strong>Gratis si lo compilas tú</strong>, o <strong>89 € una sola vez</strong> con la Licencia Oficial.
-          </p>
+        <div class="acciones">
+          <a class="btn btn-primario" href="descargas/VeriFree.exe" download>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Descargar Versión de Evaluación</span>
+          </a>
+          <a class="btn btn-secundario" href="#precios">
+            <span>Ver planes y licencias</span>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
 
-          <div class="acciones">
-            <a class="btn btn-primario" href="descargas/VeriFree.exe" download>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              <span>Descargar Versión de Evaluación</span>
-            </a>
-            <a class="btn btn-secundario" href="#precios">
-              <span>Ver planes y licencias</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+        <p class="nota">
+          VeriFree.exe portátil para Windows (14 MB), completo en Modo Pruebas, sin instalador, sin registro y sin tarjeta. Si Windows SmartScreen muestra un aviso, pulsa <strong>Más información</strong> y después <strong>Ejecutar de todas formas</strong>.
+        </p>
+        <p class="nota">
+          <a href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">Código fuente en GitHub</a>
+        </p>
+
+        <details class="huella">
+          <summary class="desplegar">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Verificar huella de integridad SHA-256 del ejecutable
+            <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="huella-cuerpo">
+            <span class="huella-titulo">Huella SHA-256 oficial (versión de evaluación):</span>
+            <code class="huella-valor">8F10E40D37F93DF9219DC0CC9BBC5F29D9377869100720CABC1709D7085F2FE4</code>
+            <span class="huella-comando">Comprobar en PowerShell: <code>Get-FileHash .\VeriFree.exe -Algorithm SHA256</code></span>
           </div>
-        </div>
-
-        <div class="hero-nota">
-          <p class="hero-letra-pequena">
-            VeriFree.exe portátil para Windows (14 MB), completo en Modo Pruebas, sin instalador, sin registro y sin tarjeta. Si Windows SmartScreen muestra un aviso, pulsa <strong>Más información</strong> y después <strong>Ejecutar de todas formas</strong>.
-          </p>
-          <p class="hero-letra-pequena">
-            <a href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">Código fuente en GitHub</a>
-          </p>
-        </div>
+        </details>
       </div>
 
       <!-- Captura real del programa -->
-      <figure class="hero-visual">
-        <img class="hero-captura" src="capturas/facturas.png" alt="VeriFree: lista de facturas con los totales del trimestre y el estado de envío a la AEAT" width="1920" height="1140">
+      <figure class="escenario">
+        <img src="capturas/facturas.png" alt="VeriFree: lista de facturas con los totales del trimestre y el estado de envío a la AEAT" width="1920" height="1140">
       </figure>
-
-      <!-- Talón de verificación del ejecutable -->
-      <details class="verificacion-hash">
-        <summary>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Verificar huella de integridad SHA-256 del ejecutable
-        </summary>
-        <div class="hash-cuerpo">
-          <span class="hash-titulo">Huella SHA-256 oficial (versión de evaluación):</span>
-          <code class="hash-valor">8F10E40D37F93DF9219DC0CC9BBC5F29D9377869100720CABC1709D7085F2FE4</code>
-          <span class="hash-comando">Comprobar en PowerShell: <code>Get-FileHash .\VeriFree.exe -Algorithm SHA256</code></span>
-        </div>
-      </details>
     </div>
   </section>
 
-  <!-- Comparativa: fin del alquiler de software -->
-  <section class="seccion-comparativa" id="ventajas">
+  <!-- Comparativa de costes -->
+  <section class="seccion" id="ventajas">
     <div class="marco">
-      <div class="cabecera-seccion" id="comparativa">
-        <span class="rubrica">Fin del alquiler perpetuo de software</span>
+      <header class="seccion-cabecera" id="comparativa">
         <h2>¿Por qué pagar cuotas de por vida por cumplir con Hacienda?</h2>
         <p>Casi todo el mercado ha eliminado la compra de programas: ahora todo son suscripciones mensuales que te cobran indefinidamente por emitir facturas. Con VeriFree el programa es tuyo y nunca pagarás una cuota obligatoria para facturar.</p>
-      </div>
+      </header>
 
-      <!-- Matriz completa de prestaciones y precios -->
-      <div class="contenedor-tabla-matriz">
-        <table class="tabla-matriz">
-          <thead>
-            <tr>
-              <th scope="col" style="width:25%;">Prestaciones y Costes</th>
-              <th scope="col" class="col-destacada" style="width:25%;">
-                VeriFree Facturación
-                <span class="badge-tabla badge-exito">ÚNICO 100% LIBRE</span>
-              </th>
-              <th scope="col" style="width:17%;">
-                Plataformas Cloud
-                <span class="badge-tabla">SaaS / Alquiler</span>
-              </th>
-              <th scope="col" style="width:17%;">
-                Software Clásico
-                <span class="badge-tabla">Escritorio tradicional</span>
-              </th>
-              <th scope="col" style="width:16%;">
-                Web Oficial AEAT
-                <span class="badge-tabla">Básico público</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="categoria-fila">
-              <td colspan="5">Costes y Licenciamiento</td>
-            </tr>
-            <tr>
-              <td><strong>Precio de adquisición</strong></td>
-              <td class="col-destacada">
-                <span class="icono-si">0 €</span> (código libre) o <span class="icono-si">89 €</span> (pago único)
-              </td>
-              <td>15 € a 40 € / mes <br><small>(lo habitual; los planes gratis suelen ser muy recortados)</small></td>
-              <td>240 € a 580 € / año <br><small>(mantenimiento habitual para tener Veri*Factu)</small></td>
-              <td>0 € <br><small>(gratuito)</small></td>
-            </tr>
-            <tr>
-              <td><strong>Coste acumulado a 3 años</strong></td>
-              <td class="col-destacada">
-                <span class="icono-si"><strong>0 € o 89 €</strong></span>
-              </td>
-              <td><span class="icono-no">540 € a 1.440 €</span></td>
-              <td><span class="icono-no">720 € a 1.740 €</span></td>
-              <td>0 €</td>
-            </tr>
-            <tr>
-              <td><strong>Límite de facturas gratis</strong></td>
-              <td class="col-destacada"><span class="icono-si">ILIMITADAS</span></td>
-              <td><span class="icono-no">Unas pocas al mes</span></td>
-              <td><span class="icono-no">Sin soporte ni Veri*Factu</span></td>
-              <td>Ilimitadas (manual)</td>
-            </tr>
-            <tr>
-              <td><strong>Cuotas obligatorias para emitir</strong></td>
-              <td class="col-destacada"><span class="icono-si">Ninguna (0 € / mes)</span></td>
-              <td><span class="icono-no">Mensuales obligatorias</span></td>
-              <td><span class="icono-no">Anuales obligatorias</span></td>
-              <td>Ninguna</td>
-            </tr>
-            <tr>
-              <td><strong>Actualizaciones normativas ante cambios legales</strong></td>
-              <td class="col-destacada">
-                <span class="icono-si"><i class="m-si" aria-hidden="true"></i>Opcionales y sin cuotas forzosas</span>
-                <br><small>(sin alquiler forzoso; Plan Tranquilidad opcional)</small>
-              </td>
-              <td><span class="icono-alerta">Alquiler mensual forzoso</span> <br><small>(180 € a 480 €/año; si dejas de pagar, pierdes el acceso)</small></td>
-              <td><span class="icono-no">Mantenimiento anual obligatorio</span> <br><small>(240 € a 580 €/año para tener versiones legales)</small></td>
-              <td><span class="icono-si"><i class="m-si" aria-hidden="true"></i>En su propia web</span> <br><small>(mantiene su formulario básico)</small></td>
-            </tr>
-
-            <tr class="categoria-fila">
-              <td colspan="5">Cumplimiento Legal y Formatos</td>
-            </tr>
-            <tr>
-              <td><strong>VERI*FACTU automático mTLS (AEAT)</strong></td>
-              <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Incluido e ilimitado</span></td>
-              <td><span class="icono-alerta">Solo en planes de pago</span></td>
-              <td><span class="icono-no">Solo con contrato anual</span></td>
-              <td><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Manual en su web</span></td>
-            </tr>
-            <tr>
-              <td><strong>Factura Electrónica UBL 2.1 con firma XAdES</strong></td>
-              <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Automática en segundo plano</span></td>
-              <td><span class="icono-alerta">Según plan contratado</span></td>
-              <td><span class="icono-alerta">Módulo extra de pago</span></td>
-              <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>No genera UBL ni firma XAdES</span></td>
-            </tr>
-            <tr>
-              <td><strong>Libro registro IVA e IRPF en Excel (.xlsx AEAT)</strong></td>
-              <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Exportación en 1 clic</span></td>
-              <td><span class="icono-alerta">CSV genérico</span></td>
-              <td><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Incluido</span></td>
-              <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>No exporta libros</span></td>
-            </tr>
-            <tr>
-              <td><strong>Facturas PDF con QR reglamentario</strong></td>
-              <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Con leyenda oficial</span></td>
-              <td><span class="icono-alerta">Marcas de agua en versión gratis</span></td>
-              <td><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Incluido</span></td>
-              <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>Formato rígido no editable</span></td>
-            </tr>
-
-            <tr class="categoria-fila">
-              <td colspan="5">Operativa y Automatización</td>
-            </tr>
-            <tr>
-              <td><strong>Facturas recurrentes por lotes</strong></td>
-              <td class="col-destacada">
-                <span class="icono-si"><i class="m-si" aria-hidden="true"></i>Incluidas e ilimitadas</span>
-                <br><small>(plantillas periódicas sin duplicados)</small>
-              </td>
-              <td><span class="icono-alerta">Solo en planes avanzados</span> <br><small>(requiere cuotas mensuales altas)</small></td>
-              <td><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Incluidas</span> <br><small>(en versiones completas)</small></td>
-              <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>No disponible</span> <br><small>(manual factura a factura)</small></td>
-            </tr>
-            <tr>
-              <td><strong>Remesas de adeudos SEPA XML</strong></td>
-              <td class="col-destacada">
-                <span class="icono-si"><i class="m-si" aria-hidden="true"></i>pain.008.001.02 incluido</span>
-                <br><small>(con mandatos y justificante en PDF)</small>
-              </td>
-              <td><span class="icono-no">Planes premium de pago</span> <br><small>(o pasarelas externas con comisión)</small></td>
-              <td><span class="icono-alerta">Módulo extra o soporte</span> <br><small>(requiere cuota anual activa)</small></td>
-              <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>No disponible</span> <br><small>(sin gestión bancaria)</small></td>
-            </tr>
-
-            <tr class="categoria-fila">
-              <td colspan="5">Privacidad, Control y Rendimiento</td>
-            </tr>
-            <tr>
-              <td><strong>Ubicación de tus datos</strong></td>
-              <td class="col-destacada"><span class="icono-si">100% en tu PC (SQLite local)</span></td>
-              <td><span class="icono-no">Servidores en la nube de terceros</span></td>
-              <td>En tu PC o servidor local</td>
-              <td>Solo registros en la AEAT</td>
-            </tr>
-            <tr>
-              <td><strong>Funciona sin conexión a internet</strong></td>
-              <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Sí (reintenta al volver la red)</span></td>
-              <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>No (requiere internet permanente)</span></td>
-              <td><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Sí</span></td>
-              <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>No</span></td>
-            </tr>
-            <tr>
-              <td><strong>Multiempresa y multiautónomo</strong></td>
-              <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Ilimitadas sin recargo</span></td>
-              <td><span class="icono-no">Pago extra por cada NIF</span></td>
-              <td><span class="icono-alerta">Según versión adquirida</span></td>
-              <td>Cambio manual de certificado</td>
-            </tr>
-            <tr>
-              <td><strong>Auditoría del código fuente</strong></td>
-              <td class="col-destacada">
-                <span class="icono-si"><i class="m-si" aria-hidden="true"></i>100% visible y auditable</span>
-                <br><small>(inspeccionable ante la AEAT; sin dobles cajas)</small>
-              </td>
-              <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>Código cerrado y opaco</span> <br><small>(caja negra en servidores ajenos)</small></td>
-              <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>Binario cerrado</span> <br><small>(sin posibilidad de auditar)</small></td>
-              <td><i class="m-si" aria-hidden="true"></i>Web pública oficial <br><small>(propiedad de la AEAT)</small></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <details class="detalles-matriz">
-        <summary>
-          <span class="btn-desplegar-matriz">
-            <span>Ver auditoría técnica y detalles de ingeniería</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </span>
-        </summary>
-        <div class="contenedor-tabla-matriz">
-          <table class="tabla-matriz">
-            <tbody>
-              <tr class="categoria-fila">
-                <td colspan="5">Arquitectura y Blindaje Antifraude</td>
-              </tr>
-              <tr>
-                <td style="width:25%;"><strong>Inmutabilidad por triggers de base de datos</strong></td>
-                <td class="col-destacada" style="width:25%;"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Triggers SQLite inalterables</span></td>
-                <td style="width:17%;"><span class="icono-alerta">Opaco en la nube</span></td>
-                <td style="width:17%;"><span class="icono-alerta">Bases de datos tradicionales</span></td>
-                <td style="width:16%;">No aplica</td>
-              </tr>
-              <tr>
-                <td><strong>Sincronización horaria con el Observatorio de la Armada (ROA)</strong></td>
-                <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>NTP oficial según Orden HAC/1177/2024</span></td>
-                <td>Servidor del proveedor</td>
-                <td>Reloj local de Windows</td>
-                <td>Servidor AEAT</td>
-              </tr>
-              <tr>
-                <td><strong>Editor de borradores con autoguardado en tiempo real</strong></td>
-                <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Autoguardado continuo</span></td>
-                <td><i class="m-si" aria-hidden="true"></i>Dependiente de red</td>
-                <td>Guardado manual</td>
-                <td><i class="m-no" aria-hidden="true"></i>Sin borradores</td>
-              </tr>
-              <tr>
-                <td><strong>Rendimiento de interfaz</strong></td>
-                <td class="col-destacada"><span class="icono-si">Nativa 60 fps (.NET 10 / WPF)</span></td>
-                <td>Lenta por red y navegador</td>
-                <td>Aceptable</td>
-                <td>Lenta (web estática)</td>
-              </tr>
-              <tr>
-                <td><strong>Copia de seguridad y migración</strong></td>
-                <td class="col-destacada"><span class="icono-si">Copiar carpeta Empresas y listo</span></td>
-                <td><span class="icono-no">Exportaciones parciales</span></td>
-                <td>Asistente de respaldo</td>
-                <td>No guarda facturas</td>
-              </tr>
-            </tbody>
-          </table>
+      <figure class="coste" aria-labelledby="coste-titulo">
+        <figcaption class="coste-titulo" id="coste-titulo">Coste acumulado a 3 años</figcaption>
+        <div class="coste-grafico">
+          <div class="coste-fila es-verifree">
+            <span class="coste-nombre">VeriFree Facturación</span>
+            <span class="coste-pista" aria-hidden="true"><span class="coste-barra" style="--desde: 0; --hasta: 89"></span></span>
+            <span class="coste-valor">0 € o 89 €</span>
+          </div>
+          <div class="coste-fila">
+            <span class="coste-nombre">Plataformas Cloud</span>
+            <span class="coste-pista" aria-hidden="true"><span class="coste-barra" style="--desde: 540; --hasta: 1440"></span></span>
+            <span class="coste-valor">540 € a 1.440 €</span>
+          </div>
+          <div class="coste-fila">
+            <span class="coste-nombre">Software Clásico</span>
+            <span class="coste-pista" aria-hidden="true"><span class="coste-barra" style="--desde: 720; --hasta: 1740"></span></span>
+            <span class="coste-valor">720 € a 1.740 €</span>
+          </div>
+          <div class="coste-fila">
+            <span class="coste-nombre">Web Oficial AEAT</span>
+            <span class="coste-pista" aria-hidden="true"><span class="coste-barra" style="--desde: 0; --hasta: 0"></span></span>
+            <span class="coste-valor">0 €</span>
+          </div>
+          <div class="coste-eje" aria-hidden="true">
+            <span class="coste-ticks"><span style="--en: 0">0 €</span><span style="--en: 500">500 €</span><span style="--en: 1000">1.000 €</span><span style="--en: 1500">1.500 €</span></span>
+          </div>
         </div>
-      </details>
+      </figure>
+
+      <div class="detalle-comparativa">
+        <details>
+          <summary class="desplegar">
+            Ver comparativa completa
+            <svg class="chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="contenedor-tabla">
+            <table class="tabla">
+              <thead>
+                <tr>
+                  <th scope="col" style="width:25%;">Prestaciones y Costes</th>
+                  <th scope="col" class="col-destacada" style="width:25%;">
+                    VeriFree Facturación
+                    <span class="badge-tabla">ÚNICO 100% LIBRE</span>
+                  </th>
+                  <th scope="col" style="width:17%;">
+                    Plataformas Cloud
+                    <span class="badge-tabla">SaaS / Alquiler</span>
+                  </th>
+                  <th scope="col" style="width:17%;">
+                    Software Clásico
+                    <span class="badge-tabla">Escritorio tradicional</span>
+                  </th>
+                  <th scope="col" style="width:16%;">
+                    Web Oficial AEAT
+                    <span class="badge-tabla">Básico público</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="categoria-fila">
+                  <td colspan="5">Costes y Licenciamiento</td>
+                </tr>
+                <tr>
+                  <td><strong>Precio de adquisición</strong></td>
+                  <td class="col-destacada">
+                    <span class="icono-si">0 €</span> (código libre) o <span class="icono-si">89 €</span> (pago único)
+                  </td>
+                  <td>15 € a 40 € / mes <br><small>(lo habitual; los planes gratis suelen ser muy recortados)</small></td>
+                  <td>240 € a 580 € / año <br><small>(mantenimiento habitual para tener Veri*Factu)</small></td>
+                  <td>0 € <br><small>(gratuito)</small></td>
+                </tr>
+                <tr>
+                  <td><strong>Coste acumulado a 3 años</strong></td>
+                  <td class="col-destacada">
+                    <span class="icono-si"><strong>0 € o 89 €</strong></span>
+                  </td>
+                  <td><span class="icono-no">540 € a 1.440 €</span></td>
+                  <td><span class="icono-no">720 € a 1.740 €</span></td>
+                  <td>0 €</td>
+                </tr>
+                <tr>
+                  <td><strong>Límite de facturas gratis</strong></td>
+                  <td class="col-destacada"><span class="icono-si">ILIMITADAS</span></td>
+                  <td><span class="icono-no">Unas pocas al mes</span></td>
+                  <td><span class="icono-no">Sin soporte ni Veri*Factu</span></td>
+                  <td>Ilimitadas (manual)</td>
+                </tr>
+                <tr>
+                  <td><strong>Cuotas obligatorias para emitir</strong></td>
+                  <td class="col-destacada"><span class="icono-si">Ninguna (0 € / mes)</span></td>
+                  <td><span class="icono-no">Mensuales obligatorias</span></td>
+                  <td><span class="icono-no">Anuales obligatorias</span></td>
+                  <td>Ninguna</td>
+                </tr>
+                <tr>
+                  <td><strong>Actualizaciones normativas ante cambios legales</strong></td>
+                  <td class="col-destacada">
+                    <span class="icono-si"><i class="m-si" aria-hidden="true"></i>Opcionales y sin cuotas forzosas</span>
+                    <br><small>(sin alquiler forzoso; Plan Tranquilidad opcional)</small>
+                  </td>
+                  <td><span class="icono-alerta">Alquiler mensual forzoso</span> <br><small>(180 € a 480 €/año; si dejas de pagar, pierdes el acceso)</small></td>
+                  <td><span class="icono-no">Mantenimiento anual obligatorio</span> <br><small>(240 € a 580 €/año para tener versiones legales)</small></td>
+                  <td><span class="icono-si"><i class="m-si" aria-hidden="true"></i>En su propia web</span> <br><small>(mantiene su formulario básico)</small></td>
+                </tr>
+
+                <tr class="categoria-fila">
+                  <td colspan="5">Cumplimiento Legal y Formatos</td>
+                </tr>
+                <tr>
+                  <td><strong>VERI*FACTU automático mTLS (AEAT)</strong></td>
+                  <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Incluido e ilimitado</span></td>
+                  <td><span class="icono-alerta">Solo en planes de pago</span></td>
+                  <td><span class="icono-no">Solo con contrato anual</span></td>
+                  <td><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Manual en su web</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Factura Electrónica UBL 2.1 con firma XAdES</strong></td>
+                  <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Automática en segundo plano</span></td>
+                  <td><span class="icono-alerta">Según plan contratado</span></td>
+                  <td><span class="icono-alerta">Módulo extra de pago</span></td>
+                  <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>No genera UBL ni firma XAdES</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Libro registro IVA e IRPF en Excel (.xlsx AEAT)</strong></td>
+                  <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Exportación en 1 clic</span></td>
+                  <td><span class="icono-alerta">CSV genérico</span></td>
+                  <td><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Incluido</span></td>
+                  <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>No exporta libros</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Facturas PDF con QR reglamentario</strong></td>
+                  <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Con leyenda oficial</span></td>
+                  <td><span class="icono-alerta">Marcas de agua en versión gratis</span></td>
+                  <td><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Incluido</span></td>
+                  <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>Formato rígido no editable</span></td>
+                </tr>
+
+                <tr class="categoria-fila">
+                  <td colspan="5">Operativa y Automatización</td>
+                </tr>
+                <tr>
+                  <td><strong>Facturas recurrentes por lotes</strong></td>
+                  <td class="col-destacada">
+                    <span class="icono-si"><i class="m-si" aria-hidden="true"></i>Incluidas e ilimitadas</span>
+                    <br><small>(plantillas periódicas sin duplicados)</small>
+                  </td>
+                  <td><span class="icono-alerta">Solo en planes avanzados</span> <br><small>(requiere cuotas mensuales altas)</small></td>
+                  <td><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Incluidas</span> <br><small>(en versiones completas)</small></td>
+                  <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>No disponible</span> <br><small>(manual factura a factura)</small></td>
+                </tr>
+                <tr>
+                  <td><strong>Remesas de adeudos SEPA XML</strong></td>
+                  <td class="col-destacada">
+                    <span class="icono-si"><i class="m-si" aria-hidden="true"></i>pain.008.001.02 incluido</span>
+                    <br><small>(con mandatos y justificante en PDF)</small>
+                  </td>
+                  <td><span class="icono-no">Planes premium de pago</span> <br><small>(o pasarelas externas con comisión)</small></td>
+                  <td><span class="icono-alerta">Módulo extra o soporte</span> <br><small>(requiere cuota anual activa)</small></td>
+                  <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>No disponible</span> <br><small>(sin gestión bancaria)</small></td>
+                </tr>
+
+                <tr class="categoria-fila">
+                  <td colspan="5">Privacidad, Control y Rendimiento</td>
+                </tr>
+                <tr>
+                  <td><strong>Ubicación de tus datos</strong></td>
+                  <td class="col-destacada"><span class="icono-si">100% en tu PC (SQLite local)</span></td>
+                  <td><span class="icono-no">Servidores en la nube de terceros</span></td>
+                  <td>En tu PC o servidor local</td>
+                  <td>Solo registros en la AEAT</td>
+                </tr>
+                <tr>
+                  <td><strong>Funciona sin conexión a internet</strong></td>
+                  <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Sí (reintenta al volver la red)</span></td>
+                  <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>No (requiere internet permanente)</span></td>
+                  <td><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Sí</span></td>
+                  <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>No</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Multiempresa y multiautónomo</strong></td>
+                  <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Ilimitadas sin recargo</span></td>
+                  <td><span class="icono-no">Pago extra por cada NIF</span></td>
+                  <td><span class="icono-alerta">Según versión adquirida</span></td>
+                  <td>Cambio manual de certificado</td>
+                </tr>
+                <tr>
+                  <td><strong>Auditoría del código fuente</strong></td>
+                  <td class="col-destacada">
+                    <span class="icono-si"><i class="m-si" aria-hidden="true"></i>100% visible y auditable</span>
+                    <br><small>(inspeccionable ante la AEAT; sin dobles cajas)</small>
+                  </td>
+                  <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>Código cerrado y opaco</span> <br><small>(caja negra en servidores ajenos)</small></td>
+                  <td><span class="icono-no"><i class="m-no" aria-hidden="true"></i>Binario cerrado</span> <br><small>(sin posibilidad de auditar)</small></td>
+                  <td><i class="m-si" aria-hidden="true"></i>Web pública oficial <br><small>(propiedad de la AEAT)</small></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+
+        <details>
+          <summary class="desplegar">
+            Ver auditoría técnica y detalles de ingeniería
+            <svg class="chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="contenedor-tabla">
+            <table class="tabla">
+              <tbody>
+                <tr class="categoria-fila">
+                  <td colspan="5">Arquitectura y Blindaje Antifraude</td>
+                </tr>
+                <tr>
+                  <td style="width:25%;"><strong>Inmutabilidad por triggers de base de datos</strong></td>
+                  <td class="col-destacada" style="width:25%;"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Triggers SQLite inalterables</span></td>
+                  <td style="width:17%;"><span class="icono-alerta">Opaco en la nube</span></td>
+                  <td style="width:17%;"><span class="icono-alerta">Bases de datos tradicionales</span></td>
+                  <td style="width:16%;">No aplica</td>
+                </tr>
+                <tr>
+                  <td><strong>Sincronización horaria con el Observatorio de la Armada (ROA)</strong></td>
+                  <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>NTP oficial según Orden HAC/1177/2024</span></td>
+                  <td>Servidor del proveedor</td>
+                  <td>Reloj local de Windows</td>
+                  <td>Servidor AEAT</td>
+                </tr>
+                <tr>
+                  <td><strong>Editor de borradores con autoguardado en tiempo real</strong></td>
+                  <td class="col-destacada"><span class="icono-si"><i class="m-si" aria-hidden="true"></i>Autoguardado continuo</span></td>
+                  <td><i class="m-si" aria-hidden="true"></i>Dependiente de red</td>
+                  <td>Guardado manual</td>
+                  <td><i class="m-no" aria-hidden="true"></i>Sin borradores</td>
+                </tr>
+                <tr>
+                  <td><strong>Rendimiento de interfaz</strong></td>
+                  <td class="col-destacada"><span class="icono-si">Nativa 60 fps (.NET 10 / WPF)</span></td>
+                  <td>Lenta por red y navegador</td>
+                  <td>Aceptable</td>
+                  <td>Lenta (web estática)</td>
+                </tr>
+                <tr>
+                  <td><strong>Copia de seguridad y migración</strong></td>
+                  <td class="col-destacada"><span class="icono-si">Copiar carpeta Empresas y listo</span></td>
+                  <td><span class="icono-no">Exportaciones parciales</span></td>
+                  <td>Asistente de respaldo</td>
+                  <td>No guarda facturas</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </div>
     </div>
   </section>
 
-  <!-- Funciones: una por renglón -->
-  <section class="seccion-funciones" id="funciones">
+  <!-- Funciones -->
+  <section class="seccion" id="funciones">
     <div class="marco">
-      <div class="cabecera-seccion">
-        <span class="rubrica">Ingeniería sólida</span>
+      <header class="seccion-cabecera">
         <h2>Todo lo que exige la ley, sin complicaciones</h2>
         <p>Cumple con VERI*FACTU y con la factura electrónica obligatoria (Ley Crea y Crece) tanto si eres autónomo como pyme, sin complicaciones técnicas.</p>
-      </div>
+      </header>
 
-      <div class="libro-funciones">
-        <article class="funcion funcion-principal">
-          <h3>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Remisión Automática VERI*FACTU a la AEAT
-          </h3>
-          <p>
-            Cada factura, rectificativa o anulación se envía sola a Hacienda con tu certificado digital, encadenada a la anterior para que nadie pueda alterarla después. Si no hay conexión o la AEAT va lenta, lo vuelve a intentar sin que hagas nada y te avisa de lo que falta por enviar.
-          </p>
+      <div class="funciones">
+        <article class="funcion funcion-destacada">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          <h3>Remisión Automática VERI*FACTU a la AEAT</h3>
+          <p>Cada factura, rectificativa o anulación se envía sola a Hacienda con tu certificado digital, encadenada a la anterior para que nadie pueda alterarla después. Si no hay conexión o la AEAT va lenta, lo vuelve a intentar sin que hagas nada y te avisa de lo que falta por enviar.</p>
+        </article>
+
+        <article class="funcion funcion-destacada">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 13h6M9 17h4"/></svg>
+          <h3>Factura Electrónica Estructurada</h3>
+          <p>Cada factura genera su versión electrónica en el estándar europeo oficial (UBL 2.1 con firma digital XAdES), válida para entregar a clientes autónomos, empresas o la administración pública según la Ley Crea y Crece, firmada en segundo plano con tu certificado mientras sigues trabajando.</p>
         </article>
 
         <article class="funcion">
-          <h3>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-            Factura Electrónica Estructurada
-          </h3>
-          <p>
-            Cada factura genera su versión electrónica en el estándar europeo oficial (UBL 2.1 con firma digital XAdES), válida para entregar a clientes autónomos, empresas o la administración pública según la Ley Crea y Crece, firmada en segundo plano con tu certificado mientras sigues trabajando.
-          </p>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+          <h3>Libro Registro Oficial en Excel</h3>
+          <p>Exporta en un clic el libro registro de facturas expedidas en el formato de la AEAT: un Excel con el IVA y el IRPF, listo para entregar a tu asesoría.</p>
         </article>
 
         <article class="funcion">
-          <h3>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-            Libro Registro Oficial en Excel
-          </h3>
-          <p>
-            Exporta en un clic el libro registro de facturas expedidas en el formato de la AEAT: un Excel con el IVA y el IRPF, listo para entregar a tu asesoría.
-          </p>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <h3>Borradores con Autoguardado</h3>
+          <p>Edita a pantalla completa. Los borradores se guardan solos mientras escribes y el programa te dice qué falta antes de emitir. Antes de emitir, revisa la vista previa del PDF.</p>
         </article>
 
         <article class="funcion">
-          <h3>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-            Borradores con Autoguardado
-          </h3>
-          <p>
-            Edita a pantalla completa. Los borradores se guardan solos mientras escribes y el programa te dice qué falta antes de emitir. Antes de emitir, revisa la vista previa del PDF.
-          </p>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+          <h3>Multiempresa Ilimitada</h3>
+          <p>Lleva la facturación de varias empresas o autónomos desde el mismo programa, cada una con sus datos, su numeración y su configuración por separado.</p>
         </article>
 
         <article class="funcion">
-          <h3>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-            Multiempresa Ilimitada
-          </h3>
-          <p>
-            Lleva la facturación de varias empresas o autónomos desde el mismo programa, cada una con sus datos, su numeración y su configuración por separado.
-          </p>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+          <h3>Facturas Recurrentes</h3>
+          <p>Guarda como plantilla las facturas que repites cada periodo, con su cliente, sus líneas y su forma de pago. Cuando toca, VeriFree prepara de una vez los borradores de todas para que los revises y los emitas, y recuerda qué periodos ya generó para que ninguna se duplique.</p>
         </article>
 
         <article class="funcion">
-          <h3>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
-            Facturas Recurrentes
-          </h3>
-          <p>
-            Guarda como plantilla las facturas que repites cada periodo, con su cliente, sus líneas y su forma de pago. Cuando toca, VeriFree prepara de una vez los borradores de todas para que los revises y los emitas, y recuerda qué periodos ya generó para que ninguna se duplique.
-          </p>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/><path d="M5 15h4"/></svg>
+          <h3>Remesas de Adeudos SEPA</h3>
+          <p>Elige las facturas domiciliadas y genera el fichero de adeudos directos SEPA para subirlo a tu banco, con un PDF justificante de cada remesa. Guarda los mandatos de tus clientes, con su referencia y su fecha de firma, y el historial de las remesas en las que ha ido cada factura.</p>
         </article>
 
         <article class="funcion">
-          <h3>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
-            Remesas de Adeudos SEPA
-          </h3>
-          <p>
-            Elige las facturas domiciliadas y genera el fichero de adeudos directos SEPA para subirlo a tu banco, con un PDF justificante de cada remesa. Guarda los mandatos de tus clientes, con su referencia y su fecha de firma, y el historial de las remesas en las que ha ido cada factura.
-          </p>
-        </article>
-
-        <article class="funcion">
-          <h3>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><polyline points="21 3 21 9 15 9"/></svg>
-            Actualizaciones sin Ataduras
-          </h3>
-          <p>
-            Evoluciona con la normativa de la AEAT y la Ley Crea y Crece sin cuotas mensuales forzosas: mantén tu ejecutable oficial siempre al día con el Plan Tranquilidad opcional o accede al código fuente en GitHub como base técnica transparente y auditable.
-          </p>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><polyline points="21 3 21 9 15 9"/></svg>
+          <h3>Actualizaciones sin Ataduras</h3>
+          <p>Evoluciona con la normativa de la AEAT y la Ley Crea y Crece sin cuotas mensuales forzosas: mantén tu ejecutable oficial siempre al día con el Plan Tranquilidad opcional o accede al código fuente en GitHub como base técnica transparente y auditable.</p>
         </article>
       </div>
 
-      <details class="detalles-matriz">
-        <summary>
-          <span class="btn-desplegar-matriz">
-            <span>Ver detalles técnicos</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </span>
+      <details class="ficha-tecnica">
+        <summary class="desplegar">
+          Ver detalles técnicos
+          <svg class="chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <ul class="lista-tecnica">
-          <li><strong>VERI*FACTU:</strong> registro de facturación encadenado con huella SHA-256 y enviado por el servicio web de la AEAT (SOAP con certificado, mTLS), con su control de flujo y reintentos.</li>
-          <li><strong>Factura electrónica:</strong> UBL 2.1 según el anexo I de la Orden HAC/1028/2026, firmada con XAdES y validada contra los esquemas de OASIS.</li>
-          <li><strong>Remesas:</strong> adeudos directos SEPA en formato pain.008.001.02.</li>
-          <li><strong>Actualizaciones:</strong> arquitectura modular para incorporar los futuros servicios telemáticos de factura electrónica de la AEAT sin comprometer el histórico local ni obligar a suscripciones forzosas.</li>
-          <li><strong>Datos:</strong> una base de datos SQLite local por empresa.</li>
-          <li><strong>Programa:</strong> aplicación nativa de Windows en .NET 10 y WPF.</li>
-        </ul>
+        <dl class="ficha">
+          <dt>VERI*FACTU</dt>
+          <dd>registro de facturación encadenado con huella SHA-256 y enviado por el servicio web de la AEAT (SOAP con certificado, mTLS), con su control de flujo y reintentos.</dd>
+          <dt>Factura electrónica</dt>
+          <dd>UBL 2.1 según el anexo I de la Orden HAC/1028/2026, firmada con XAdES y validada contra los esquemas de OASIS.</dd>
+          <dt>Remesas</dt>
+          <dd>adeudos directos SEPA en formato pain.008.001.02.</dd>
+          <dt>Actualizaciones</dt>
+          <dd>arquitectura modular para incorporar los futuros servicios telemáticos de factura electrónica de la AEAT sin comprometer el histórico local ni obligar a suscripciones forzosas.</dd>
+          <dt>Datos</dt>
+          <dd>una base de datos SQLite local por empresa.</dd>
+          <dt>Programa</dt>
+          <dd>aplicación nativa de Windows en .NET 10 y WPF.</dd>
+        </dl>
       </details>
     </div>
   </section>
 
-  <!-- Capturas en pestañas de archivador -->
-  <section class="seccion-showcase" id="capturas">
+  <!-- Capturas -->
+  <section class="seccion seccion-gris" id="capturas">
     <div class="marco">
-      <div class="cabecera-seccion">
-        <span class="rubrica">Interfaz limpia y accesible</span>
+      <header class="seccion-cabecera">
         <h2>Diseñado para trabajar rápido en Windows</h2>
         <p>Un programa de Windows de verdad: rápido, sin esperas de carga ni distracciones.</p>
-      </div>
+      </header>
 
-      <div class="showcase-tabs" role="tablist" aria-label="Capturas del programa">
+      <div class="selector" role="tablist" aria-label="Capturas del programa">
         <button type="button" class="tab-btn activo" role="tab" aria-selected="true" aria-controls="tab-facturas" onclick="cambiarTab('tab-facturas', this)">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           Facturas y Estados AEAT
         </button>
         <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-pdf" onclick="cambiarTab('tab-pdf', this)">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           Factura PDF con Código QR
         </button>
         <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-ubl" onclick="cambiarTab('tab-ubl', this)">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           Factura Electrónica
         </button>
       </div>
 
-      <!-- Pestaña 1: Facturas y estados AEAT -->
       <div id="tab-facturas" class="tab-contenido activo" role="tabpanel">
-        <div class="marco-ventana">
-          <div class="captura-contenido">
-            <img src="capturas/facturas.png" alt="Pantalla principal de Facturas de VeriFree: totales del trimestre, filtros y avisos de remisión a la AEAT" width="1920" height="1140" loading="lazy">
-          </div>
-        </div>
-        <p class="tab-pie">
+        <figure class="captura-marco">
+          <img src="capturas/facturas.png" alt="Pantalla principal de Facturas de VeriFree: totales del trimestre, filtros y avisos de remisión a la AEAT" width="1920" height="1140" loading="lazy">
+        </figure>
+        <p class="captura-pie">
           Listado correlativo inmutable, totales del trimestre en tiempo real, desglose de bases y estado directo de cada registro en la AEAT con CSV oficial.
         </p>
       </div>
 
-      <!-- Pestaña 2: Factura PDF con QR -->
       <div id="tab-pdf" class="tab-contenido" role="tabpanel">
-        <div class="showcase-detalles">
-          <div class="captura-pdf-wrapper">
+        <div class="captura-detalle">
+          <figure class="captura-marco">
             <img src="capturas/factura-pdf.png" alt="Factura en PDF con código QR y leyenda oficial VERI*FACTU" width="992" height="780" loading="lazy">
-          </div>
+          </figure>
           <div>
             <h3>Facturas PDF con validez legal inmediata</h3>
             <p>
@@ -485,20 +479,19 @@
             <p>
               Incluye desglose por tipos de IVA, retención de IRPF configurable por línea, formas de pago (transferencia, Bizum, domiciliación) y leyendas personalizadas.
             </p>
-            <div class="garantias">
-              <span class="garantia-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Código QR oficial de cotejo</span>
-              <span class="garantia-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Sin marcas de agua</span>
-            </div>
+            <ul class="lista-check">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Código QR oficial de cotejo</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Sin marcas de agua</li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <!-- Pestaña 3: Factura electrónica UBL 2.1 -->
       <div id="tab-ubl" class="tab-contenido" role="tabpanel">
-        <div class="showcase-detalles">
-          <div class="captura-pdf-wrapper">
+        <div class="captura-detalle">
+          <figure class="captura-marco">
             <img src="capturas/ubl-electronica.jpg" alt="Factura electrónica UBL 2.1 con firma digital XAdES según Orden HAC/1028/2026" width="1280" height="714" loading="lazy">
-          </div>
+          </figure>
           <div>
             <h3>Formato estándar europeo UBL 2.1 con firma XAdES</h3>
             <p>
@@ -507,166 +500,101 @@
             <p>
               Las facturas electrónicas firmadas se archivan de manera organizada por empresa, ejercicio y mes, listas para su entrega a clientes autónomos, empresas o a la administración pública.
             </p>
-            <div class="garantias">
-              <span class="garantia-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Validado contra esquemas OASIS</span>
-              <span class="garantia-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Firma XAdES Enveloped</span>
-            </div>
+            <ul class="lista-check">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Validado contra esquemas OASIS</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Firma XAdES Enveloped</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Precios y modalidades -->
-  <section class="seccion-precios" id="precios">
+  <!-- Precios -->
+  <section class="seccion" id="precios">
     <div class="marco">
-      <div class="cabecera-seccion">
-        <span class="rubrica">Doble alternativa frente al alquiler SaaS</span>
+      <header class="seccion-cabecera">
         <h2>Tú eliges cómo tener VeriFree: Gratis o Pago Único</h2>
-        <p>Casi todo el mercado te obliga a pagar entre 180 € y 580 € cada año en cuotas que nunca terminan. En VeriFree tú decides: puedes compilarlo <strong>100 % gratis desde GitHub</strong>, o adquirir la <strong>Licencia Oficial con un único pago de 89 € para siempre</strong> sin mensualidades obligatorias.</p>
+        <p>Casi todo el mercado te obliga a pagar entre 180 € y 580 € cada año en cuotas que nunca terminan. En VeriFree tú decides: puedes compilarlo <strong>100 % gratis desde GitHub</strong>, o adquirir la <strong>Licencia Oficial con un único pago de 89 € para siempre</strong> sin mensualidades obligatorias.</p>
 
-        <!-- Selector de facturación mensual / anual -->
-        <div class="selector-facturacion">
-          <span class="selector-etiqueta">Modalidad del Mantenimiento Opcional:</span>
-          <div class="switch-toggle" role="group" aria-label="Seleccionar periodo de pago de mantenimiento">
+        <div class="modalidad">
+          <span class="modalidad-etiqueta">Modalidad del Mantenimiento Opcional:</span>
+          <div class="selector" role="group" aria-label="Seleccionar periodo de pago de mantenimiento">
             <button type="button" class="switch-opcion activo" id="btn-mensual" aria-pressed="true" onclick="cambiarFacturacion('mensual')">Mensual</button>
-            <button type="button" class="switch-opcion" id="btn-anual" aria-pressed="false" onclick="cambiarFacturacion('anual')">
-              Anual <span class="badge-ahorro">-17% ahorro</span>
-            </button>
+            <button type="button" class="switch-opcion" id="btn-anual" aria-pressed="false" onclick="cambiarFacturacion('anual')">Anual <span class="ahorro">-17% ahorro</span></button>
           </div>
         </div>
-      </div>
+      </header>
 
-      <!-- Talón de prueba gratuita -->
-      <div class="caja-evaluacion-precios talon-prueba">
-        <div class="talon-texto">
-          <p class="talon-sello">
-            <span class="pildora">Descarga Inmediata</span>
-            <span class="talon-gratis">100% Gratuito para probar</span>
-          </p>
+      <div class="prueba">
+        <div>
           <h3>Prueba VeriFree en tu ordenador antes de comprar</h3>
-          <p>
-            Descarga directa del ejecutable oficial preconfigurado en <strong>Modo Pruebas</strong>. Crea tu empresa, comprueba la rapidez nativa de la interfaz, emite facturas simuladas con hash encadenado SHA-256, obtén el PDF con su código QR y exporta el libro Excel oficial. Por imperativo legal, esta versión tiene bloqueada la remisión definitiva a Producción.
-          </p>
+          <p>Descarga directa del ejecutable oficial preconfigurado en <strong>Modo Pruebas</strong>. Crea tu empresa, comprueba la rapidez nativa de la interfaz, emite facturas simuladas con hash encadenado SHA-256, obtén el PDF con su código QR y exporta el libro Excel oficial. Por imperativo legal, esta versión tiene bloqueada la remisión definitiva a Producción.</p>
         </div>
-        <div class="talon-matriz">
-          <a class="btn btn-primario" href="descargas/VeriFree.exe" download>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span>Descargar VeriFree (Modo Pruebas)</span>
-          </a>
-        </div>
+        <a class="btn btn-primario" href="descargas/VeriFree.exe" download>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Descargar VeriFree (Modo Pruebas)</span>
+        </a>
       </div>
 
-      <div class="cuadricula-precios">
-        <!-- 1. Compilación gratuita / código libre -->
-        <article class="tarjeta-precio">
-          <div class="precio-cabecera">
+      <div class="planes">
+        <article class="plan">
+          <div class="plan-lema"></div>
+          <div class="plan-cabecera">
             <h3>Compilación Comunitaria</h3>
-            <p class="precio-descripcion">Para desarrolladores y perfiles técnicos que desean auditar el código o compilar con su propio NIF.</p>
+            <p>Para desarrolladores y perfiles técnicos que desean auditar el código o compilar con su propio NIF.</p>
           </div>
-          <div class="precio-cifra">
-            0 €
-            <span class="precio-periodo">gratis para siempre</span>
-          </div>
-          <div class="precio-iva">Sin límite de facturas · Código abierto en GitHub · Sin soporte</div>
-          <div class="precio-divisor"></div>
-          <ul class="precio-beneficios">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>El <strong>código fuente íntegro</strong> en GitHub, para auditarlo o compilarlo tú con el SDK de .NET 10.</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Tú eres el productor del software:</strong> compilas con tu NIF y emites tu propia declaración responsable ante la AEAT.</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Código publicado «as-is»:</strong> libre para auditar, estudiar o adaptar por tu cuenta, sin compromiso de paridad temporal ni calendario de actualizaciones.</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Licencia de uso interno:</strong> autoriza el uso propio en tu actividad o despacho; prohibida terminantemente la reventa, distribución a terceros, marca blanca o cobro de servicios de soporte.</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Acceso completo al manual de usuario online.</span>
-            </li>
+          <div class="plan-cifra">0 € <span class="plan-periodo">gratis para siempre</span></div>
+          <div class="plan-iva">Sin límite de facturas · Código abierto en GitHub · Sin soporte</div>
+          <ul class="plan-beneficios">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>El <strong>código fuente íntegro</strong> en GitHub, para auditarlo o compilarlo tú con el SDK de .NET 10.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Tú eres el productor del software:</strong> compilas con tu NIF y emites tu propia declaración responsable ante la AEAT.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Código publicado «as-is»:</strong> libre para auditar, estudiar o adaptar por tu cuenta, sin compromiso de paridad temporal ni calendario de actualizaciones.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Licencia de uso interno:</strong> autoriza el uso propio en tu actividad o despacho; prohibida terminantemente la reventa, distribución a terceros, marca blanca o cobro de servicios de soporte.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Acceso completo al manual de usuario online.</span></li>
           </ul>
           <a class="btn btn-secundario" href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">
             <span>Ver código en GitHub</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
           </a>
         </article>
 
-        <!-- 2. Licencia Oficial (destacada) -->
-        <article class="tarjeta-precio tarjeta-destacada">
-          <div class="badge-popular">PAGO ÚNICO PERPETUO · SIN CUOTAS MENSUALES</div>
-          <div class="precio-cabecera">
+        <article class="plan plan-destacado">
+          <div class="plan-lema">Pago único perpetuo · Sin cuotas mensuales</div>
+          <div class="plan-cabecera">
             <h3>Licencia Oficial</h3>
-            <p class="precio-descripcion">Para autónomos y empresas que quieren pagar una sola vez, descargar y facturar para siempre sin tocar código.</p>
+            <p>Para autónomos y empresas que quieren pagar una sola vez, descargar y facturar para siempre sin tocar código.</p>
           </div>
-          <div class="precio-cifra">
-            89 €
-            <span class="precio-periodo">+ IVA (un solo pago)</span>
-          </div>
-          <div class="precio-iva">107,69 € con IVA incluido · Sin cuotas de alquiler · El programa es tuyo</div>
-          <div class="precio-divisor"></div>
-          <ul class="precio-beneficios">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Pagas una vez y es tuyo para siempre:</strong> sin cuotas, sin caducidad y sin límite de facturas ni de empresas.</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Ejecutable oficial firmado</strong> para Windows, listo para descargar y empezar a facturar de inmediato.</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Telytec Ingenieros, S.L. es el productor oficial</strong> ante la AEAT, con NIF validado en su censo.</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Declaración responsable oficial</strong> incluida: te protege frente a las sanciones de 50.000 € (art. 201 bis LGT).</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Facturas recurrentes y remesas SEPA XML</strong> incluidas sin coste extra ni módulos adicionales.</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Producto terminado para la ley actual:</strong> tu programa no caduca ni exige suscripción. Soporte y actualizaciones normativas disponibles en el Plan Tranquilidad.</span>
-            </li>
+          <div class="plan-cifra">89 € <span class="plan-periodo">+ IVA (un solo pago)</span></div>
+          <div class="plan-iva">107,69 € con IVA incluido · Sin cuotas de alquiler · El programa es tuyo</div>
+          <ul class="plan-beneficios">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Pagas una vez y es tuyo para siempre:</strong> sin cuotas, sin caducidad y sin límite de facturas ni de empresas.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Ejecutable oficial firmado</strong> para Windows, listo para descargar y empezar a facturar de inmediato.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Telytec Ingenieros, S.L. es el productor oficial</strong> ante la AEAT, con NIF validado en su censo.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Declaración responsable oficial</strong> incluida: te protege frente a las sanciones de 50.000 € (art. 201 bis LGT).</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Facturas recurrentes y remesas SEPA XML</strong> incluidas sin coste extra ni módulos adicionales.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Producto terminado para la ley actual:</strong> tu programa no caduca ni exige suscripción. Soporte y actualizaciones normativas disponibles en el Plan Tranquilidad.</span></li>
           </ul>
           <a class="btn btn-primario" href="mailto:contacto@verifree.es?subject=Comprar%20Licencia%20Oficial%20VeriFree">
             <span>Comprar Licencia Oficial (Pago Único)</span>
           </a>
         </article>
 
-        <!-- 3. Mantenimiento y soporte continuo -->
-        <article class="tarjeta-precio">
-          <div class="precio-cabecera">
+        <article class="plan">
+          <div class="plan-lema"></div>
+          <div class="plan-cabecera">
             <h3>Plan Tranquilidad</h3>
-            <p class="precio-descripcion">Mantenimiento continuo con todas las actualizaciones normativas y soporte experto.</p>
+            <p>Mantenimiento continuo con todas las actualizaciones normativas y soporte experto.</p>
           </div>
-          <div class="precio-cifra">
+          <div class="plan-cifra">
             <span id="precio-mantenimiento-cifra">9,90 €</span>
-            <span class="precio-periodo" id="precio-mantenimiento-periodo">/ mes + IVA</span>
+            <span class="plan-periodo" id="precio-mantenimiento-periodo">/ mes + IVA</span>
           </div>
-          <div class="precio-iva" id="precio-mantenimiento-nota">Facturación mensual · Cancela cuando quieras</div>
-          <div class="precio-divisor"></div>
-          <ul class="precio-beneficios">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Todas las actualizaciones normativas y ejecutables oficiales incluidos:</strong> al día ante cualquier cambio del BOE o de la AEAT (2026–2028).</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Adaptación asegurada a los futuros servicios de la solución pública de factura electrónica (Ley Crea y Crece).</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Soporte prioritario</strong> por correo en menos de 24 h laborables, y por <strong>escritorio remoto</strong> con certificados o rechazos de la AEAT.</span>
-            </li>
+          <div class="plan-iva" id="precio-mantenimiento-nota">Facturación mensual · Cancela cuando quieras</div>
+          <ul class="plan-beneficios">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Todas las actualizaciones normativas y ejecutables oficiales incluidos:</strong> al día ante cualquier cambio del BOE o de la AEAT (2026–2028).</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Adaptación asegurada a los futuros servicios de la solución pública de factura electrónica (Ley Crea y Crece).</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Soporte prioritario</strong> por correo en menos de 24 h laborables, y por <strong>escritorio remoto</strong> con certificados o rechazos de la AEAT.</span></li>
           </ul>
           <a class="btn btn-secundario" href="mailto:contacto@verifree.es?subject=Contratar%20Plan%20Tranquilidad%20VeriFree">
             <span>Contratar Mantenimiento</span>
@@ -674,151 +602,94 @@
         </article>
       </div>
 
-      <div class="precios-notas">
-        <!-- Servicios profesionales sueltos -->
-        <div class="servicios-sueltos-box">
-          <div class="servicio-item">
-            <h4>Puesta en Marcha Llave en Mano</h4>
-            <div class="precio-servicio">45 € + IVA (pago único)</div>
-            <p>Instalación remota de VeriFree, configuración de tu certificado digital FNMT/DNIe, datos fiscales, series y primera factura de prueba guiada paso a paso.</p>
-          </div>
+      <div class="precios-extra">
+        <div>
+          <h4>Puesta en Marcha Llave en Mano</h4>
+          <p class="precio-servicio">45 € + IVA (pago único)</p>
+          <p>Instalación remota de VeriFree, configuración de tu certificado digital FNMT/DNIe, datos fiscales, series y primera factura de prueba guiada paso a paso.</p>
         </div>
-
-        <!-- Contacto comercial previo -->
-        <div class="contacto-comercial-box">
-          <div class="contacto-comercial">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <div>
-              <h4>¿Dudas antes de comprar la Licencia Oficial o la Puesta en Marcha?</h4>
-              <p>
-                Atención directa de lunes a viernes: llámanos al <a class="tel" href="tel:965134033">965 13 40 33</a> o escríbenos por WhatsApp al <a class="tel" href="tel:686600299">686 60 02 99</a>.
-              </p>
-            </div>
-          </div>
+        <div>
+          <h4>¿Dudas antes de comprar la Licencia Oficial o la Puesta en Marcha?</h4>
+          <p>Atención directa de lunes a viernes: llámanos al <a class="tel" href="tel:965134033">965 13 40 33</a> o escríbenos por WhatsApp al <a class="tel" href="tel:686600299">686 60 02 99</a>.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Garantía legal del productor y régimen sancionador -->
-  <section class="seccion-legal" id="productor">
-    <div class="marco">
-      <div class="legal-grid">
-        <div class="legal-texto">
-          <span class="rubrica">Marco legal y tributario</span>
-          <h2>¿Qué exige la Agencia Tributaria sobre el «Productor del Software»?</h2>
-          <p>
-            El Reglamento VERI*FACTU (RD 1007/2023, art. 13) establece una distinción fundamental: <strong>quien compila o desarrolla el software es legalmente su productor</strong>.
-          </p>
-          <p>
-            La ley exige que en cada factura enviada a la AEAT figuren obligatoriamente el NIF y el nombre del productor (bloque <code>SistemaInformatico</code>), y la AEAT <strong>comprueba en su censo que dicho NIF exista y sea válido</strong>. Además, el productor debe emitir por escrito una <strong>Declaración Responsable</strong> certificando que el software no permite dobles contabilidades ni alteración de registros.
-          </p>
-          <p>
-            <strong>El régimen sancionador de la Ley General Tributaria (art. 201 bis LGT):</strong>
-          </p>
-          <ul class="lista-sanciones">
-            <li><strong>Multa de 50.000 € por ejercicio</strong> para la empresa o autónomo que utilice sistemas de facturación que no cuenten con la debida declaración responsable del productor (art. 201 bis.2 y 4 LGT).</li>
-            <li><strong>Multa de 150.000 € por ejercicio</strong> con ventas y por cada tipo de sistema para quien fabrique o comercialice sistemas que no cumplan con las especificaciones o permitan alterar registros (art. 201 bis.1 y 4 LGT).</li>
-          </ul>
+  <!-- Garantía legal del productor -->
+  <section class="seccion seccion-gris" id="productor">
+    <div class="marco legal">
+      <div class="legal-texto">
+        <h2>¿Qué exige la Agencia Tributaria sobre el «Productor del Software»?</h2>
+        <p>
+          El Reglamento VERI*FACTU (RD 1007/2023, art. 13) establece una distinción fundamental: <strong>quien compila o desarrolla el software es legalmente su productor</strong>.
+        </p>
+        <p>
+          La ley exige que en cada factura enviada a la AEAT figuren obligatoriamente el NIF y el nombre del productor (bloque <code>SistemaInformatico</code>), y la AEAT <strong>comprueba en su censo que dicho NIF exista y sea válido</strong>. Además, el productor debe emitir por escrito una <strong>Declaración Responsable</strong> certificando que el software no permite dobles contabilidades ni alteración de registros.
+        </p>
 
-          <div class="nota-auditoria">
-            <div class="nota-auditoria-titulo">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              <strong>Auditoría abierta y escrutinio técnico continuo</strong>
-            </div>
-            <p>
-              Frente al software privativo cerrado —cuyo funcionamiento interno es una «caja negra» opaca—, el código fuente de VeriFree está a la vista de todos en GitHub. Cualquier asesor, perito o inspector puede comprobar que el programa <strong>carece de dobles cajas, no permite contabilidades B ni alteración de registros</strong> (RD 1007/2023). Además, estar expuesto al escrutinio público de la comunidad técnica garantiza un software mucho más depurado, seguro y libre de errores ocultos.
-            </p>
+        <h3>El régimen sancionador de la Ley General Tributaria (art. 201 bis LGT):</h3>
+        <ul class="sanciones">
+          <li><strong>Multa de 50.000 € por ejercicio</strong> para la empresa o autónomo que utilice sistemas de facturación que no cuenten con la debida declaración responsable del productor (art. 201 bis.2 y 4 LGT).</li>
+          <li><strong>Multa de 150.000 € por ejercicio</strong> con ventas y por cada tipo de sistema para quien fabrique o comercialice sistemas que no cumplan con las especificaciones o permitan alterar registros (art. 201 bis.1 y 4 LGT).</li>
+        </ul>
+
+        <div class="auditoria">
+          <h3>Auditoría abierta y escrutinio técnico continuo</h3>
+          <p>
+            Frente al software privativo cerrado —cuyo funcionamiento interno es una «caja negra» opaca—, el código fuente de VeriFree está a la vista de todos en GitHub. Cualquier asesor, perito o inspector puede comprobar que el programa <strong>carece de dobles cajas, no permite contabilidades B ni alteración de registros</strong> (RD 1007/2023). Además, estar expuesto al escrutinio público de la comunidad técnica garantiza un software mucho más depurado, seguro y libre de errores ocultos.
+          </p>
+        </div>
+      </div>
+
+      <div class="legal-lateral">
+        <figure class="legal-factura">
+          <img src="capturas/factura-pdf.png" alt="Factura en PDF con el QR tributario y la frase «Factura verificable en la sede electrónica de la AEAT»" width="992" height="780" loading="lazy">
+          <figcaption>Cada factura sale con su QR tributario y la frase «Factura verificable en la sede electrónica de la AEAT».</figcaption>
+        </figure>
+
+        <div class="panel">
+          <h4>Declaración Responsable Oficial</h4>
+          <p>Blindaje ante el régimen sancionador de la LGT (art. 201 bis).</p>
+          <div class="panel-separado">
+            <h4>¿Cómo te afecta según la opción que elijas?</h4>
+            <ul class="puntos">
+              <li><strong>Si compilas la versión libre (0 €):</strong> Eres totalmente libre de usarla gratis en tu empresa o despacho profesional, pero asumes la condición de productor ante Hacienda (configurando tu NIF y tu propia declaración responsable). La licencia autoriza exclusivamente el uso interno: no otorga derechos de venta, distribución a terceros, marca blanca ni prestación remunerada de soporte.</li>
+              <li><strong>Si compras la Licencia Oficial (89 € + IVA):</strong> Telytec Ingenieros, S.L. figura y se responsabiliza como productor oficial ante la AEAT con NIF verificado en el censo. Incluye la declaración responsable oficial que te blinda jurídicamente frente al art. 201 bis de la LGT sin que tengas que programar ni asumir riesgos técnicos.</li>
+            </ul>
           </div>
         </div>
 
-        <div class="legal-lateral">
-          <figure class="legal-factura">
-            <img src="capturas/factura-pdf.png" alt="Factura en PDF con el QR tributario y la frase «Factura verificable en la sede electrónica de la AEAT»" width="992" height="780" loading="lazy">
-            <figcaption>Cada factura sale con su QR tributario y la frase «Factura verificable en la sede electrónica de la AEAT».</figcaption>
-          </figure>
-
-          <div class="caja-responsabilidad">
-            <div class="responsabilidad-cabecera">
-              <svg class="sello" viewBox="-120 -120 240 240" role="img" aria-label="Sello Oficial de Garantía y Declaración Responsable VERI*FACTU">
-              <defs>
-                <path id="sello-anillo" d="M78.0 0.0 L80.0 1.4 L81.8 2.9 L83.1 4.4 L83.7 5.9 L83.6 7.3 L82.7 8.7 L81.2 10.0 L79.3 11.1 L77.0 12.2 L74.8 13.2 L72.8 14.1 L71.2 15.1 L70.2 16.2 L69.9 17.4 L70.3 18.8 L71.3 20.4 L72.6 22.2 L74.2 24.1 L75.7 26.1 L76.9 28.0 L77.7 29.8 L77.8 31.4 L77.2 32.8 L76.0 33.8 L74.2 34.6 L72.0 35.1 L69.5 35.4 L67.1 35.7 L64.8 35.9 L63.0 36.4 L61.8 37.1 L61.1 38.2 L61.1 39.7 L61.5 41.5 L62.2 43.6 L63.1 45.8 L63.9 48.2 L64.5 50.4 L64.7 52.4 L64.3 53.9 L63.3 55.0 L61.8 55.7 L59.9 55.8 L57.6 55.6 L55.2 55.2 L52.8 54.6 L50.6 54.2 L48.7 54.1 L47.3 54.4 L46.3 55.2 L45.8 56.6 L45.6 58.4 L45.7 60.7 L45.8 63.1 L45.9 65.6 L45.8 67.9 L45.3 69.8 L44.5 71.2 L43.2 71.9 L41.6 72.0 L39.7 71.6 L37.6 70.7 L35.4 69.5 L33.3 68.3 L31.3 67.2 L29.6 66.5 L28.2 66.4 L27.0 66.8 L26.1 68.0 L25.4 69.7 L24.7 71.8 L24.1 74.2 L23.4 76.6 L22.6 78.7 L21.5 80.4 L20.3 81.4 L18.9 81.8 L17.3 81.4 L15.6 80.4 L13.9 78.8 L12.2 77.0 L10.6 75.2 L9.0 73.6 L7.6 72.4 L6.3 71.8 L5.0 71.9 L3.8 72.7 L2.6 74.1 L1.3 75.9 L0.0 78.0 L-1.4 80.0 L-2.9 81.8 L-4.4 83.1 L-5.9 83.7 L-7.3 83.6 L-8.7 82.7 L-10.0 81.2 L-11.1 79.3 L-12.2 77.0 L-13.2 74.8 L-14.1 72.8 L-15.1 71.2 L-16.2 70.2 L-17.4 69.9 L-18.8 70.3 L-20.4 71.3 L-22.2 72.6 L-24.1 74.2 L-26.1 75.7 L-28.0 76.9 L-29.8 77.7 L-31.4 77.8 L-32.8 77.2 L-33.8 76.0 L-34.6 74.2 L-35.1 72.0 L-35.4 69.5 L-35.7 67.1 L-35.9 64.8 L-36.4 63.0 L-37.1 61.8 L-38.2 61.1 L-39.7 61.1 L-41.5 61.5 L-43.6 62.2 L-45.8 63.1 L-48.2 63.9 L-50.4 64.5 L-52.4 64.7 L-53.9 64.3 L-55.0 63.3 L-55.7 61.8 L-55.8 59.9 L-55.6 57.6 L-55.2 55.2 L-54.6 52.8 L-54.2 50.6 L-54.1 48.7 L-54.4 47.3 L-55.2 46.3 L-56.6 45.8 L-58.4 45.6 L-60.7 45.7 L-63.1 45.8 L-65.6 45.9 L-67.9 45.8 L-69.8 45.3 L-71.2 44.5 L-71.9 43.2 L-72.0 41.6 L-71.6 39.7 L-70.7 37.6 L-69.5 35.4 L-68.3 33.3 L-67.2 31.3 L-66.5 29.6 L-66.4 28.2 L-66.8 27.0 L-68.0 26.1 L-69.7 25.4 L-71.8 24.7 L-74.2 24.1 L-76.6 23.4 L-78.7 22.6 L-80.4 21.5 L-81.4 20.3 L-81.8 18.9 L-81.4 17.3 L-80.4 15.6 L-78.8 13.9 L-77.0 12.2 L-75.2 10.6 L-73.6 9.0 L-72.4 7.6 L-71.8 6.3 L-71.9 5.0 L-72.7 3.8 L-74.1 2.6 L-75.9 1.3 L-78.0 0.0 L-80.0 -1.4 L-81.8 -2.9 L-83.1 -4.4 L-83.7 -5.9 L-83.6 -7.3 L-82.7 -8.7 L-81.2 -10.0 L-79.3 -11.1 L-77.0 -12.2 L-74.8 -13.2 L-72.8 -14.1 L-71.2 -15.1 L-70.2 -16.2 L-69.9 -17.4 L-70.3 -18.8 L-71.3 -20.4 L-72.6 -22.2 L-74.2 -24.1 L-75.7 -26.1 L-76.9 -28.0 L-77.7 -29.8 L-77.8 -31.4 L-77.2 -32.8 L-76.0 -33.8 L-74.2 -34.6 L-72.0 -35.1 L-69.5 -35.4 L-67.1 -35.7 L-64.8 -35.9 L-63.0 -36.4 L-61.8 -37.1 L-61.1 -38.2 L-61.1 -39.7 L-61.5 -41.5 L-62.2 -43.6 L-63.1 -45.8 L-63.9 -48.2 L-64.5 -50.4 L-64.7 -52.4 L-64.3 -53.9 L-63.3 -55.0 L-61.8 -55.7 L-59.9 -55.8 L-57.6 -55.6 L-55.2 -55.2 L-52.8 -54.6 L-50.6 -54.2 L-48.7 -54.1 L-47.3 -54.4 L-46.3 -55.2 L-45.8 -56.6 L-45.6 -58.4 L-45.7 -60.7 L-45.8 -63.1 L-45.9 -65.6 L-45.8 -67.9 L-45.3 -69.8 L-44.5 -71.2 L-43.2 -71.9 L-41.6 -72.0 L-39.7 -71.6 L-37.6 -70.7 L-35.4 -69.5 L-33.3 -68.3 L-31.3 -67.2 L-29.6 -66.5 L-28.2 -66.4 L-27.0 -66.8 L-26.1 -68.0 L-25.4 -69.7 L-24.7 -71.8 L-24.1 -74.2 L-23.4 -76.6 L-22.6 -78.7 L-21.5 -80.4 L-20.3 -81.4 L-18.9 -81.8 L-17.3 -81.4 L-15.6 -80.4 L-13.9 -78.8 L-12.2 -77.0 L-10.6 -75.2 L-9.0 -73.6 L-7.6 -72.4 L-6.3 -71.8 L-5.0 -71.9 L-3.8 -72.7 L-2.6 -74.1 L-1.3 -75.9 L-0.0 -78.0 L1.4 -80.0 L2.9 -81.8 L4.4 -83.1 L5.9 -83.7 L7.3 -83.6 L8.7 -82.7 L10.0 -81.2 L11.1 -79.3 L12.2 -77.0 L13.2 -74.8 L14.1 -72.8 L15.1 -71.2 L16.2 -70.2 L17.4 -69.9 L18.8 -70.3 L20.4 -71.3 L22.2 -72.6 L24.1 -74.2 L26.1 -75.7 L28.0 -76.9 L29.8 -77.7 L31.4 -77.8 L32.8 -77.2 L33.8 -76.0 L34.6 -74.2 L35.1 -72.0 L35.4 -69.5 L35.7 -67.1 L35.9 -64.8 L36.4 -63.0 L37.1 -61.8 L38.2 -61.1 L39.7 -61.1 L41.5 -61.5 L43.6 -62.2 L45.8 -63.1 L48.2 -63.9 L50.4 -64.5 L52.4 -64.7 L53.9 -64.3 L55.0 -63.3 L55.7 -61.8 L55.8 -59.9 L55.6 -57.6 L55.2 -55.2 L54.6 -52.8 L54.2 -50.6 L54.1 -48.7 L54.4 -47.3 L55.2 -46.3 L56.6 -45.8 L58.4 -45.6 L60.7 -45.7 L63.1 -45.8 L65.6 -45.9 L67.9 -45.8 L69.8 -45.3 L71.2 -44.5 L71.9 -43.2 L72.0 -41.6 L71.6 -39.7 L70.7 -37.6 L69.5 -35.4 L68.3 -33.3 L67.2 -31.3 L66.5 -29.6 L66.4 -28.2 L66.8 -27.0 L68.0 -26.1 L69.7 -25.4 L71.8 -24.7 L74.2 -24.1 L76.6 -23.4 L78.7 -22.6 L80.4 -21.5 L81.4 -20.3 L81.8 -18.9 L81.4 -17.3 L80.4 -15.6 L78.8 -13.9 L77.0 -12.2 L75.2 -10.6 L73.6 -9.0 L72.4 -7.6 L71.8 -6.3 L71.9 -5.0 L72.7 -3.8 L74.1 -2.6 L75.9 -1.3Z"/>
-                <path id="sello-arco-sup" d="M-95 0A95 95 0 0 1 95 0"/>
-                <path id="sello-arco-inf" d="M-104 0A104 104 0 0 0 104 0"/>
-              </defs>
-              <g fill="none" stroke="currentColor">
-                <circle r="117" stroke-width="1.6"/>
-                <circle r="112.5" stroke-width=".6"/>
-                <circle r="90" stroke-width=".6"/>
-                <g stroke-width=".55"><use href="#sello-anillo"/><use href="#sello-anillo" transform="rotate(2.25)"/><use href="#sello-anillo" transform="rotate(4.50)"/><use href="#sello-anillo" transform="rotate(6.75)"/><use href="#sello-anillo" transform="rotate(9.00)"/><use href="#sello-anillo" transform="rotate(11.25)"/><use href="#sello-anillo" transform="rotate(13.50)"/><use href="#sello-anillo" transform="rotate(15.75)"/></g>
-                <circle r="65" stroke-width=".6"/>
-                <path d="M-26 -6L-8 12L28 -24" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-              </g>
-              <g fill="currentColor" class="sello-texto">
-                <text class="sello-titulo"><textPath href="#sello-arco-sup" startOffset="50%" text-anchor="middle">VERI*FACTU</textPath></text>
-                <text><textPath href="#sello-arco-inf" startOffset="50%" text-anchor="middle">DECLARACIÓN RESPONSABLE</textPath></text>
-                <text y="40" text-anchor="middle" class="sello-rd">RD 1007/2023</text>
-              </g>
-            </svg>
-              <div>
-                <span class="pildora">Protección Jurídica</span>
-                <h4>Declaración Responsable Oficial</h4>
-                <p>Blindaje ante el régimen sancionador de la LGT (art. 201 bis).</p>
-              </div>
-            </div>
-            <h4>¿Cómo te afecta según la opción que elijas?</h4>
-            <ul class="lista-puntos">
-              <li class="punto-libre">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Si compilas la versión libre (0 €):</strong> Eres totalmente libre de usarla gratis en tu empresa o despacho profesional, pero asumes la condición de productor ante Hacienda (configurando tu NIF y tu propia declaración responsable). La licencia autoriza exclusivamente el uso interno: no otorga derechos de venta, distribución a terceros, marca blanca ni prestación remunerada de soporte.</span>
-              </li>
-              <li class="punto-oficial">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Si compras la Licencia Oficial (89 € + IVA):</strong> Telytec Ingenieros, S.L. figura y se responsabiliza como productor oficial ante la AEAT con NIF verificado en el censo. Incluye la declaración responsable oficial que te blinda jurídicamente frente al art. 201 bis de la LGT sin que tengas que programar ni asumir riesgos técnicos.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Sede y titularidad -->
-          <div class="caja-empresa">
-            <div class="empresa-cabecera">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M9 21V3h6v18"/></svg>
-              <div>
-                <h4>Telytec Ingenieros, S.L.</h4>
-                <span class="empresa-cif">CIF: B53808739 · Registro Mercantil de Alicante</span>
-              </div>
-            </div>
-            <p class="empresa-sub">
-              Empresa titular y responsable legal de VeriFree Facturación. Sede física y desarrollo de ingeniería en España con atención telefónica directa.
-            </p>
-            <ul class="empresa-datos">
-              <li>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span>Calle Reyes Católicos, 24, 1º Izq. · 03003 Alicante</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span>Fijo: <a href="tel:965134033">965 13 40 33</a> · Móvil: <a href="tel:686600299">686 60 02 99</a></span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <span><a href="mailto:contacto@verifree.es">contacto@verifree.es</a></span>
-              </li>
-            </ul>
-          </div>
+        <div class="panel">
+          <h4>Telytec Ingenieros, S.L.</h4>
+          <span class="empresa-cif">CIF: B53808739 · Registro Mercantil de Alicante</span>
+          <p class="empresa-sub">Empresa titular y responsable legal de VeriFree Facturación. Sede física y desarrollo de ingeniería en España con atención telefónica directa.</p>
+          <ul class="datos">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Calle Reyes Católicos, 24, 1º Izq. · 03003 Alicante</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Fijo: <a href="tel:965134033">965 13 40 33</a> · Móvil: <a href="tel:686600299">686 60 02 99</a></span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span><a href="mailto:contacto@verifree.es">contacto@verifree.es</a></span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Preguntas frecuentes -->
-  <section class="seccion-faq" id="faq">
-    <div class="marco">
-      <div class="cabecera-seccion">
-        <span class="rubrica">Dudas habituales</span>
+  <section class="seccion" id="faq">
+    <div class="marco faq">
+      <header class="seccion-cabecera">
         <h2>Preguntas Frecuentes</h2>
         <p>Todo lo que necesitas saber sobre el funcionamiento legal y técnico de VeriFree.</p>
-      </div>
+      </header>
 
       <div class="faq-lista">
         <details class="faq-item" open>
@@ -980,14 +851,14 @@
   </section>
 
   <!-- Cierre -->
-  <section class="cta-final">
+  <section class="cierre">
     <div class="marco">
-      <div class="cta-box">
-        <h2>Empieza a facturar con la tranquilidad de cumplir la ley</h2>
+      <h2>Empieza a facturar con la tranquilidad de cumplir la ley</h2>
+      <div class="cierre-lateral">
         <p>Sin alquileres en la nube, con tus datos bajo tu control y con el respaldo técnico que necesitas.</p>
         <div class="acciones">
           <a class="btn btn-primario" href="descargas/VeriFree.exe" download>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             <span>Descargar versión de evaluación</span>
           </a>
           <a class="btn btn-secundario" href="#precios">Ver planes y licencias</a>
@@ -1000,21 +871,19 @@
 
 <footer class="pie">
   <div class="marco">
-    <div class="pie-grid">
-      <!-- Columna 1: marca y descripción -->
+    <div class="pie-rejilla">
       <div class="pie-col">
         <div class="marca">
-          <img src="icono.svg" alt="Logotipo VeriFree" width="30" height="30">
+          <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
           VeriFree <span>Facturación</span>
         </div>
         <p>Software de facturación de escritorio para Windows adaptado al Reglamento VERI*FACTU y la Ley Crea y Crece.</p>
         <p class="pie-nota">100% privado en tu equipo, sin servidores en la nube y con base de datos SQLite local inalterable.</p>
       </div>
 
-      <!-- Columna 2: navegación -->
       <div class="pie-col">
         <h5>Navegación</h5>
-        <ul class="pie-col-links">
+        <ul class="pie-enlaces">
           <li><a href="#ventajas">Ventajas</a></li>
           <li><a href="#comparativa">Comparativa</a></li>
           <li><a href="#funciones">Funciones</a></li>
@@ -1027,10 +896,9 @@
         </ul>
       </div>
 
-      <!-- Columna 3: titularidad y sede oficial (LSSI art. 10) -->
       <div class="pie-col">
         <h5>Sede y Titularidad Legal</h5>
-        <ul class="pie-contacto-list">
+        <ul class="pie-contacto">
           <li>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M9 21V3h6v18"/></svg>
             <span><strong>Telytec Ingenieros, S.L.</strong></span>
@@ -1055,7 +923,7 @@
       </div>
     </div>
 
-    <div class="pie-bottom">
+    <div class="pie-legal">
       <span>© 2026 Telytec Ingenieros, S.L. Todos los derechos reservados. Información general en cumplimiento del art. 10 de la Ley 34/2002 (LSSI-CE).</span>
       <span>Web 100% privada: libre de cookies de terceros y libre de rastreo.</span>
     </div>
@@ -1102,6 +970,22 @@ function cambiarFacturacion(modo) {
     nota.textContent = 'Facturación mensual · Cancela cuando quieras';
   }
 }
+
+/* El gráfico de costes se dibuja al llegar a él */
+(function () {
+  var coste = document.querySelector('.coste');
+  if (!coste || !('IntersectionObserver' in window)) return;
+  coste.classList.add('preparado');
+  var observador = new IntersectionObserver(function (entradas) {
+    entradas.forEach(function (entrada) {
+      if (entrada.isIntersecting) {
+        coste.classList.add('visible');
+        observador.disconnect();
+      }
+    });
+  }, { threshold: 0.35 });
+  observador.observe(coste);
+})();
 </script>
 
 </body>

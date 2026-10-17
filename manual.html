@@ -8,15 +8,15 @@
 <link rel="icon" type="image/svg+xml" href="icono.svg">
 <link rel="alternate icon" type="image/png" href="icono.png">
 <link rel="apple-touch-icon" href="icono.png">
-<meta name="theme-color" content="#f4f6f1">
-<link rel="preload" href="fuentes/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#ffffff">
+<link rel="preload" href="fuentes/mona-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
 <header class="cabecera">
   <div class="marco">
-    <a class="marca" href="./"><img src="icono.svg" alt="Logotipo VeriFree" width="32" height="32">VeriFree <span>Facturación</span></a>
+    <a class="marca" href="./"><img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">VeriFree <span>Facturación</span></a>
     <nav class="menu" aria-label="Secciones">
       <a href="./#ventajas">Por qué VeriFree</a>
       <a href="./#comparativa">Comparativa</a>
@@ -25,7 +25,7 @@
       <a href="./#precios">Precios</a>
       <a href="./#productor">Garantía Legal</a>
       <a href="manual.html" aria-current="page">Manual</a>
-      <a class="btn-menu" href="./#precios">Elegir Plan</a>
+      <a class="btn btn-primario btn-sm" href="./#precios">Elegir Plan</a>
     </nav>
   </div>
 </header>
@@ -63,7 +63,7 @@
         <h3>Comprobación de integridad (SHA-256)</h3>
         <p>Para comprobar que el ejecutable descargado no ha sufrido alteraciones y coincide con el publicado por el autor, puedes verificar su huella digital en PowerShell:</p>
         <p><code>Get-FileHash .\VeriFree.exe -Algorithm SHA256</code></p>
-        <p>La huella SHA-256 oficial de la versión de evaluación disponible en la web es:<br><code class="hash-valor">8F10E40D37F93DF9219DC0CC9BBC5F29D9377869100720CABC1709D7085F2FE4</code></p>
+        <p>La huella SHA-256 oficial de la versión de evaluación disponible en la web es:<br><code class="huella-valor">8F10E40D37F93DF9219DC0CC9BBC5F29D9377869100720CABC1709D7085F2FE4</code></p>
         <h3>Cómo actualizar a una nueva versión</h3>
         <p>Al ser una aplicación portátil sin instalación, actualizar es tan sencillo como sustituir el archivo <span class="ruta">VeriFree.exe</span> por la nueva versión oficial descargada o recompilada. Tus empresas, facturas y configuraciones se conservan intactas en la carpeta <span class="ruta">Empresas</span> y el programa actualiza la base de datos automáticamente al abrirse.</p>
       </section>
@@ -177,21 +177,18 @@
 
 <footer class="pie">
   <div class="marco">
-    <div class="pie-grid">
-      <!-- Columna 1: Marca y descripción -->
+    <div class="pie-rejilla">
       <div class="pie-col">
         <div class="marca">
-          <img src="icono.svg" alt="Logotipo VeriFree" width="30" height="30">
+          <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
           VeriFree <span>Facturación</span>
         </div>
         <p>Software de facturación de escritorio para Windows adaptado al Reglamento VERI*FACTU y la Ley Crea y Crece.</p>
         <p class="pie-nota">100% privado en tu equipo, sin servidores en la nube y con base de datos SQLite local inalterable.</p>
       </div>
-
-      <!-- Columna 2: Navegación -->
       <div class="pie-col">
         <h5>Navegación</h5>
-        <ul class="pie-col-links">
+        <ul class="pie-enlaces">
           <li><a href="./#ventajas">Ventajas</a></li>
           <li><a href="./#comparativa">Comparativa</a></li>
           <li><a href="./#funciones">Funciones</a></li>
@@ -203,11 +200,9 @@
           <li><a href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">Código en GitHub</a></li>
         </ul>
       </div>
-
-      <!-- Columna 3: Titularidad y Sede Oficial (LSSI art. 10) -->
       <div class="pie-col">
         <h5>Sede y Titularidad Legal</h5>
-        <ul class="pie-contacto-list">
+        <ul class="pie-contacto">
           <li>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M9 21V3h6v18"/></svg>
             <span><strong>Telytec Ingenieros, S.L.</strong></span>
@@ -232,7 +227,7 @@
       </div>
     </div>
 
-    <div class="pie-bottom">
+    <div class="pie-legal">
       <span>© 2026 Telytec Ingenieros, S.L. Todos los derechos reservados. Información general en cumplimiento del art. 10 de la Ley 34/2002 (LSSI-CE).</span>
       <span>Web 100% privada: libre de cookies de terceros y libre de rastreo.</span>
     </div>
