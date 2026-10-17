@@ -2510,3 +2510,63 @@ body { background: var(--gris); color: var(--tinta); }
 .seccion, .seccion-gris { background: #ffffff; }
 .seccion-gris { background: #faf9f6; }
 body { background: #fff; }
+
+/* ==========================================================================
+   Sello circular y animaciones extra
+   ========================================================================== */
+.sello { display: block; width: 104px; height: 104px; color: #ff6a00; }
+.sello-texto { font-family: var(--fuente); font-size: 12.5px; font-weight: 700; letter-spacing: 0.1em; }
+.sello-titulo { font-size: 16px; letter-spacing: 0.14em; }
+.sello-rd { font-size: 11px; letter-spacing: 0.06em; }
+.panel-sello .sello { margin-bottom: 1rem; }
+.seguir-sello { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+.seguir-sello .sello { width: 168px; height: 168px; filter: drop-shadow(0 18px 30px rgba(255, 106, 0, 0.18)); }
+@media (prefers-reduced-motion: no-preference) {
+  .sello g[stroke-width=".55"] { transform-box: view-box; transform-origin: 50% 50%; animation: girar 60s linear infinite; }
+  .sello .sello-texto text:not(.sello-rd) { transform-box: view-box; transform-origin: 50% 50%; animation: girar 90s linear infinite reverse; }
+  .seguir-sello .sello:hover g[stroke-width=".55"] { animation-duration: 8s; }
+}
+@keyframes girar { to { transform: rotate(360deg); } }
+
+/* Titular palabra a palabra, enfocándose */
+.palabra { display: inline-block; animation: palabra 0.9s var(--curva) both; }
+@keyframes palabra { from { opacity: 0; filter: blur(12px); transform: translateY(0.35em); } to { opacity: 1; filter: none; transform: none; } }
+@media (prefers-reduced-motion: no-preference) {
+  .portada .subtitulo, .portada .acciones, .portada .nota, .portada .huella { animation: palabra 0.9s var(--curva) 0.7s both; }
+  .portada .acciones { animation-delay: 0.85s; }
+  .escenario { animation: palabra 1.2s var(--curva) 1s both; }
+}
+
+/* Foco de luz que sigue al ratón */
+.explorador-panel, .plan, .coste { position: relative; }
+.explorador-panel::after, .plan::after, .coste::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(22rem circle at var(--mx, 50%) var(--my, -30%), rgba(255, 122, 26, 0.14), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.explorador-panel:hover::after, .plan:hover::after, .coste:hover::after { opacity: 1; }
+.plan > *, .coste > * { position: relative; z-index: 1; }
+
+/* Destello en los botones */
+.btn { position: relative; overflow: hidden; isolation: isolate; }
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.45) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.7s var(--curva);
+}
+.btn:hover::before { transform: translateX(120%); }
+.btn { transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s var(--curva); }
+.btn:active { transform: scale(0.97); }
+
+/* Elevación suave de tarjetas */
+.plan, .panel, .captura-marco img { transition: transform 0.5s var(--curva), box-shadow 0.5s var(--curva); }
+.panel:hover { transform: translateY(-4px); box-shadow: 0 24px 50px -28px rgba(60, 40, 20, 0.35); }
