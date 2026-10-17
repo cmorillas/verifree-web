@@ -337,13 +337,13 @@ p {
 
 .hero .marco {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
   gap: 3.5rem;
   align-items: center;
 }
 
 .hero h1 {
-  font-size: clamp(2.35rem, 3.8vw + 1rem, 3.75rem);
+  font-size: clamp(2.25rem, 2.6vw + 1rem, 3.1rem);
   letter-spacing: -0.03em;
   margin-block: 1rem 1.25rem;
   font-weight: 800;
@@ -390,134 +390,35 @@ p {
   flex-shrink: 0;
 }
 
-/* Tarjeta interactiva del Hero (Simulador VERI*FACTU) */
+/* Letra pequeña bajo los botones de la portada y captura real del programa */
+.hero-letra-pequena {
+  margin-top: 1rem;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--tinta-suave);
+  max-width: 36rem;
+}
+
+.hero-letra-pequena + .hero-letra-pequena {
+  margin-top: 0.5rem;
+}
+
+.hero-letra-pequena a {
+  color: var(--azul-primario);
+}
+
 .hero-visual {
   position: relative;
 }
 
-.tarjeta-simulador {
-  background: var(--superficie);
+.hero-captura {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
   border: 1px solid var(--borde);
-  border-radius: 16px;
-  padding: 1.5rem;
   box-shadow: var(--sombra-destacada);
-  position: relative;
-  overflow: hidden;
-}
-
-.tarjeta-simulador::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--azul-primario), var(--verde-exito));
-}
-
-.simulador-cabecera {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--borde-suave);
-  padding-bottom: 0.85rem;
-  margin-bottom: 1rem;
-}
-
-.simulador-titulo {
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--tinta-suave);
-}
-
-.cadena-items {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  position: relative;
-}
-
-.cadena-nodo {
-  background: var(--fondo);
-  border: 1px solid var(--borde-suave);
-  border-radius: 10px;
-  padding: 0.85rem 1rem;
-  font-size: 0.875rem;
-  position: relative;
-  transition: border-color 0.2s;
-}
-
-.cadena-nodo:hover {
-  border-color: var(--azul-primario);
-}
-
-.cadena-nodo + .cadena-nodo::before {
-  content: "";
-  position: absolute;
-  left: 1.5rem;
-  top: -1rem;
-  height: 1rem;
-  width: 2px;
-  border-left: 2px dashed var(--azul-primario);
-}
-
-.nodo-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.35rem;
-}
-
-.nodo-numero {
-  font-weight: 700;
-  color: var(--tinta);
-}
-
-.chip-estado {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.15rem 0.55rem;
-  border-radius: 999px;
-}
-
-.chip-correcto {
-  background: var(--verde-tenue);
-  color: var(--verde-exito);
-  border: 1px solid var(--verde-borde);
-}
-
-.chip-encadenado {
-  background: var(--purpura-tenue);
-  color: var(--purpura-acento);
-  border: 1px solid rgba(139, 92, 246, 0.3);
-}
-
-.nodo-meta {
-  color: var(--tinta-suave);
-  font-size: 0.8125rem;
-  margin-bottom: 0.5rem;
-}
-
-.nodo-hash {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  font-size: 0.775rem;
-  color: var(--tinta-tenue);
-  min-width: 0;
-}
-
-.nodo-hash code {
-  color: var(--azul-primario);
-  background: var(--azul-brillo);
-  padding: 0.1rem 0.3rem;
-  border-radius: 4px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  min-width: 0;
+  background: #ffffff;
 }
 
 /* ==========================================================================
@@ -712,32 +613,6 @@ p {
   margin: 0 auto;
 }
 
-.barra-ventana {
-  background: rgba(15, 23, 42, 0.9);
-  padding: 0.75rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-bottom: 1px solid var(--borde-suave);
-}
-
-.punto-control {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: #475569;
-}
-
-.punto-control:nth-child(1) { background: #ef4444; }
-.punto-control:nth-child(2) { background: #f59e0b; }
-.punto-control:nth-child(3) { background: #10b981; }
-
-.titulo-ventana {
-  margin-left: 0.5rem;
-  font-size: 0.8125rem;
-  color: var(--tinta-suave);
-}
-
 .captura-contenido img {
   width: 100%;
 }
@@ -883,8 +758,10 @@ p {
   background: var(--superficie);
   border: 1px solid var(--borde);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2rem;
+  max-width: 46rem;
+  margin-inline: auto;
 }
 
 .servicio-item h4 {
@@ -1078,6 +955,29 @@ p {
 .btn-desplegar-matriz:hover {
   border-color: var(--azul-primario);
   background: var(--superficie-hover);
+}
+
+/* Detalles técnicos plegados bajo las funciones: el detalle para quien lo busque, sin cargar las tarjetas */
+.seccion-funciones .detalles-matriz {
+  margin-top: 2rem;
+}
+
+.lista-tecnica {
+  margin: 1rem auto 0;
+  max-width: 52rem;
+  padding: 1.25rem 1.5rem 1.25rem 2.5rem;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  background: var(--superficie);
+  display: grid;
+  gap: 0.6rem;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--tinta-suave);
+}
+
+.lista-tecnica strong {
+  color: var(--tinta);
 }
 
 /* ==========================================================================
