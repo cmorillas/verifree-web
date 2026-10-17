@@ -2015,3 +2015,123 @@ p.aviso {
 .seccion-pagina .legal-texto {
   padding-top: 0.25rem;
 }
+
+/* ==========================================================================
+   Explorador de funciones
+   ========================================================================== */
+.explorador {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--hueco);
+  align-items: stretch;
+}
+
+.explorador-lista {
+  grid-column: 1 / span 5;
+  display: grid;
+  border-top: 1px solid var(--tinta);
+}
+
+.explorador-opcion {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.05rem 0.25rem;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--borde);
+  color: var(--tinta-3);
+  font: inherit;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease, padding 0.3s var(--curva);
+}
+
+.explorador-num {
+  min-width: 1.6rem;
+  color: var(--borde-control);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.explorador-opcion:hover {
+  color: var(--tinta);
+}
+
+.explorador-opcion.activo {
+  padding-left: 1rem;
+  color: var(--tinta);
+  box-shadow: inset 3px 0 0 var(--senal);
+}
+
+.explorador-opcion.activo .explorador-num {
+  color: var(--senal);
+}
+
+.explorador-paneles {
+  grid-column: 7 / span 6;
+  position: relative;
+}
+
+.explorador-panel {
+  display: none;
+  height: 100%;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  background: var(--noche-2);
+  border-radius: var(--radio-panel);
+  color: var(--blanco);
+}
+
+.explorador-panel.activo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .explorador-panel.activo > * {
+    animation: subir 0.5s var(--curva) both;
+  }
+  .explorador-panel.activo > h3 { animation-delay: 0.05s; }
+  .explorador-panel.activo > p { animation-delay: 0.1s; }
+}
+
+@keyframes subir {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+.explorador-panel svg {
+  width: 56px;
+  height: 56px;
+  margin-bottom: auto;
+  color: var(--senal);
+  stroke-width: 1.4;
+}
+
+.explorador-panel h3 {
+  margin-top: 3rem;
+  color: var(--blanco);
+  font-size: clamp(1.75rem, 1.5vw + 1.2rem, 2.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.explorador-panel p {
+  margin-top: 1.25rem;
+  color: var(--noche-texto);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 980px) {
+  .explorador-lista { display: none; }
+  .explorador-paneles { grid-column: 1 / -1; display: grid; gap: 1rem; }
+  .explorador-panel { display: flex; flex-direction: column; }
+  .explorador-panel svg { width: 40px; height: 40px; margin-bottom: 0; }
+  .explorador-panel h3 { margin-top: 1.5rem; }
+}
