@@ -2633,3 +2633,7 @@ body { background: #fff; }
 .texto-pagina { margin-inline: auto; }
 .texto-pagina .btn { margin-top: 0.5rem; }
 @media (max-width: 760px) { .precios-extra > div { grid-column: 1 / -1; } }
+
+.coste-gancho { margin-bottom: 0.75rem; color: var(--tinta-2); font-size: 1rem; text-align: center; }
+.coste-gancho b { display: block; color: var(--tinta); font-size: clamp(3rem, 5vw + 1rem, 5.5rem); font-weight: 700; letter-spacing: -0.05em; line-height: 1; }
+.coste-gancho b { background: linear-gradient(90deg, #ff6a00, #ff9447); -webkit-background-clip: text; background-clip: text; color: transparent; }
