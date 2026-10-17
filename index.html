@@ -246,6 +246,16 @@
               <td><span class="icono-alerta">Según versión adquirida</span></td>
               <td>Cambio manual de certificado</td>
             </tr>
+            <tr>
+              <td><strong>Auditoría del código fuente</strong></td>
+              <td class="col-destacada">
+                <span class="icono-si">✓ 100% visible y auditable</span>
+                <br><small style="color:var(--tinta-suave);">(inspeccionable ante la AEAT; sin dobles cajas)</small>
+              </td>
+              <td><span class="icono-no">✗ Código cerrado y opaco</span> <br><small style="color:var(--tinta-suave);">(caja negra en servidores ajenos)</small></td>
+              <td><span class="icono-no">✗ Binario cerrado</span> <br><small style="color:var(--tinta-suave);">(sin posibilidad de auditar)</small></td>
+              <td>✓ Web pública oficial <br><small style="color:var(--tinta-suave);">(propiedad de la AEAT)</small></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -680,6 +690,16 @@
             <li><strong>Multa de 50.000 € por ejercicio</strong> para la empresa o autónomo que utilice sistemas de facturación que no cuenten con la debida declaración responsable del productor (art. 201 bis.2 y 4 LGT).</li>
             <li><strong>Multa de 150.000 € por ejercicio</strong> con ventas y por cada tipo de sistema para quien fabrique o comercialice sistemas que no cumplan con las especificaciones o permitan alterar registros (art. 201 bis.1 y 4 LGT).</li>
           </ul>
+
+          <div style="margin-top:1.5rem; background:var(--superficie); border:1px solid var(--borde); border-left:4px solid var(--verde-exito); border-radius:12px; padding:1.25rem 1.4rem;">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.4rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--verde-exito)" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <strong style="font-size:1.05rem; color:var(--tinta);">Auditoría abierta: blindaje ante inspecciones de Hacienda</strong>
+            </div>
+            <p style="margin:0; font-size:0.9rem; color:var(--tinta-suave); line-height:1.6;">
+              Frente al software privativo cerrado —cuyo funcionamiento interno es una «caja negra» opaca—, el código fuente de VeriFree está a la vista de todos en GitHub. Cualquier asesor, perito informático o inspector de la Agencia Tributaria puede auditar línea por línea que el programa <strong>carece de dobles cajas, no permite contabilidades B ni alteración de registros</strong>, y cumple con rigor milimétrico los requisitos antifraude del RD 1007/2023.
+            </p>
+          </div>
         </div>
         <div class="legal-lateral">
         <figure class="legal-factura">
@@ -749,6 +769,16 @@
           </summary>
           <div class="faq-respuesta">
             Mediante verificación criptográfica. Cada ejecutable oficial distribuido cuenta con su huella SHA-256 pública. Si un tercero descargase el código fuente libre o manipulase el ejecutable para cometer fraude o alterar registros, la huella SHA-256 cambia de forma matemática e inmediata y cualquier firma digital queda invalidada. Ante una inspección de la AEAT o un peritaje judicial, esto permite demostrar que el software ha sido modificado sin autorización y no se corresponde con el producto original certificado por el autor.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>¿Por qué tener el código accesible en GitHub es una ventaja ante una inspección de Hacienda?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Porque elimina de raíz cualquier sospecha de «software de doble uso» o contabilidad paralela (sancionado con hasta 50.000 € por el art. 201 bis de la LGT). Mientras que el software comercial cerrado es una caja negra opaca donde ni el usuario ni los inspectores pueden auditar qué ocurre por dentro, el código de VeriFree está a la vista pública: cualquier perito informático, asesor fiscal o actuario de la Agencia Tributaria puede comprobar línea por línea que la base de datos es inalterable por triggers, que no existen cajas B ni funciones para ocultar facturas, y que el encadenamiento criptográfico cumple estrictamente con el Reglamento VERI*FACTU.
           </div>
         </details>
 
