@@ -682,6 +682,57 @@ p {
   background: linear-gradient(135deg, rgba(30, 58, 138, 0.2) 0%, var(--superficie) 100%);
 }
 
+/* Módulos opcionales (se activan por empresa), debajo de la cuadrícula de funciones */
+.modulos-cabecera {
+  margin: 3rem 0 1.25rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem 0.85rem;
+  flex-wrap: wrap;
+}
+
+.modulos-cabecera h3 {
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+.modulos-cabecera p {
+  margin: 0;
+  color: var(--tinta-suave);
+  font-size: 0.9375rem;
+}
+
+.modulos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.etiqueta-proximamente {
+  align-self: flex-start;
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .etiqueta-proximamente {
+    color: #b45309;
+  }
+}
+
+@media (max-width: 640px) {
+  .modulos-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 /* ==========================================================================
    Capturas y Showcase del Software
    ========================================================================== */
