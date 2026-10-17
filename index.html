@@ -155,6 +155,16 @@
               <td><span class="icono-no">Anuales obligatorias</span></td>
               <td>Ninguna</td>
             </tr>
+            <tr>
+              <td><strong>Actualizaciones normativas ante cambios legales</strong></td>
+              <td class="col-destacada">
+                <span class="icono-si">✓ Opcionales y sin cuotas forzosas</span>
+                <br><small style="color:var(--tinta-suave);">(código libre con git pull o Plan Tranquilidad opcional)</small>
+              </td>
+              <td><span class="icono-alerta">Alquiler mensual forzoso</span> <br><small style="color:var(--tinta-suave);">(180 € a 480 €/año; si dejas de pagar, pierdes el acceso)</small></td>
+              <td><span class="icono-no">Mantenimiento anual obligatorio</span> <br><small style="color:var(--tinta-suave);">(240 € a 580 €/año para tener versiones legales)</small></td>
+              <td><span class="icono-si">✓ En su propia web</span> <br><small style="color:var(--tinta-suave);">(mantiene su formulario básico)</small></td>
+            </tr>
 
             <tr class="categoria-fila">
               <td colspan="5">Cumplimiento Legal y Formatos</td>
@@ -365,13 +375,23 @@
           </p>
         </div>
 
-        <div class="bento-card bento-ancho">
+        <div class="bento-card">
           <div class="bento-icono">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
           </div>
           <h3>Remesas de Adeudos SEPA</h3>
           <p>
             Elige las facturas domiciliadas y genera el fichero de adeudos directos SEPA para subirlo a tu banco, con un PDF justificante de cada remesa. Guarda los mandatos de tus clientes, con su referencia y su fecha de firma, y el historial de las remesas en las que ha ido cada factura.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icono">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+          </div>
+          <h3>Actualizaciones sin Ataduras</h3>
+          <p>
+            Evoluciona con la normativa de la AEAT y la Ley Crea y Crece sin cuotas mensuales forzosas: actualiza gratis el código con <code>git pull</code> en GitHub o mantén tu ejecutable oficial siempre al día con el Plan Tranquilidad opcional.
           </p>
         </div>
       </div>
@@ -387,6 +407,7 @@
           <li><strong>VERI*FACTU:</strong> registro de facturación encadenado con huella SHA-256 y enviado por el servicio web de la AEAT (SOAP con certificado, mTLS), con su control de flujo y reintentos.</li>
           <li><strong>Factura electrónica:</strong> UBL 2.1 según el anexo I de la Orden HAC/1028/2026, firmada con XAdES y validada contra los esquemas de OASIS.</li>
           <li><strong>Remesas:</strong> adeudos directos SEPA en formato pain.008.001.02.</li>
+          <li><strong>Actualizaciones:</strong> arquitectura modular para incorporar los futuros servicios telemáticos B2B de la AEAT sin comprometer el histórico local ni obligar a suscripciones forzosas.</li>
           <li><strong>Datos:</strong> una base de datos SQLite local por empresa.</li>
           <li><strong>Programa:</strong> aplicación nativa de Windows en .NET 10 y WPF.</li>
         </ul>
@@ -540,6 +561,10 @@
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Actualizaciones libres en GitHub:</strong> descarga gratis las nuevas versiones con <code>git pull</code> y recompila cuando cambie la normativa.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
               <span>Acceso completo al manual de usuario online.</span>
             </li>
           </ul>
@@ -578,6 +603,10 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
               <span><strong>Declaración responsable oficial</strong> incluida: te protege frente a las sanciones de 50.000 € (art. 201 bis LGT).</span>
             </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Parches correctivos incluidos:</strong> tu programa no caduca ni se bloquea. Actualizaciones normativas mayores opcionales sin cuotas forzosas.</span>
+            </li>
           </ul>
           <a class="btn btn-primario" href="mailto:contacto@verifree.es?subject=Comprar%20Licencia%20Oficial%20VeriFree">
             <span>Comprar Licencia Oficial (Pago Único)</span>
@@ -599,7 +628,7 @@
           <ul class="precio-beneficios">
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Todas las actualizaciones normativas</strong> que publique la AEAT o el BOE (2026–2028).</span>
+              <span><strong>Todas las actualizaciones normativas y ejecutables oficiales incluidos:</strong> al día ante cualquier cambio del BOE o de la AEAT (2026–2028).</span>
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -776,6 +805,21 @@
           </summary>
           <div class="faq-respuesta">
             Rotundamente no. La Licencia Oficial es de pago único (89 € + IVA una sola vez) y de uso perpetuo. A diferencia de las plataformas en la nube (SaaS) o los programas tradicionales que bloquean tu facturación si no pagas cada mes o cada año, VeriFree se ejecuta en tu ordenador y no caduca ni exige mensualidades para seguir emitiendo facturas. El «Plan Tranquilidad» es un servicio de suscripción opcional pensado exclusivamente para quien desee soporte telefónico/remoto prioritario y actualizaciones garantizadas ante futuras reformas normativas de la AEAT, pero nunca es obligatorio para seguir utilizando tu programa.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>¿Cómo funcionan las actualizaciones cuando la AEAT o el BOE cambien la normativa?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            Con total libertad y sin ataduras según la modalidad que elijas:
+            <ul style="margin-top:0.5rem; padding-left:1.25rem; display:grid; gap:0.4rem;">
+              <li><strong>Si compilas el código libre (0 €):</strong> Las novedades normativas se publican en GitHub. Con un simple comando <code>git pull</code> descargas el código actualizado y recompilas tu versión gratis de por vida.</li>
+              <li><strong>Si tienes la Licencia Oficial (89 €):</strong> Tu programa incluye parches de estabilidad y corrección de incidencias, y nunca caduca ni te corta el servicio. Ante futuras reformas mayores de la AEAT, podrás decidir libremente si seguir con tu versión o actualizarte sin cuotas forzosas.</li>
+              <li><strong>Si contratas el Plan Tranquilidad (9,90 €/mes):</strong> Tienes cubiertas al 100% todas las actualizaciones normativas y evolutivas futuras (2026–2028: nuevos requisitos de VERI*FACTU y factura electrónica B2B), recibiendo los nuevos ejecutables oficiales listos para usar sin coste adicional.</li>
+            </ul>
           </div>
         </details>
 
