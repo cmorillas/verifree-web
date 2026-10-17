@@ -1516,4 +1516,14 @@ kbd, .ruta {
     flex-direction: column;
     align-items: flex-start;
   }
+  .menu .btn-menu {
+    white-space: nowrap;
+  }
+}
+
+/* En móviles estrechos la marca y el botón de descarga no caben juntos: se queda solo «VeriFree». */
+@media (max-width: 480px) {
+  .marca span {
+    display: none;
+  }
 }
