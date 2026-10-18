@@ -2282,6 +2282,7 @@ p.aviso {
   .explorador.visto .explorador-opcion:nth-child(6) { transition-delay: 0.25s; }
   .explorador.visto .explorador-opcion:nth-child(7) { transition-delay: 0.3s; }
   .explorador.visto .explorador-opcion:nth-child(8) { transition-delay: 0.35s; }
+  .explorador.visto .explorador-opcion:nth-child(9) { transition-delay: 0.4s; }
 }
 
 @media (prefers-reduced-motion: reduce) {

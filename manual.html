@@ -52,6 +52,7 @@
         <li><a href="#empresa">Crear la empresa</a></li>
         <li><a href="#configuracion">Configuración</a></li>
         <li><a href="#borradores">Hacer una factura</a></li>
+        <li><a href="#clientes">Clientes</a></li>
         <li><a href="#facturas">Facturas emitidas</a></li>
         <li><a href="#aeat">Envío a la AEAT</a></li>
         <li><a href="#electronica">Factura electrónica</a></li>
@@ -76,7 +77,7 @@
         <h3>Comprobación de integridad (SHA-256)</h3>
         <p>Para comprobar que el ejecutable descargado no ha sufrido alteraciones y coincide con el publicado por el autor, puedes verificar su huella digital en PowerShell:</p>
         <p><code>Get-FileHash .\VeriFree.exe -Algorithm SHA256</code></p>
-        <p>La huella SHA-256 oficial de la versión de evaluación disponible en la web es:<br><code class="huella-valor">8F10E40D37F93DF9219DC0CC9BBC5F29D9377869100720CABC1709D7085F2FE4</code></p>
+        <p>La huella SHA-256 oficial de la versión de evaluación disponible en la web es:<br><code class="huella-valor">132EA5331EAC8A1423F4F58415E5B94A00A3604A5433DAB8797DBF65424F2CC9</code></p>
         <h3>Cómo actualizar a una nueva versión</h3>
         <p>Al ser una aplicación portátil sin instalación, actualizar es tan sencillo como sustituir el archivo <span class="ruta">VeriFree.exe</span> por la nueva versión oficial descargada o recompilada. Tus empresas, facturas y configuraciones se conservan intactas en la carpeta <span class="ruta">Empresas</span> y el programa actualiza la base de datos automáticamente al abrirse.</p>
       </section>
@@ -112,7 +113,7 @@
         <p>Las facturas se preparan como borradores y se emiten cuando están bien. Un borrador se puede cambiar cuantas veces quieras; una factura emitida, no.</p>
         <ol>
           <li>Ve a <strong>Borradores</strong> y pulsa <strong>Nuevo borrador</strong>.</li>
-          <li>Escribe los datos del cliente y la descripción de la operación, y elige la serie. Si la operación se hizo otro día, marca la casilla y pon la fecha.</li>
+          <li>Busca el cliente en <strong>Clientes</strong> por su nombre o su NIF (se rellenan sus datos, su forma de pago y su retención) o escribe sus datos. Escribe la descripción de la operación y elige la serie. Si la operación se hizo otro día, marca la casilla y pon la fecha.</li>
           <li>Añade las líneas: descripción, cantidad, precio e IVA. Si una línea no lleva retención (por ejemplo, material o gastos), desmárcala en esa línea.</li>
           <li>Elige la forma de pago y, si quieres, el vencimiento. Sin vencimiento, la factura es al contado, el día de la emisión.</li>
           <li>Marca <strong>Con retención de IRPF</strong> si el cliente es una empresa o un profesional que te la practica.</li>
@@ -124,8 +125,23 @@
         <p>En la lista de borradores puedes marcar varios y emitirlos de una vez con <strong>Emitir marcados…</strong>; solo se emiten los que estén listos. <strong>Duplicar</strong> crea una copia exacta de un borrador.</p>
       </section>
 
+      <section id="clientes">
+        <h2>5. Clientes</h2>
+        <p>La agenda de clientes sirve para no escribir los datos cada vez. Cada cliente guarda sus datos fiscales, su forma de pago habitual (con su IBAN si paga por domiciliación) y si practica retención de IRPF.</p>
+        <ul>
+          <li><strong>Nuevo cliente</strong> abre su ficha; se guarda con <strong>Guardar</strong> cuando está completa, con las mismas comprobaciones que al emitir.</li>
+          <li>En un borrador, <strong>Guardar en Clientes</strong> guarda el cliente que has escrito. En <strong>Facturas</strong>, el botón derecho sobre una factura ofrece <strong>Guardar el cliente en Clientes</strong>.</li>
+          <li><strong>Nueva factura</strong> crea un borrador con los datos del cliente elegido; solo faltan las líneas.</li>
+        </ul>
+        <p>Los datos del cliente se copian en cada borrador: cambiar o borrar un cliente no toca las facturas ya emitidas ni los borradores que ya lo llevan. Si un cliente cambia de domicilio, cámbialo en su ficha y las próximas facturas saldrán con el nuevo.</p>
+        <h3>Importar clientes de otro programa</h3>
+        <p><strong>Importar…</strong> trae los clientes desde un Excel (.xlsx) o un CSV: el que exporta tu programa anterior o nuestra plantilla, que se descarga en la misma pantalla. La primera fila lleva los títulos de las columnas; VeriFree reconoce los habituales (NIF o CIF, Nombre o Razón social, Dirección o Domicilio, C.P., Población o Localidad, Provincia, País, Forma de pago, IBAN y Retención).</p>
+        <p>Antes de importar ves qué pasará con cada fila: las completas se importan; las que ya están en Clientes (por su NIF) se dejan igual o se actualizan, como elijas; y las que tienen algún error no se importan y se dice por qué, para que las corrijas en el archivo y lo vuelvas a importar.</p>
+        <p class="aviso">Si los archivos antiguos son .xls, ábrelos en Excel y guárdalos como «Libro de Excel (.xlsx)» o como CSV.</p>
+      </section>
+
       <section id="facturas">
-        <h2>5. Facturas emitidas</h2>
+        <h2>6. Facturas emitidas</h2>
         <p>En <strong>Facturas</strong> están las emitidas del periodo y el año que elijas, con sus totales: base imponible, IVA repercutido, retención de IRPF y total facturado. El buscador busca en el número de la factura y en el nombre o el NIF del cliente.</p>
         <figure class="captura">
           <img src="capturas/facturas.png" alt="Lista de facturas de VeriFree con los totales del trimestre y los botones de cada factura" width="1920" height="1140" loading="lazy">
@@ -141,6 +157,8 @@
           <dd>Un borrador nuevo con el mismo cliente, las mismas líneas y el mismo pago.</dd>
           <dt>Nueva para este cliente</dt>
           <dd>Un borrador nuevo con los datos del cliente, su forma de pago y su retención, sin líneas.</dd>
+          <dt>Guardar el cliente en Clientes</dt>
+          <dd>Guarda el cliente de la factura en la agenda, con su forma de pago y su retención (en el menú del botón derecho).</dd>
           <dt>Rectificar…</dt>
           <dd>Prepara una factura rectificativa para corregir la elegida.</dd>
           <dt>Anular…</dt>
@@ -149,7 +167,7 @@
       </section>
 
       <section id="aeat">
-        <h2>6. Envío a la AEAT</h2>
+        <h2>7. Envío a la AEAT</h2>
         <p>Cada factura y cada anulación se envían solas a la AEAT al emitirlas. Si no hay conexión, el programa lo vuelve a intentar solo y, mientras falte algo, lo avisa una banda arriba con un botón para resolverlo.</p>
         <h3>El certificado</h3>
         <p>En <strong>Configuración › VERI*FACTU</strong>, elige el certificado con el que se envía: el de la empresa o el de quien tenga poder para enviar por ella (apoderado o colaborador social). El programa lista los certificados instalados en Windows que sirven para conectar con la AEAT; si el tuyo está en un archivo, usa <strong>Importar archivo .pfx / .p12…</strong>.</p>
@@ -163,20 +181,20 @@
       </section>
 
       <section id="electronica">
-        <h2>7. Factura electrónica</h2>
+        <h2>8. Factura electrónica</h2>
         <p>Cada factura emitida tiene su factura electrónica en el formato de la AEAT (UBL), firmada justo después de emitirla con el certificado de la empresa o el de su representante. Lleva la dirección del QR, con la que quien la recibe comprueba en la AEAT que está registrada.</p>
         <p>Si no se puede firmar, se sigue facturando y una banda lo avisa. <strong>Firmar ahora</strong>, en <strong>Configuración › Factura electrónica</strong>, firma lo pendiente sin esperar al próximo intento.</p>
         <p>Ahí mismo puedes guardar una copia de cada factura firmada en una carpeta de archivo. La predeterminada está dentro de la carpeta de la empresa; también puedes elegir otra, por ejemplo una que compartas con tu asesoría.</p>
       </section>
 
       <section id="libro">
-        <h2>8. Libro registro</h2>
+        <h2>9. Libro registro</h2>
         <p>En <strong>Facturas</strong>, <strong>Exportar libro…</strong> guarda el libro registro de facturas expedidas del ejercicio, hasta el final del periodo elegido, en el formato de la AEAT. Es lo que suele pedir la asesoría.</p>
         <p>Antes, elige la actividad económica de la empresa en <strong>Configuración › Empresa</strong>: se busca por su nombre en la lista de actividades y epígrafes del IAE de la AEAT.</p>
       </section>
 
       <section id="copias">
-        <h2>9. Copias de seguridad y seguridad de los datos</h2>
+        <h2>10. Copias de seguridad y seguridad de los datos</h2>
         <p>Al ser un software local sin servidores intermedios, la custodia legal y conservación de tus registros corresponde a tu empresa (art. 29.2.e LGT). Todo lo de cada empresa está en su carpeta, dentro de <span class="ruta">Empresas</span>, junto a <span class="ruta">VeriFree.exe</span>.</p>
         <p>Para hacer una copia de seguridad manual en 5 segundos:</p>
         <ol>
