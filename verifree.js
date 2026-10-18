@@ -106,7 +106,7 @@
           if (/^\s+$/.test(parte)) { trozo.appendChild(document.createTextNode(parte)); return; }
           var palabra = document.createElement('span');
           palabra.className = 'palabra';
-          palabra.style.animationDelay = (0.06 * n++) + 's';
+          palabra.style.animationDelay = (0.025 * n++) + 's';
           palabra.textContent = parte;
           trozo.appendChild(palabra);
         });

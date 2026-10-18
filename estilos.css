@@ -1194,7 +1194,7 @@ summary::-webkit-details-marker {
 /* Planes en una sola pieza; las filas se alinean entre columnas */
 .planes {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-template-rows: repeat(6, auto);
   overflow: hidden;
   background: var(--blanco);
@@ -1317,7 +1317,7 @@ summary::-webkit-details-marker {
 }
 
 .precios-extra > div {
-  grid-column: span 6;
+  grid-column: span 4;
   padding-top: 1.5rem;
   border-top: 1px solid var(--borde-2);
 }
@@ -2178,18 +2178,18 @@ p.aviso {
   /* Titular palabra a palabra y entrada de la portada */
   .palabra {
     display: inline-block;
-    animation: enfocar 0.9s var(--curva) both;
+    animation: enfocar 0.6s var(--curva) both;
   }
 
   .portada .subtitulo,
   .portada .veri,
   .portada .acciones,
   .portada .nota {
-    animation: enfocar 0.9s var(--curva) 0.7s both;
+    animation: enfocar 0.6s var(--curva) 0.2s both;
   }
 
   .portada .acciones {
-    animation-delay: 0.85s;
+    animation-delay: 0.3s;
   }
 
   .escenario {
@@ -2303,9 +2303,9 @@ p.aviso {
 @keyframes aparecer { from { opacity: 0; } to { opacity: 1; } }
 
 /* 16. Adaptación ========================================================== */
-@media (max-width: 1180px) {
+@media (max-width: 900px) {
   .planes {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: none;
   }
 
@@ -2319,12 +2319,13 @@ p.aviso {
     margin-top: auto;
   }
 
-  .plan:nth-child(3) {
+  .plan + .plan {
     border-left: 0;
+    border-top: 1px solid var(--borde);
   }
 
-  .plan:nth-child(n + 3) {
-    border-top: 1px solid var(--borde);
+  .precios-extra > div {
+    grid-column: 1 / -1;
   }
 }
 
