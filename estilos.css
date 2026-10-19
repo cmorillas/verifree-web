@@ -89,6 +89,7 @@
 .codigo,
 .explorador-panel,
 .flotante,
+.resumen-destacada,
 .plan-destacado {
   --tinta: #ffffff;
   --tinta-2: #c4c4cc;
@@ -587,62 +588,56 @@ summary::-webkit-details-marker {
 }
 
 .portada {
+  position: relative;
   padding-block: clamp(5rem, 11vw, 9rem) clamp(4rem, 8vw, 7rem);
 }
 
 .portada-texto {
-  position: relative;
   max-width: 72rem;
   margin-inline: auto;
   text-align: center;
 }
 
-/* Sello redondo sobre el titular, a la derecha: lleva a la filosofía (Quiénes somos) */
-.portada-sello {
+/* Cinta en la esquina de la portada, como la de los proyectos de código abierto: lleva a la filosofía */
+.cinta-esquina {
   position: absolute;
-  top: calc(0.75rem - clamp(5rem, 11vw, 9rem));
-  right: 0.5rem;
-  z-index: 1;
-  display: block;
-  width: clamp(7rem, 10vw, 9rem);
-  height: clamp(7rem, 10vw, 9rem);
-  border-radius: 50%;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  transform: rotate(-12deg);
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 17rem;
+  height: 17rem;
+  overflow: hidden;
+  pointer-events: none;
 }
 
-.portada-sello svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
+.cinta {
+  position: absolute;
+  top: 5rem;
+  right: -4.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22rem;
+  padding: 0.5rem 0;
+  background: linear-gradient(90deg, rgba(255, 122, 26, 0.9), rgba(240, 90, 0, 0.9));
+  box-shadow: 0 10px 20px -10px rgba(160, 60, 0, 0.6);
+  color: var(--negro);
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transform: rotate(45deg);
+  pointer-events: auto;
 }
 
-.sello-fondo {
-  fill: rgba(255, 255, 255, 0.5);
-  stroke: var(--naranja);
-  stroke-width: 3;
+.cinta strong {
+  color: inherit;
+  font-size: 0.9375rem;
+  font-weight: 700;
 }
 
-.sello-centro {
-  fill: rgba(255, 122, 26, 0.12);
-  stroke: var(--naranja);
-  stroke-width: 1.5;
-}
-
-.sello-letras {
-  fill: var(--tinta);
-  font-size: 10.5px;
-  font-weight: 650;
-}
-
-.sello-icono {
-  fill: none;
-  stroke: var(--naranja);
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.cinta span {
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 .portada h1 {
@@ -976,6 +971,67 @@ summary::-webkit-details-marker {
   color: var(--tinta-3);
   font-size: 0.8125rem;
   text-align: center;
+}
+
+/* Resúmenes de la portada (funciones y precios): tarjetas cortas y un enlace a su página */
+.resumen {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 760px) {
+  .resumen {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.resumen-tarjeta {
+  padding: 1.5rem;
+  background: var(--blanco);
+  border-radius: var(--radio-panel);
+  box-shadow: 0 0 0 1px var(--borde);
+}
+
+.resumen-destacada {
+  background: radial-gradient(120% 120% at 100% 0%, rgba(255, 122, 26, 0.3), transparent 60%), var(--negro);
+  box-shadow: none;
+}
+
+.resumen-tarjeta svg {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 1rem;
+  color: var(--naranja);
+}
+
+.resumen-tarjeta h3 {
+  color: var(--tinta);
+  font-size: 1.125rem;
+  letter-spacing: -0.015em;
+}
+
+.resumen-tarjeta p {
+  margin-top: 0.5rem;
+  color: var(--tinta-2);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.resumen-tarjeta .resumen-cifra {
+  margin-top: 0.75rem;
+  color: var(--tinta);
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.resumen-cifra span {
+  color: var(--tinta-2);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 /* 8. Funciones (explorador): la lista a la izquierda; a la derecha, la captura y la explicación de la elegida */
@@ -1421,34 +1477,6 @@ summary::-webkit-details-marker {
 }
 
 /* 12. Garantía legal, sello y paneles ===================================== */
-.resumen {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 2rem 4rem;
-}
-
-.resumen > div:first-child {
-  max-width: 46rem;
-}
-
-.resumen h2 {
-  font-size: clamp(2rem, 2.2vw + 1.3rem, 3.25rem);
-  font-weight: 700;
-  line-height: 1.04;
-  letter-spacing: -0.038em;
-}
-
-.resumen p {
-  margin-top: 1.25rem;
-  font-size: 1.125rem;
-}
-
-.resumen .seguir {
-  margin-top: 0;
-}
-
 .seguir-sello {
   flex-direction: column;
   align-items: center;
@@ -2656,11 +2684,29 @@ p.aviso {
     display: none;
   }
 
-  .portada-sello {
-    position: static;
-    width: 7.5rem;
-    height: 7.5rem;
-    margin: 0 auto 1.5rem;
+  /* El titular empieza algo más abajo para no quedar bajo la cinta */
+  .portada {
+    padding-top: 7.5rem;
+  }
+
+  .cinta-esquina {
+    width: 11rem;
+    height: 11rem;
+  }
+
+  .cinta {
+    top: 3rem;
+    right: -3.9rem;
+    width: 16rem;
+    padding: 0.35rem 0;
+  }
+
+  .cinta strong {
+    font-size: 0.8125rem;
+  }
+
+  .cinta span {
+    font-size: 0.625rem;
   }
 }
 
