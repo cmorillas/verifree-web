@@ -212,10 +212,6 @@ summary::-webkit-details-marker {
   background: var(--blanco);
 }
 
-.seccion-gris {
-  background: var(--crema);
-}
-
 .seccion-cabecera {
   max-width: 54rem;
   margin: 0 auto clamp(2.75rem, 5vw, 4rem);
@@ -413,46 +409,6 @@ summary::-webkit-details-marker {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-}
-
-/* Pestañas en píldora */
-.selector {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.6rem;
-}
-
-.selector button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  height: 3rem;
-  padding: 0 1.5rem;
-  background: var(--blanco);
-  border: 0;
-  border-radius: var(--radio-control);
-  box-shadow: 0 0 0 1px var(--borde);
-  color: var(--tinta);
-  font: inherit;
-  font-size: 1rem;
-  font-weight: 500;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.selector button:hover {
-  background: var(--crema);
-}
-
-.selector button.activo {
-  background: var(--crema-3);
-  box-shadow: none;
-}
-
-.selector svg {
-  color: var(--tinta-2);
 }
 
 /* Marcas de sí / no */
@@ -876,16 +832,17 @@ summary::-webkit-details-marker {
   text-align: center;
 }
 
-/* 8. Funciones (explorador) =============================================== */
+/* 8. Funciones (explorador): la lista a la izquierda; a la derecha, la captura y la explicación de la elegida */
 .explorador {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: var(--hueco);
+  align-items: start;
 }
 
 .explorador-lista {
   display: grid;
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 4;
   border-top: 1px solid var(--tinta);
 }
 
@@ -894,13 +851,13 @@ summary::-webkit-details-marker {
   display: flex;
   align-items: baseline;
   gap: 1rem;
-  padding: 1.05rem 0.25rem;
+  padding: 0.95rem 0.25rem;
   background: none;
   border: 0;
   border-bottom: 1px solid var(--borde);
   color: #9a978f;
   font: inherit;
-  font-size: 1.1875rem;
+  font-size: 1.0625rem;
   font-weight: 600;
   letter-spacing: -0.015em;
   text-align: left;
@@ -939,59 +896,51 @@ summary::-webkit-details-marker {
 }
 
 .explorador-paneles {
-  grid-column: 7 / span 6;
+  display: grid;
+  grid-column: 5 / span 8;
 }
 
+/* Todos los paneles en la misma celda: el bloque mide lo que el más alto y no salta al cambiar de función */
 .explorador-panel {
-  position: relative;
-  display: none;
+  grid-area: 1 / 1;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  height: 100%;
-  min-height: 30rem;
+  visibility: hidden;
   overflow: hidden;
-  padding: clamp(2rem, 4vw, 3.5rem);
+  padding: clamp(1rem, 2vw, 1.5rem);
   background: radial-gradient(120% 90% at 100% 0%, rgba(255, 122, 26, 0.28), transparent 55%), var(--negro);
   border-radius: 28px;
 }
 
 .explorador-panel.activo {
-  display: flex;
+  visibility: visible;
 }
 
-/* Número gigante de fondo */
-.explorador-panel::before {
-  content: attr(data-num);
-  position: absolute;
-  top: -0.12em;
-  right: 0.08em;
-  color: rgba(255, 255, 255, 0.05);
-  font-size: clamp(9rem, 16vw, 15rem);
-  font-weight: 800;
-  letter-spacing: -0.06em;
-  line-height: 1;
-  pointer-events: none;
-}
-
-.explorador-panel svg {
-  width: 56px;
-  height: 56px;
-  margin-bottom: auto;
-  color: var(--naranja);
-  stroke-width: 1.4;
+.explorador-panel img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1920 / 1140;
+  object-fit: cover;
+  object-position: left top;
+  background: var(--blanco);
+  border-radius: 16px;
 }
 
 .explorador-panel h3 {
-  margin-top: 3rem;
-  font-size: clamp(1.75rem, 1.5vw + 1.2rem, 2.5rem);
+  margin: 1.5rem 0.5rem 0;
+  font-size: clamp(1.375rem, 0.8vw + 1.1rem, 1.875rem);
   font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.035em;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
 .explorador-panel p {
-  margin-top: 1.25rem;
-  line-height: 1.65;
+  margin: 0.85rem 0.5rem 0.5rem;
+  line-height: 1.6;
+}
+
+.explorador-nota {
+  text-align: center;
 }
 
 /* 9. Código a la vista ==================================================== */
@@ -1092,61 +1041,6 @@ summary::-webkit-details-marker {
   border-radius: var(--radio);
   font-size: 0.875rem;
   line-height: 1.55;
-}
-
-/* 10. Capturas ============================================================ */
-#capturas .marco {
-  text-align: center;
-}
-
-.tab-contenido {
-  display: none;
-  margin-top: 2rem;
-  text-align: left;
-}
-
-.tab-contenido.activo {
-  display: block;
-}
-
-.captura-marco img {
-  width: 100%;
-  border-radius: 18px;
-  background: var(--blanco);
-  box-shadow: var(--sombra-captura);
-}
-
-.captura-pie {
-  max-width: 44rem;
-  margin: 1.25rem auto 0;
-  font-size: 0.9375rem;
-  text-align: center;
-}
-
-.captura-detalle {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  column-gap: var(--hueco);
-  row-gap: 2rem;
-  align-items: center;
-}
-
-.captura-detalle > .captura-marco {
-  grid-column: 1 / span 7;
-}
-
-.captura-detalle > div:last-child {
-  grid-column: 9 / span 4;
-}
-
-.captura-detalle h3 {
-  font-size: 1.5rem;
-  line-height: 1.2;
-}
-
-.captura-detalle p {
-  margin-top: 1rem;
-  font-size: 0.9688rem;
 }
 
 /* 11. Precios ============================================================= */
@@ -2260,10 +2154,6 @@ p.aviso {
   .explorador-panel.activo > h3 { animation-delay: 0.05s; }
   .explorador-panel.activo > p { animation-delay: 0.1s; }
 
-  .tab-contenido.activo {
-    animation: aparecer 0.3s var(--curva);
-  }
-
   /* Aparición escalonada al hacer scroll */
   .revelar {
     opacity: 0;
@@ -2457,28 +2347,16 @@ p.aviso {
   }
 
   .explorador-paneles {
-    display: grid;
     grid-column: 1 / -1;
     gap: 1rem;
   }
 
+  /* En el móvil no hay lista: todas las funciones, una debajo de otra */
   .explorador-panel {
-    display: flex;
-    min-height: 0;
+    grid-area: auto;
+    visibility: visible;
   }
 
-  .explorador-panel svg {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 0;
-  }
-
-  .explorador-panel h3 {
-    margin-top: 1.5rem;
-  }
-
-  .captura-detalle > .captura-marco,
-  .captura-detalle > div:last-child,
   .legal-texto,
   .legal-lateral,
   .faq .seccion-cabecera,

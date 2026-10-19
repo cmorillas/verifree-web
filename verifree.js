@@ -43,20 +43,6 @@
     });
   }
 
-  /* Pestañas de capturas */
-  var pestanas = document.querySelectorAll('.tab-btn');
-  pestanas.forEach(function (boton) {
-    boton.addEventListener('click', function () {
-      pestanas.forEach(function (b) {
-        var activa = b === boton;
-        b.classList.toggle('activo', activa);
-        b.setAttribute('aria-selected', activa ? 'true' : 'false');
-        var panel = document.getElementById(b.getAttribute('aria-controls'));
-        if (panel) panel.classList.toggle('activo', activa);
-      });
-    });
-  });
-
   /* Explorador de funciones: clic, avance automático y pausa al pasar el ratón */
   var explorador = document.querySelector('.explorador');
   if (explorador) {
