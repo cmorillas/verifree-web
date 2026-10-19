@@ -881,13 +881,11 @@ summary::-webkit-details-marker {
   text-align: right;
 }
 
-.es-libre .coste-nombre,
 .es-verifree .coste-nombre {
   color: var(--tinta);
   font-weight: 620;
 }
 
-.es-libre .coste-valor,
 .es-verifree .coste-valor {
   color: #d95a00;
   font-size: 1.25rem;
@@ -896,18 +894,6 @@ summary::-webkit-details-marker {
 
 .es-verifree .coste-barra {
   background: var(--naranja);
-  box-shadow: 0 0 0 4px rgba(255, 122, 26, 0.2);
-}
-
-.es-libre .coste-barra,
-.coste.preparado .es-libre .coste-barra {
-  bottom: auto;
-  width: 12px;
-  height: 12px;
-  top: 50%;
-  border-radius: 50%;
-  background: var(--naranja);
-  transform: translate(-50%, -50%);
   box-shadow: 0 0 0 4px rgba(255, 122, 26, 0.2);
 }
 
@@ -1289,7 +1275,6 @@ summary::-webkit-details-marker {
 .plan + .plan {
   border-left: 1px solid var(--borde);
 }
-
 .plan-destacado {
   background: var(--negro);
 }
@@ -2737,8 +2722,7 @@ p.aviso {
     text-align: right;
   }
 
-  .es-verifree .coste-valor,
-  .es-libre .coste-valor {
+  .es-verifree .coste-valor {
     font-size: 0.9375rem;
   }
 
@@ -2760,13 +2744,6 @@ p.aviso {
   .coste-barra {
     height: 100%;
     border-radius: 999px;
-  }
-
-  .es-libre .coste-barra,
-  .coste.preparado .es-libre .coste-barra {
-    width: 10px;
-    height: 10px;
-    box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.25);
   }
 
   .coste-eje {
