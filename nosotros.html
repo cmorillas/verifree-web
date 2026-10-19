@@ -28,18 +28,22 @@
     </a>
     <nav class="menu" id="menu-principal" aria-label="Navegación principal">
       <a href="index.html#funciones">Funciones</a>
-      <a href="index.html#precios">Precios</a>
-      <a href="comparativa.html">Comparativa</a>
+      <div class="menu-grupo">
+        <a href="index.html#precios">Precios</a>
+        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-precios" aria-label="Más de Precios"></button>
+        <div class="submenu" id="submenu-precios">
+          <a href="comparativa.html">Comparativa</a>
+          <a href="compilalo.html">Compílalo tú</a>
+        </div>
+      </div>
       <a href="garantia.html">Garantía</a>
-      <a href="filosofia.html">Filosofía</a>
-      <a href="quienes-somos.html" aria-current="page">Quiénes somos</a>
+      <a href="nosotros.html" aria-current="page">Nosotros</a>
       <div class="menu-grupo">
         <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-ayuda">Ayuda</button>
         <div class="submenu" id="submenu-ayuda">
           <a href="preguntas.html">Preguntas</a>
           <a href="manual.html">Manual</a>
           <a href="descargas.html">Descargas</a>
-          <a href="compilalo.html">Compílalo tú</a>
           <a href="mailto:contacto@verifree.es">Contacto</a>
         </div>
       </div>
@@ -63,22 +67,19 @@
     <div class="marco">
       <a class="volver" href="./">← Volver al inicio</a>
       <h1>Quiénes somos</h1>
-      <p>Detrás de VeriFree hay personas de carne y hueso: un equipo pequeño de ingeniería en Alicante que responde del programa ante Hacienda y ante ti.</p>
+      <p>Un equipo pequeño de ingeniería en Alicante, afín al software libre. Creemos que un programa que maneja tus facturas no debe tener secretos ni atarte a una cuota de por vida.</p>
     </div>
   </section>
   <section class="seccion seccion-pagina">
     <div class="marco">
       <article class="texto texto-pagina">
-        <p class="codigo-aviso"><strong>Contenido de ejemplo</strong> para ver cómo queda la página: la trayectoria de la empresa y las personas del equipo son inventadas y se cambiarán por las reales antes de publicarla.</p>
+        <h2>Quién hay detrás</h2>
+        <p>VeriFree lo hace Telytec Ingenieros, S.L., una empresa de ingeniería de Alicante que además es su productora ante la AEAT. No es un proyecto anónimo ni un experimento: respondemos del programa ante Hacienda y ante ti, y nuestro negocio es que funcione bien.</p>
 
-        <h2>La empresa</h2>
-        <p>VeriFree lo hace Telytec Ingenieros, S.L., una empresa de ingeniería de Alicante que lleva más de quince años desarrollando software a medida para empresas de la zona. Somos también su productora ante la AEAT: firmamos su declaración responsable y respondemos de que el programa cumple.</p>
-
-        <h2>Por qué lo hacemos</h2>
-        <p>Con VERI*FACTU vimos que a muchos autónomos y pymes de nuestro alrededor les iban a cobrar una cuota cada mes, para siempre, solo por cumplir con Hacienda. Pensamos que se podía hacer de otra manera: un programa que se paga una vez, que guarda los datos en tu ordenador y con el código público, como aprendimos del software libre. Y que, si llamas, te atienda alguien que lo conoce por dentro.</p>
-
+        <!-- El equipo: de ejemplo hasta tener los nombres, las fotos y las trayectorias reales. Cuando haya fotos,
+             cada .persona-foto lleva dentro un <img> en lugar de las iniciales. -->
         <h2>El equipo</h2>
-        <!-- Cuando haya fotos, cada .persona-foto lleva dentro un <img> en lugar de las iniciales -->
+        <p class="codigo-aviso"><strong>Contenido de ejemplo</strong> para ver cómo queda la página: las personas del equipo son inventadas y se cambiarán por las reales antes de publicarla.</p>
         <div class="equipo">
           <article class="persona">
             <div class="persona-foto" aria-hidden="true">ES</div>
@@ -99,6 +100,36 @@
             <p>Es quien te atiende al teléfono. Antes de VeriFree trabajó en una asesoría, así que entiende tus facturas tanto como el programa.</p>
           </article>
         </div>
+
+        <h2 id="por-que">Por qué lo hacemos</h2>
+        <p>Con VERI*FACTU, la mayoría de autónomos y pymes van a necesitar un programa adaptado. Casi todos se pagan cada mes, para siempre, y no hay forma de saber qué hacen por dentro. Nosotros preferimos hacerlo de otra manera:</p>
+        <ul>
+          <li><strong>Pagas una vez:</strong> cumplir con Hacienda no debería convertirse en un alquiler de por vida.</li>
+          <li><strong>Puedes comprobarlo:</strong> el código está entero en GitHub. Un asesor, un perito o un inspector de la AEAT puede verificar que las facturas emitidas no se pueden cambiar, que no hay cajas B ni funciones ocultas y que tus datos no pasan por servidores nuestros.</li>
+          <li><strong>No dependes de nosotros:</strong> el programa funciona en tu ordenador y su código es público. Si un día desapareciéramos, tu programa seguiría funcionando y tus facturas seguirían siendo tuyas.</li>
+          <li><strong>Compilarlo, para quien sabe:</strong> quien sabe programar puede compilarlo por su cuenta, pero entonces es su productor ante Hacienda y responde de él. No es un camino para la mayoría.</li>
+        </ul>
+
+        <h2 id="codigo-publico">Código público, que no software libre</h2>
+        <p>Compartimos la filosofía del software libre: creemos que el código de un programa que maneja tus facturas tiene que poder leerse, revisarse y servir para aprender. Pero VeriFree no es software libre en sentido estricto, y preferimos decirlo claro: la licencia permite leerlo, revisarlo y compilarlo para uso propio, pero no repartirlo ni revenderlo (lo que en inglés se llama <em>source-available</em>).</p>
+        <p>Si no es software libre del todo, es por responsabilidad: queremos que detrás de cada copia haya alguien que responda de ella ante Hacienda. La ley exige que cada programa de facturación VERI*FACTU tenga un productor que firme su declaración responsable (RD 1007/2023, art. 13, y art. 201 bis de la LGT), y si un programa no la tiene o está modificado, la multa es para quien lo usa. Quien compila el código es el productor de su copia y responde de ella; si cualquiera pudiera repartir copias, o copias modificadas, quien las usara no sabría quién responde de ellas.</p>
+
+        <h2>La Licencia Oficial</h2>
+        <p>La mayoría de autónomos, pymes y asesorías quieren facturar y olvidarse de lo demás, y es lo normal. Para eso está la Licencia Oficial: <strong>119 € una sola vez</strong>, con el primer año de actualizaciones y soporte incluido, y después <strong>59 € al año</strong> solo si quieres seguir al día.</p>
+        <ul>
+          <li>Telytec Ingenieros, S.L. es la productora del programa ante la AEAT y responde de que cumple.</li>
+          <li>Te damos el ejecutable oficial firmado y la declaración responsable que exige el art. 201 bis de la LGT.</li>
+          <li>Si tienes una duda o un problema, nos llamas y te atiende una persona que conoce el programa.</li>
+        </ul>
+        <p>Mantener un programa así es un trabajo de todos los días: la AEAT cambia sus especificaciones, salen órdenes nuevas en el BOE y llega la factura electrónica obligatoria. VeriFree es nuestro trabajo y estamos orgullosos de él. La Licencia Oficial es lo que lo sostiene y lo que nos permite seguir mejorándolo, y el código sigue siendo público para que cualquiera pueda comprobar qué hace.</p>
+
+        <h2>Cómo puedes ayudar</h2>
+        <ul>
+          <li><strong>Con la Licencia Oficial:</strong> es la mejor manera de usar VeriFree con respaldo y de que siga mejorando.</li>
+          <li><strong>Contándonos qué falla o qué echas en falta:</strong> en GitHub puedes <a href="https://github.com/cmorillas/verifree/issues" target="_blank" rel="noopener">avisar de errores</a> o <a href="https://github.com/cmorillas/verifree/discussions" target="_blank" rel="noopener">proponer mejoras</a>.</li>
+          <li><strong>Recomendándolo</strong> a otros autónomos, asesorías o asociaciones que busquen una facturación privada y sin cuotas de por vida.</li>
+          <li><strong>Si ya lo compilas tú</strong> y te resulta útil, puedes <a href="mailto:contacto@verifree.es?subject=Quiero%20apoyar%20VeriFree">hacernos llegar una aportación</a>.</li>
+        </ul>
 
         <h2>Hablemos</h2>
         <p>Estamos en la C/ Reyes Católicos, 24, de Alicante, y nos gusta hablar con quien usa el programa. Llámanos de lunes a viernes, de 9:00 a 14:00, al <a href="tel:965134033">965 13 40 33</a>, escríbenos por WhatsApp al <a href="tel:686600299">686 60 02 99</a> o a <a href="mailto:contacto@verifree.es">contacto@verifree.es</a>.</p>
@@ -131,8 +162,7 @@
           <li><a href="manual.html">Manual de uso</a></li>
           <li><a href="descargas.html">Descargas</a></li>
           <li><a href="compilalo.html">Compílalo tú</a></li>
-          <li><a href="filosofia.html">Nuestra filosofía</a></li>
-          <li><a href="quienes-somos.html">Quiénes somos</a></li>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
           <li><a href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">Código en GitHub</a></li>
         </ul>
       </div>

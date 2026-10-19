@@ -27,18 +27,22 @@
     </a>
     <nav class="menu" id="menu-principal" aria-label="Navegación principal">
       <a href="index.html#funciones">Funciones</a>
-      <a href="index.html#precios">Precios</a>
-      <a href="comparativa.html">Comparativa</a>
+      <div class="menu-grupo">
+        <a href="index.html#precios">Precios</a>
+        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-precios" aria-label="Más de Precios"></button>
+        <div class="submenu" id="submenu-precios">
+          <a href="comparativa.html">Comparativa</a>
+          <a href="compilalo.html">Compílalo tú</a>
+        </div>
+      </div>
       <a href="garantia.html">Garantía</a>
-      <a href="filosofia.html">Filosofía</a>
-      <a href="quienes-somos.html">Quiénes somos</a>
+      <a href="nosotros.html">Nosotros</a>
       <div class="menu-grupo">
         <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-ayuda">Ayuda</button>
         <div class="submenu" id="submenu-ayuda">
           <a href="preguntas.html">Preguntas</a>
           <a href="manual.html">Manual</a>
           <a href="descargas.html">Descargas</a>
-          <a href="compilalo.html">Compílalo tú</a>
           <a href="mailto:contacto@verifree.es">Contacto</a>
         </div>
       </div>
@@ -62,7 +66,15 @@
   <section class="portada">
     <div class="marco">
       <div class="portada-texto">
-        <a class="portada-etiqueta" href="filosofia.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg><span>Código público,<br> con espíritu de software libre</span></a>
+        <a class="portada-sello" href="nosotros.html#codigo-publico" aria-label="Código público, con espíritu de software libre">
+          <svg viewBox="0 0 160 160" aria-hidden="true">
+            <defs><path id="sello-camino" d="M 23,80 a 57,57 0 1,1 114,0 a 57,57 0 1,1 -114,0"/></defs>
+            <circle class="sello-fondo" cx="80" cy="80" r="76"/>
+            <circle class="sello-centro" cx="80" cy="80" r="46"/>
+            <text class="sello-letras"><textPath href="#sello-camino" textLength="352" lengthAdjust="spacing">CÓDIGO PÚBLICO · CON ESPÍRITU DE SOFTWARE LIBRE ·</textPath></text>
+            <g class="sello-icono"><polyline points="95 64 111 80 95 96"/><polyline points="65 64 49 80 65 96"/><line x1="86" y1="60" x2="74" y2="100"/></g>
+          </svg>
+        </a>
         <h1>Facturación <span class="destacado">VERI*FACTU</span> en tu PC:<br class="corte"> pagas una vez y es tuya para siempre</h1>
         <p class="subtitulo">
           Haces la factura, VeriFree se la manda a Hacienda y todo se queda en tu ordenador: sin nube, sin límite de facturas y con varias empresas a la vez.
@@ -104,7 +116,7 @@
       <div class="manifiesto">
         <h2>Por qué hacemos VeriFree</h2>
         <p>Con VERI*FACTU, la mayoría de autónomos y pymes van a necesitar un programa adaptado, y lo habitual es pagar una cuota cada mes, para siempre. Creemos que cumplir con Hacienda no debería convertirse en un alquiler de por vida. Por eso VeriFree se paga una vez, tus datos se quedan en tu ordenador y su código es público, como aprendimos del software libre.</p>
-        <footer><a href="filosofia.html">Nuestra filosofía →</a></footer>
+        <footer><a href="nosotros.html#por-que">Nuestra filosofía →</a></footer>
       </div>
     </div>
   </section>
@@ -260,7 +272,7 @@
           <h3>Código público: nadie tiene que creernos</h3>
           <p>Somos afines al software libre y creemos que un programa que maneja tus facturas no debe tener secretos. Por eso su código es público: un asesor, un perito o un inspector puede comprobar línea a línea qué hace y que no permite cajas B ni tocar las facturas emitidas.</p>
           <div class="acciones">
-            <a class="btn btn-secundario btn-flecha" href="filosofia.html"><span>Nuestra filosofía</span><svg class="flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-secundario btn-flecha" href="nosotros.html#codigo-publico"><span>Nuestra filosofía</span><svg class="flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div>
       </div>
@@ -458,8 +470,7 @@
           <li><a href="manual.html">Manual de uso</a></li>
           <li><a href="descargas.html">Descargas</a></li>
           <li><a href="compilalo.html">Compílalo tú</a></li>
-          <li><a href="filosofia.html">Nuestra filosofía</a></li>
-          <li><a href="quienes-somos.html">Quiénes somos</a></li>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
           <li><a href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">Código en GitHub</a></li>
         </ul>
       </div>

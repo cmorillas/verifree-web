@@ -27,18 +27,22 @@
     </a>
     <nav class="menu" id="menu-principal" aria-label="Navegación principal">
       <a href="index.html#funciones">Funciones</a>
-      <a href="index.html#precios">Precios</a>
-      <a href="comparativa.html" aria-current="page">Comparativa</a>
+      <div class="menu-grupo actual">
+        <a href="index.html#precios">Precios</a>
+        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-precios" aria-label="Más de Precios"></button>
+        <div class="submenu" id="submenu-precios">
+          <a href="comparativa.html" aria-current="page">Comparativa</a>
+          <a href="compilalo.html">Compílalo tú</a>
+        </div>
+      </div>
       <a href="garantia.html">Garantía</a>
-      <a href="filosofia.html">Filosofía</a>
-      <a href="quienes-somos.html">Quiénes somos</a>
+      <a href="nosotros.html">Nosotros</a>
       <div class="menu-grupo">
         <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-ayuda">Ayuda</button>
         <div class="submenu" id="submenu-ayuda">
           <a href="preguntas.html">Preguntas</a>
           <a href="manual.html">Manual</a>
           <a href="descargas.html">Descargas</a>
-          <a href="compilalo.html">Compílalo tú</a>
           <a href="mailto:contacto@verifree.es">Contacto</a>
         </div>
       </div>
@@ -357,8 +361,7 @@
           <li><a href="manual.html">Manual de uso</a></li>
           <li><a href="descargas.html">Descargas</a></li>
           <li><a href="compilalo.html">Compílalo tú</a></li>
-          <li><a href="filosofia.html">Nuestra filosofía</a></li>
-          <li><a href="quienes-somos.html">Quiénes somos</a></li>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
           <li><a href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">Código en GitHub</a></li>
         </ul>
       </div>
