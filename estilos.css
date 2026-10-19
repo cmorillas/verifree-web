@@ -1103,22 +1103,6 @@ summary::-webkit-details-marker {
   letter-spacing: -0.015em;
 }
 
-/* Portada: por qué existe VeriFree, una banda corta tras el titular */
-.seccion-mision {
-  padding-block: clamp(3.5rem, 7vw, 5.5rem);
-}
-
-.seccion-mision .manifiesto {
-  margin-bottom: 0;
-}
-
-.manifiesto p + p {
-  margin-top: 1rem;
-  color: var(--tinta-2);
-  font-size: clamp(1rem, 0.5vw + 0.9rem, 1.1875rem);
-  line-height: 1.6;
-}
-
 .manifiesto footer {
   margin-top: 1.25rem;
   color: var(--naranja-texto);
