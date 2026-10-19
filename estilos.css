@@ -325,6 +325,82 @@ summary::-webkit-details-marker {
   justify-self: end;
 }
 
+/* Ayuda, el único grupo del menú: se abre al pasar el ratón, con un toque o con el teclado (verifree.js) */
+.menu-grupo {
+  position: relative;
+}
+
+.menu-boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 1.3rem 0;
+  background: none;
+  border: 0;
+  color: var(--tinta-2);
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.menu-boton::after {
+  content: "";
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-0.15em) rotate(45deg);
+}
+
+.menu-boton:hover,
+.menu-boton[aria-expanded="true"],
+.menu-grupo.actual > .menu-boton {
+  color: var(--tinta);
+}
+
+.menu-grupo.actual > .menu-boton {
+  box-shadow: inset 0 -2px var(--naranja);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: -0.75rem;
+  z-index: 60;
+  min-width: 12rem;
+  padding: 0.5rem;
+  background: var(--blanco);
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px var(--borde), var(--sombra);
+}
+
+.menu-grupo:hover > .submenu,
+.menu-grupo:focus-within > .submenu,
+.menu-grupo.abierto > .submenu {
+  display: grid;
+}
+
+.menu .submenu a {
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+}
+
+.menu .submenu a:hover {
+  background: var(--crema-2);
+}
+
+.menu .submenu a[aria-current="page"] {
+  color: var(--naranja-texto);
+  font-weight: 600;
+}
+
+.menu .submenu a[aria-current="page"]::after {
+  display: none;
+}
+
 .btn-hamburguesa {
   display: none;
 }
@@ -503,28 +579,44 @@ summary::-webkit-details-marker {
 }
 
 .portada-texto {
+  position: relative;
   max-width: 72rem;
   margin-inline: auto;
   text-align: center;
 }
 
-/* Etiqueta sobre el titular, que lleva a la filosofía */
+/* Pegatina sobre el titular, girada a la derecha, que lleva a la filosofía */
 .portada-etiqueta {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  padding: 0.4rem 0.95rem;
-  background: rgba(255, 122, 26, 0.1);
-  border-radius: 999px;
-  box-shadow: inset 0 0 0 1px rgba(255, 122, 26, 0.28);
-  color: var(--naranja-texto);
+  position: absolute;
+  top: clamp(-4.5rem, -5vw, -3rem);
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem 1.1rem;
+  background: radial-gradient(120% 140% at 100% 0%, rgba(255, 122, 26, 0.35), transparent 60%), var(--negro);
+  border-radius: 16px;
+  box-shadow: 0 18px 36px -14px rgba(11, 11, 12, 0.5);
+  color: #ffffff;
   font-size: 0.875rem;
   font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  transform: rotate(6deg);
+  transition: transform 0.25s var(--curva);
 }
 
 .portada-etiqueta:hover {
-  background: rgba(255, 122, 26, 0.18);
+  transform: rotate(3deg) scale(1.04);
+}
+
+.portada-etiqueta svg {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  color: var(--naranja);
 }
 
 .portada h1 {
@@ -2032,6 +2124,56 @@ summary::-webkit-details-marker {
   margin-top: 0.5rem;
 }
 
+/* Quiénes somos: cada persona del equipo con su foto (o sus iniciales), su cargo y unas líneas */
+.equipo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.persona {
+  padding: 1.25rem;
+  background: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: 0 0 0 1px var(--borde);
+}
+
+.persona-foto {
+  display: grid;
+  place-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  overflow: hidden;
+  background: radial-gradient(120% 120% at 100% 0%, rgba(255, 122, 26, 0.4), transparent 60%), var(--negro);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.375rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.persona-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto .persona h3 {
+  margin-top: 1rem;
+}
+
+.texto .persona .persona-cargo {
+  margin-top: 0.15rem;
+  color: var(--naranja-texto);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.texto .persona p {
+  font-size: 0.9375rem;
+}
+
 .huella-valor {
   display: block;
   margin-top: 0.35rem;
@@ -2282,7 +2424,7 @@ p.aviso {
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .cabecera .marco {
     display: flex;
     justify-content: space-between;
@@ -2373,6 +2515,45 @@ p.aviso {
     font-weight: 650;
     color: var(--naranja-texto);
   }
+
+  /* En el menú plegado, Ayuda es un título con sus enlaces debajo, siempre a la vista */
+  .menu-grupo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+
+  .menu-boton {
+    padding: 0.75rem 1rem 0.25rem;
+    color: var(--tinta-2);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
+  .menu-grupo.actual > .menu-boton {
+    box-shadow: none;
+  }
+
+  .menu-boton::after {
+    display: none;
+  }
+
+  .submenu,
+  .menu-grupo:hover > .submenu {
+    display: grid;
+    position: static;
+    min-width: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .menu .submenu a {
+    padding: 0.75rem 1rem;
+  }
 }
 
 @keyframes aparecerMenu {
@@ -2431,6 +2612,13 @@ p.aviso {
 @media (max-width: 900px) {
   .portada h1 .corte {
     display: none;
+  }
+
+  .portada-etiqueta {
+    position: static;
+    display: inline-flex;
+    margin-bottom: 1.75rem;
+    transform: rotate(-2deg);
   }
 }
 

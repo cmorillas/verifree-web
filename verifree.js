@@ -43,6 +43,30 @@
     });
   }
 
+  /* Submenú de la cabecera (Ayuda): con un toque o con el teclado (con el ratón ya se abre solo) */
+  var grupos = [].slice.call(document.querySelectorAll('.menu-grupo'));
+  var cerrarGrupos = function (salvo) {
+    grupos.forEach(function (g) {
+      if (g === salvo) return;
+      g.classList.remove('abierto');
+      g.querySelector('.menu-boton').setAttribute('aria-expanded', 'false');
+    });
+  };
+  grupos.forEach(function (grupo) {
+    var boton = grupo.querySelector('.menu-boton');
+    boton.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var abrir = !grupo.classList.contains('abierto');
+      cerrarGrupos(grupo);
+      grupo.classList.toggle('abierto', abrir);
+      boton.setAttribute('aria-expanded', abrir ? 'true' : 'false');
+    });
+  });
+  document.addEventListener('click', function () { cerrarGrupos(null); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') cerrarGrupos(null);
+  });
+
   /* Explorador de funciones: clic, avance automático y pausa al pasar el ratón */
   var explorador = document.querySelector('.explorador');
   if (explorador) {
