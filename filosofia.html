@@ -26,33 +26,11 @@
       VeriFree <span>Facturación</span>
     </a>
     <nav class="menu" id="menu-principal" aria-label="Navegación principal">
-      <div class="menu-grupo">
-        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-producto">Producto</button>
-        <div class="submenu" id="submenu-producto">
-          <a href="index.html#funciones">Funciones</a>
-          <a href="index.html#capturas">Capturas</a>
-          <a href="comparativa.html">Comparativa</a>
-          <a href="index.html#en-camino">En camino</a>
-        </div>
-      </div>
+      <a href="index.html#funciones">Funciones</a>
       <a href="index.html#precios">Precios</a>
-      <div class="menu-grupo actual">
-        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-confianza">Confianza</button>
-        <div class="submenu" id="submenu-confianza">
-          <a href="index.html#ventajas">Por qué fiarte</a>
-          <a href="garantia.html">Garantía legal</a>
-          <a href="filosofia.html" aria-current="page">Código público</a>
-        </div>
-      </div>
-      <div class="menu-grupo">
-        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-ayuda">Ayuda</button>
-        <div class="submenu" id="submenu-ayuda">
-          <a href="preguntas.html">Preguntas</a>
-          <a href="manual.html">Manual</a>
-          <a href="descargas.html">Descargas</a>
-          <a href="mailto:contacto@verifree.es">Contacto</a>
-        </div>
-      </div>
+      <a href="garantia.html">Garantía</a>
+      <a href="preguntas.html">Preguntas</a>
+      <a href="manual.html">Manual</a>
     </nav>
     <div class="cabecera-acciones">
       <a class="btn btn-primario btn-sm cabecera-accion" href="https://github.com/cmorillas/verifree-web/releases/latest/download/VeriFree.exe" download>
@@ -79,42 +57,36 @@
   <section class="seccion seccion-pagina">
     <div class="marco">
       <article class="texto texto-pagina">
-        <h2>Espíritu de software libre, rigor de empresa de ingeniería</h2>
-        <p>VeriFree nace del convencimiento de que el software debe pertenecer al usuario y residir en su propio equipo, sin ataduras a servidores externos ni cuotas de alquiler perpetuo. Pero no somos un proyecto anónimo ni improvisado: detrás de este desarrollo hay un equipo de ingeniería y una empresa con trayectoria que actúa como productora legal ante la AEAT (Telytec Ingenieros, S.L.), aportando solvencia técnica, respaldo mercantil y un modelo de negocio transparente.</p>
+        <h2>Quién hay detrás</h2>
+        <p>VeriFree lo hace Telytec Ingenieros, S.L., una empresa de ingeniería que además es su productora ante la AEAT. No es un proyecto anónimo ni un experimento: respondemos del programa ante Hacienda y ante ti, y nuestro negocio es que funcione bien.</p>
 
-        <h2>Por qué el código está publicado</h2>
-        <p>Casi todo el mercado actual de la facturación en España ha optado por el modelo de suscripción forzosa: pagar mes a mes, para siempre, solo por cumplir con las exigencias de Hacienda. Frente a esa tendencia, en VeriFree apostamos por la claridad:</p>
+        <h2>Por qué el código es público</h2>
+        <p>Casi todos los programas de facturación se pagan cada mes, para siempre, y no hay forma de saber qué hacen por dentro. Nosotros preferimos hacerlo de otra manera:</p>
         <ul>
-          <li><strong>Confianza auditable:</strong> el código fuente está disponible íntegramente en GitHub. Cualquier perito, asesor fiscal o inspector de la AEAT puede verificar que las facturas emitidas no se pueden alterar, que no existen cajas B ni funciones ocultas y que los datos jamás salen de tu ordenador.</li>
+          <li><strong>Puedes comprobarlo:</strong> el código está entero en GitHub. Un asesor, un perito o un inspector de la AEAT puede verificar que las facturas emitidas no se pueden cambiar, que no hay cajas B ni funciones ocultas y que tus datos no pasan por servidores nuestros.</li>
+          <li><strong>No dependes de nosotros:</strong> el programa funciona en tu ordenador y su código es público. Si un día desapareciéramos, tu programa seguiría funcionando y tus facturas seguirían siendo tuyas.</li>
           <li><strong>Compilarlo, para quien sabe:</strong> quien sabe programar puede compilarlo por su cuenta, pero entonces es su productor ante Hacienda y responde de él. No es un camino para la mayoría.</li>
-          <li><strong>Continuidad garantizada:</strong> el código es público y perdurable. Tu herramienta de trabajo no depende de la voluntad o permanencia de una plataforma externa en la nube.</li>
         </ul>
 
-        <h2>Código público, que no software libre: por qué</h2>
-        <p>Compartimos la filosofía del software libre: creemos que el código de un programa que maneja tus facturas tiene que poder leerse, revisarse y servir para aprender. Por eso el de VeriFree es público. Pero no es software libre en sentido estricto, y preferimos decirlo claro: la licencia permite leerlo, auditarlo y compilarlo gratis para uso propio, pero no redistribuirlo ni revenderlo (lo que en inglés se llama <em>source-available</em>).</p>
+        <h2>Código público, que no software libre</h2>
+        <p>Compartimos la filosofía del software libre: creemos que el código de un programa que maneja tus facturas tiene que poder leerse, revisarse y servir para aprender. Pero VeriFree no es software libre en sentido estricto, y preferimos decirlo claro: la licencia permite leerlo, revisarlo y compilarlo para uso propio, pero no repartirlo ni revenderlo (lo que en inglés se llama <em>source-available</em>).</p>
         <p>Si no es software libre del todo, es por responsabilidad: queremos que detrás de cada copia haya alguien que responda de ella ante Hacienda. La ley exige que cada programa de facturación VERI*FACTU tenga un productor que firme su declaración responsable (RD 1007/2023, art. 13, y art. 201 bis de la LGT), y si un programa no la tiene o está modificado, la multa es para quien lo usa. Quien compila el código es el productor de su copia y responde de ella; si cualquiera pudiera repartir copias, o copias modificadas, quien las usara no sabría quién responde de ellas.</p>
 
-        <h2>El papel de la Licencia Oficial y la sostenibilidad</h2>
-        <p>Desarrollar y mantener un software adaptado a VERI*FACTU y la Ley Crea y Crece requiere un trabajo continuo de ingeniería: actualizar especificaciones técnicas de la AEAT, seguir las órdenes ministeriales en el BOE, renovar esquemas XML y ofrecer asistencia cualificada.</p>
-        <p>La inmensa mayoría de autónomos, empresas y asesorías necesitan centrarse en su actividad y prefieren una solución llave en mano con plenas garantías jurídicas. Para ellos existe la <strong>Licencia Oficial (119 € pago único)</strong> y el servicio opcional de <strong>actualizaciones y soporte (59 €/año)</strong>:</p>
+        <h2>La Licencia Oficial</h2>
+        <p>La mayoría de autónomos, pymes y asesorías quieren facturar y olvidarse de lo demás, y es lo normal. Para eso está la Licencia Oficial: <strong>119 € una sola vez</strong>, con el primer año de actualizaciones y soporte incluido, y después <strong>59 € al año</strong> solo si quieres seguir al día.</p>
         <ul>
-          <li>Nuestra empresa productora (Telytec Ingenieros, S.L.) asume formalmente la condición y responsabilidad de productor oficial ante la AEAT.</li>
-          <li>Entregamos los ejecutables oficiales firmados digitalmente y la declaración responsable exigida por el art. 201 bis de la LGT.</li>
-          <li>Proporcionamos soporte técnico directo ante dudas normativas, incidencias o configuración de certificados.</li>
+          <li>Telytec Ingenieros, S.L. es la productora del programa ante la AEAT y responde de que cumple.</li>
+          <li>Te damos el ejecutable oficial firmado y la declaración responsable que exige el art. 201 bis de la LGT.</li>
+          <li>Si tienes una duda o un problema, nos llamas y te atiende una persona que conoce el programa.</li>
         </ul>
-        <p>VeriFree es nuestro trabajo y estamos orgullosos de él. La Licencia Oficial es lo que lo sostiene y lo que nos permite seguir mejorándolo, y el código sigue siendo público para que cualquiera pueda comprobar qué hace.</p>
+        <p>Mantener un programa así es un trabajo de todos los días: la AEAT cambia sus especificaciones, salen órdenes nuevas en el BOE y llega la factura electrónica obligatoria. VeriFree es nuestro trabajo y estamos orgullosos de él. La Licencia Oficial es lo que lo sostiene y lo que nos permite seguir mejorándolo, y el código sigue siendo público para que cualquiera pueda comprobar qué hace.</p>
 
-        <h2>Por qué la licencia reserva la distribución comercial</h2>
-        <p>El código de VeriFree puede estudiarse, auditarse y compilarse libremente para uso interno propio, pero la licencia prohíbe su reventa o distribución a terceros bajo marca blanca.</p>
-        <p>Esta reserva responde a la lógica de sostener la actividad profesional del equipo desarrollador y, sobre todo, al marco regulatorio: el art. 201 bis de la LGT impone sanciones de hasta 150.000 € a quienes comercialicen sistemas de facturación sin asumir la responsabilidad de productor censado. La exclusividad en la distribución oficial garantiza la trazabilidad y la seguridad jurídica de todos los usuarios.</p>
-
-        <h2>Cómo colaborar con VeriFree</h2>
-        <p>Existen diversas vías para formar parte del ecosistema del proyecto:</p>
+        <h2>Cómo puedes ayudar</h2>
         <ul>
-          <li><strong>Adquirir la Licencia Oficial:</strong> la opción idónea para trabajar con respaldo legal completo y soporte profesional.</li>
-          <li><strong>Participar en la comunidad:</strong> a través de GitHub, puedes <a href="https://github.com/cmorillas/verifree/issues" target="_blank" rel="noopener">notificar errores</a>, colaborar en pruebas o <a href="https://github.com/cmorillas/verifree/discussions" target="_blank" rel="noopener">proponer mejoras</a>.</li>
-          <li><strong>Difundir el proyecto:</strong> recomendando VeriFree a colegas, asesorías y asociaciones profesionales que busquen una facturación privada y sin cuotas obligatorias.</li>
-          <li><strong>Apoyo voluntario:</strong> si compilas el software por tu cuenta y te resulta de gran utilidad, siempre puedes <a href="mailto:contacto@verifree.es?subject=Quiero%20apoyar%20VeriFree">hacernos llegar tu aportación o colaborar con el proyecto</a>.</li>
+          <li><strong>Con la Licencia Oficial:</strong> es la mejor manera de usar VeriFree con respaldo y de que siga mejorando.</li>
+          <li><strong>Contándonos qué falla o qué echas en falta:</strong> en GitHub puedes <a href="https://github.com/cmorillas/verifree/issues" target="_blank" rel="noopener">avisar de errores</a> o <a href="https://github.com/cmorillas/verifree/discussions" target="_blank" rel="noopener">proponer mejoras</a>.</li>
+          <li><strong>Recomendándolo</strong> a otros autónomos, asesorías o asociaciones que busquen una facturación privada y sin cuotas de por vida.</li>
+          <li><strong>Si ya lo compilas tú</strong> y te resulta útil, puedes <a href="mailto:contacto@verifree.es?subject=Quiero%20apoyar%20VeriFree">hacernos llegar una aportación</a>.</li>
         </ul>
       </article>
     </div>

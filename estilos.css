@@ -317,82 +317,6 @@ summary::-webkit-details-marker {
   background: var(--naranja);
 }
 
-/* Grupos del menú con su submenú: se abren al pasar el ratón, con un toque o con el teclado (verifree.js) */
-.menu-grupo {
-  position: relative;
-}
-
-.menu-boton {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 1.3rem 0;
-  background: none;
-  border: 0;
-  color: var(--tinta-2);
-  font: inherit;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.menu-boton::after {
-  content: "";
-  width: 0.4em;
-  height: 0.4em;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: translateY(-0.15em) rotate(45deg);
-}
-
-.menu-boton:hover,
-.menu-boton[aria-expanded="true"],
-.menu-grupo.actual > .menu-boton {
-  color: var(--tinta);
-}
-
-.menu-grupo.actual > .menu-boton {
-  box-shadow: inset 0 -2px var(--naranja);
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: -0.75rem;
-  z-index: 60;
-  min-width: 12rem;
-  padding: 0.5rem;
-  background: var(--blanco);
-  border-radius: 12px;
-  box-shadow: 0 0 0 1px var(--borde), var(--sombra);
-}
-
-.menu-grupo:hover > .submenu,
-.menu-grupo:focus-within > .submenu,
-.menu-grupo.abierto > .submenu {
-  display: grid;
-}
-
-.menu .submenu a {
-  padding: 0.55rem 0.75rem;
-  border-radius: 8px;
-}
-
-.menu .submenu a:hover {
-  background: var(--crema-2);
-}
-
-.menu .submenu a[aria-current="page"] {
-  color: var(--naranja-texto);
-  font-weight: 600;
-}
-
-.menu .submenu a[aria-current="page"]::after {
-  display: none;
-}
-
 .cabecera-acciones {
   display: flex;
   align-items: center;
@@ -2513,50 +2437,6 @@ p.aviso {
     background: var(--crema-3);
     font-weight: 650;
     color: var(--naranja-texto);
-  }
-
-  /* En el móvil, cada grupo es un título con sus enlaces debajo, siempre desplegados; un enlace suelto (Precios),
-     separado de los grupos */
-  .menu > a {
-    margin-block: 0.5rem;
-    font-weight: 600;
-  }
-
-  .menu-grupo {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .menu-boton {
-    padding: 0.75rem 1rem 0.25rem;
-    color: var(--tinta-2);
-    font-size: 0.8125rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    pointer-events: none;
-  }
-
-  .menu-grupo.actual > .menu-boton {
-    box-shadow: none;
-  }
-
-  .menu-boton::after {
-    display: none;
-  }
-
-  .submenu,
-  .menu-grupo:hover > .submenu {
-    display: grid;
-    position: static;
-    min-width: 0;
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .menu .submenu a {
-    padding: 0.75rem 1rem;
   }
 }
 
