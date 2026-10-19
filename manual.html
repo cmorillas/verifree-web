@@ -81,7 +81,7 @@
         <h3>Comprobación de integridad (SHA-256)</h3>
         <p>Para comprobar que el ejecutable descargado no ha sufrido alteraciones y coincide con el publicado por el autor, puedes verificar su huella digital en PowerShell:</p>
         <p><code>Get-FileHash .\VeriFree.exe -Algorithm SHA256</code></p>
-        <p>La huella SHA-256 oficial de la versión de evaluación disponible en la web es:<br><code class="huella-valor">4328331107D8E4CFA63DAB76E13E9044246ED1A55FF8E15AB0151577EA27FDC3</code></p>
+        <p>La huella SHA-256 oficial de la versión de evaluación disponible en la web es:<br><code class="huella-valor">B498BFC2C7079AE25CB4A8BE09B7E34C01A6D316F88B6EB2B031815102090127</code></p>
         <h3>Cómo actualizar a una nueva versión</h3>
         <p>Al ser una aplicación portátil sin instalación, actualizar es tan sencillo como sustituir el archivo <span class="ruta">VeriFree.exe</span> por la nueva versión oficial descargada o recompilada. Tus empresas, facturas y configuraciones se conservan intactas en la carpeta <span class="ruta">Empresas</span> y el programa actualiza la base de datos automáticamente al abrirse. La versión que tienes se ve en <strong>Configuración › Acerca de</strong>.</p>
       </section>
@@ -205,7 +205,7 @@
         <h2>9. Envío a la AEAT</h2>
         <p>Cada factura y cada anulación se envían solas a la AEAT al emitirlas. Si no hay conexión, el programa lo vuelve a intentar solo y, mientras falte algo, lo avisa una banda arriba con un botón para resolverlo.</p>
         <h3>Pruebas y Producción</h3>
-        <p>Cada empresa empieza en el entorno de pruebas de la AEAT, sin validez legal: sus facturas llevan la banda «Modo de pruebas». Cuando quieras facturar de verdad, pásate a Producción en <strong>Configuración › VERI*FACTU</strong>: el programa pide confirmación, comprueba el certificado y la conexión, y el cambio no se puede deshacer durante el año. La versión de evaluación no puede pasar a Producción.</p>
+        <p>Cada empresa empieza en el entorno de pruebas de la AEAT, sin validez legal: sus facturas llevan la banda «Modo de pruebas». Cuando quieras facturar de verdad, pásate a Producción en <strong>Configuración › VERI*FACTU</strong>: el programa pide confirmación, comprueba el certificado y la conexión, y el cambio no se puede deshacer durante el año. La versión de evaluación no envía nada a la AEAT ni puede pasar a Producción: una banda arriba lo recuerda.</p>
         <h3>El certificado</h3>
         <p>En <strong>Configuración › VERI*FACTU</strong>, elige el certificado con el que se envía: el de la empresa o el de quien tenga poder para enviar por ella (apoderado o colaborador social). El programa lista los certificados instalados en Windows que sirven para conectar con la AEAT; si el tuyo está en un archivo, usa <strong>Importar archivo .pfx / .p12…</strong>.</p>
         <p>El certificado se queda en Windows: en la carpeta de la empresa no se guarda ni el certificado ni su contraseña. Por eso, en otro equipo hay que volver a instalarlo.</p>
