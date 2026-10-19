@@ -507,6 +507,25 @@ summary::-webkit-details-marker {
   text-align: center;
 }
 
+/* Etiqueta sobre el titular, que lleva a la filosofía */
+.portada-etiqueta {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 0.4rem 0.95rem;
+  background: rgba(255, 122, 26, 0.1);
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 122, 26, 0.28);
+  color: var(--naranja-texto);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.portada-etiqueta:hover {
+  background: rgba(255, 122, 26, 0.18);
+}
+
 .portada h1 {
   font-size: clamp(2.5rem, 3.6vw + 1rem, 4.6rem);
   font-weight: 720;
@@ -967,6 +986,23 @@ summary::-webkit-details-marker {
   color: var(--naranja-texto);
   font-size: 0.9375rem;
   font-weight: 600;
+}
+
+/* Portada: por qué hacemos VeriFree, una banda corta tras la presentación */
+.seccion-mision {
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.seccion-mision .manifiesto {
+  margin-bottom: 0;
+}
+
+.manifiesto h2 {
+  margin-bottom: 1rem;
+  color: var(--naranja-texto);
+  font-size: 0.9375rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
 }
 
 .codigo-rejilla {
