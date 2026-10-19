@@ -2315,9 +2315,7 @@ p.aviso {
   .explorador.visto .explorador-opcion:nth-child(7) { transition-delay: 0.3s; }
   .explorador.visto .explorador-opcion:nth-child(8) { transition-delay: 0.35s; }
   .explorador.visto .explorador-opcion:nth-child(9) { transition-delay: 0.4s; }
-  .explorador.visto .explorador-opcion:nth-child(10) { transition-delay: 0.45s; }
-  .explorador.visto .explorador-opcion:nth-child(11) { transition-delay: 0.5s; }
-}
+  .explorador.visto .explorador-opcion:nth-child(10) { transition-delay: 0.45s; }}
 
 @media (prefers-reduced-motion: reduce) {
   html {
