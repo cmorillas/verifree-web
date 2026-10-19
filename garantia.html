@@ -26,13 +26,34 @@
       VeriFree <span>Facturación</span>
     </a>
     <nav class="menu" id="menu-principal" aria-label="Navegación principal">
-      <a href="index.html#funciones">Funciones</a>
+      <div class="menu-grupo">
+        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-producto">Producto</button>
+        <div class="submenu" id="submenu-producto">
+          <a href="index.html#funciones">Funciones</a>
+          <a href="index.html#capturas">Capturas</a>
+          <a href="comparativa.html">Comparativa</a>
+          <a href="index.html#en-camino">En camino</a>
+        </div>
+      </div>
       <a href="index.html#precios">Precios</a>
-      <a href="filosofia.html">Código público</a>
-      <a href="comparativa.html">Comparativa</a>
-      <a href="garantia.html" aria-current="page">Garantía legal</a>
-      <a href="preguntas.html">Preguntas</a>
-      <a href="manual.html">Manual</a>
+      <div class="menu-grupo actual">
+        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-confianza">Confianza</button>
+        <div class="submenu" id="submenu-confianza">
+          <a href="index.html#ventajas">Por qué fiarte</a>
+          <a href="garantia.html" aria-current="page">Garantía legal</a>
+          <a href="filosofia.html">Código público</a>
+          <a href="compilalo.html">Compílalo tú</a>
+        </div>
+      </div>
+      <div class="menu-grupo">
+        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-ayuda">Ayuda</button>
+        <div class="submenu" id="submenu-ayuda">
+          <a href="preguntas.html">Preguntas</a>
+          <a href="manual.html">Manual</a>
+          <a href="descargas.html">Descargas</a>
+          <a href="mailto:contacto@verifree.es">Contacto</a>
+        </div>
+      </div>
     </nav>
     <div class="cabecera-acciones">
       <a class="btn btn-primario btn-sm cabecera-accion" href="https://github.com/cmorillas/verifree-web/releases/latest/download/VeriFree.exe" download>
@@ -137,7 +158,7 @@
             <h4>¿Cómo te afecta según la opción que elijas?</h4>
             <ul class="puntos">
               <li><strong>Si compilas el código tú (0 €):</strong> Puedes usarlo gratis en tu empresa o despacho profesional, pero asumes la condición de productor ante Hacienda (configurando tu NIF o CIF y tu propia declaración responsable). La licencia autoriza exclusivamente el uso interno: no otorga derechos de venta, distribución a terceros, marca blanca ni prestación remunerada de soporte.</li>
-              <li><strong>Si compras la Licencia Oficial (119 € + IVA):</strong> Nuestra empresa productora (Telytec Ingenieros, S.L., con NIF censado en la AEAT) figura y se responsabiliza legalmente del sistema. Incluye la declaración responsable oficial, así que usas un software que cumple el requisito del art. 201 bis de la LGT sin tener que programar ni asumir el papel de productor.</li>
+              <li><strong>Si compras la Licencia Oficial (119 € + IVA):</strong> Nuestra empresa productora (Telytec Ingenieros, S.L.) figura y se responsabiliza legalmente del sistema. Incluye la declaración responsable oficial, así que usas un software que cumple el requisito del art. 201 bis de la LGT sin tener que programar ni asumir el papel de productor.</li>
             </ul>
           </div>
         </div>

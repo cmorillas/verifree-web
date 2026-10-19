@@ -26,13 +26,34 @@
       VeriFree <span>Facturación</span>
     </a>
     <nav class="menu" id="menu-principal" aria-label="Navegación principal">
-      <a href="index.html#funciones">Funciones</a>
+      <div class="menu-grupo">
+        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-producto">Producto</button>
+        <div class="submenu" id="submenu-producto">
+          <a href="index.html#funciones">Funciones</a>
+          <a href="index.html#capturas">Capturas</a>
+          <a href="comparativa.html">Comparativa</a>
+          <a href="index.html#en-camino">En camino</a>
+        </div>
+      </div>
       <a href="index.html#precios">Precios</a>
-      <a href="filosofia.html" aria-current="page">Código público</a>
-      <a href="comparativa.html">Comparativa</a>
-      <a href="garantia.html">Garantía legal</a>
-      <a href="preguntas.html">Preguntas</a>
-      <a href="manual.html">Manual</a>
+      <div class="menu-grupo actual">
+        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-confianza">Confianza</button>
+        <div class="submenu" id="submenu-confianza">
+          <a href="index.html#ventajas">Por qué fiarte</a>
+          <a href="garantia.html">Garantía legal</a>
+          <a href="filosofia.html" aria-current="page">Código público</a>
+          <a href="compilalo.html">Compílalo tú</a>
+        </div>
+      </div>
+      <div class="menu-grupo">
+        <button type="button" class="menu-boton" aria-expanded="false" aria-controls="submenu-ayuda">Ayuda</button>
+        <div class="submenu" id="submenu-ayuda">
+          <a href="preguntas.html">Preguntas</a>
+          <a href="manual.html">Manual</a>
+          <a href="descargas.html">Descargas</a>
+          <a href="mailto:contacto@verifree.es">Contacto</a>
+        </div>
+      </div>
     </nav>
     <div class="cabecera-acciones">
       <a class="btn btn-primario btn-sm cabecera-accion" href="https://github.com/cmorillas/verifree-web/releases/latest/download/VeriFree.exe" download>
@@ -78,7 +99,7 @@
         <p>Desarrollar y mantener un software adaptado a VERI*FACTU y la Ley Crea y Crece requiere un trabajo continuo de ingeniería: actualizar especificaciones técnicas de la AEAT, seguir las órdenes ministeriales en el BOE, renovar esquemas XML y ofrecer asistencia cualificada.</p>
         <p>La inmensa mayoría de autónomos, empresas y asesorías necesitan centrarse en su actividad y prefieren una solución llave en mano con plenas garantías jurídicas. Para ellos existe la <strong>Licencia Oficial (119 € pago único)</strong> y el servicio opcional de <strong>actualizaciones y soporte (59 €/año)</strong>:</p>
         <ul>
-          <li>Nuestra empresa productora (Telytec Ingenieros, S.L.) asume formalmente la condición y responsabilidad de productor oficial ante la AEAT con CIF censado.</li>
+          <li>Nuestra empresa productora (Telytec Ingenieros, S.L.) asume formalmente la condición y responsabilidad de productor oficial ante la AEAT.</li>
           <li>Entregamos los ejecutables oficiales firmados digitalmente y la declaración responsable exigida por el art. 201 bis de la LGT.</li>
           <li>Proporcionamos soporte técnico directo ante dudas normativas, incidencias o configuración de certificados.</li>
         </ul>
