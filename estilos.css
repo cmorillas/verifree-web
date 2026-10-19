@@ -630,9 +630,19 @@ summary::-webkit-details-marker {
 }
 
 .cinta strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
   color: inherit;
   font-size: 0.9375rem;
   font-weight: 700;
+}
+
+/* El logo de GitHub, sin modificar y en negro, como permiten sus normas de marca */
+.cinta svg {
+  width: 1.15em;
+  height: 1.15em;
+  fill: currentColor;
 }
 
 .cinta span {
