@@ -78,8 +78,8 @@
         <h2>Paso a paso</h2>
         <ol>
           <li><strong>Descarga el código</strong> desde <a href="https://github.com/cmorillas/verifree" target="_blank" rel="noopener">GitHub</a>.</li>
-          <li><strong>Pon tus datos de productor.</strong> El código viene con un NIF ficticio de prueba (89890001K); cámbialo por tu NIF o CIF y tu nombre o razón social siguiendo las instrucciones del README del repositorio.</li>
-          <li><strong>Compílalo</strong> con el SDK de .NET 10 siguiendo el README. Obtendrás tu propio <span class="ruta">VeriFree.exe</span>.</li>
+          <li><strong>Pon tus datos de productor.</strong> El código trae el archivo <span class="ruta">Productor.json</span> con un productor de prueba (NIF 89890001K), que solo deja emitir en el entorno de pruebas de la AEAT. No lo cambies: haz una copia fuera de la carpeta del código, pon en ella tu NIF o CIF y tu nombre o razón social y quita la marca de pruebas, como explica el propio archivo. Así tus datos nunca acaban en el código por descuido.</li>
+          <li><strong>Compílalo</strong> con el SDK de .NET 10, indicando dónde está tu copia: <code>dotnet publish src\VeriFree.Escritorio -c Release -o dist -p:ArchivoProductor="C:\ruta\Productor.json"</code>. Obtendrás tu propio <span class="ruta">VeriFree.exe</span> en la carpeta <span class="ruta">dist</span>.</li>
           <li><strong>Redacta y firma tu declaración responsable</strong> como productor del software.</li>
           <li><strong>Empieza a facturar.</strong> Todo lo demás funciona igual que la versión oficial.</li>
         </ol>

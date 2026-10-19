@@ -1335,6 +1335,38 @@ summary::-webkit-details-marker {
   margin-top: 0.5rem;
 }
 
+/* Bajo Funciones: lo que VeriFree no pretende ser y lo que está en camino */
+.alcance {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem var(--hueco);
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.alcance > div {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--borde-2);
+}
+
+.alcance h3 {
+  font-size: 1.25rem;
+}
+
+.alcance p {
+  margin-top: 0.5rem;
+  font-size: 0.9375rem;
+}
+
+.alcance .lista-check {
+  margin-top: 1rem;
+}
+
+@media (max-width: 860px) {
+  .alcance {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .precio-servicio {
   margin-block: 0.35rem 0.5rem;
   color: var(--enlace);
@@ -2283,6 +2315,8 @@ p.aviso {
   .explorador.visto .explorador-opcion:nth-child(7) { transition-delay: 0.3s; }
   .explorador.visto .explorador-opcion:nth-child(8) { transition-delay: 0.35s; }
   .explorador.visto .explorador-opcion:nth-child(9) { transition-delay: 0.4s; }
+  .explorador.visto .explorador-opcion:nth-child(10) { transition-delay: 0.45s; }
+  .explorador.visto .explorador-opcion:nth-child(11) { transition-delay: 0.5s; }
 }
 
 @media (prefers-reduced-motion: reduce) {
