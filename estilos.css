@@ -88,6 +88,7 @@
 .pie,
 .codigo,
 .explorador-panel,
+.flotante,
 .plan-destacado {
   --tinta: #ffffff;
   --tinta-2: #c4c4cc;
@@ -596,41 +597,49 @@ summary::-webkit-details-marker {
   transform-origin: 50% 0;
 }
 
+/* Tarjetas flotantes sobre la captura: oscuras, para que destaquen sobre el programa y sobre el fondo */
 .flotante {
   position: absolute;
   z-index: 2;
   padding: 1.25rem 1.4rem;
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(16px) saturate(160%);
-  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  background: radial-gradient(120% 120% at 100% 0%, rgba(255, 122, 26, 0.3), transparent 60%), var(--negro);
   border-radius: 22px;
-  box-shadow: 0 30px 60px -24px rgba(60, 40, 20, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 30px 60px -18px rgba(11, 11, 12, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  color: var(--tinta);
   text-align: left;
+}
+
+.flotante svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0.75rem;
+  color: var(--naranja);
 }
 
 .flotante strong {
   display: block;
   font-size: 1.375rem;
-  font-weight: 560;
+  font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.1;
 }
 
 .flotante span {
   display: block;
-  margin-top: 0.35rem;
-  color: var(--tinta-3);
-  font-size: 0.8125rem;
+  margin-top: 0.4rem;
+  color: var(--tinta-2);
+  font-size: 0.875rem;
 }
 
 .flotante-izq {
-  left: -2%;
+  left: -4%;
   bottom: 8%;
-  max-width: 13.5rem;
+  max-width: 14rem;
 }
 
 .flotante-der {
-  right: -2.5%;
+  right: -4%;
   top: 10%;
   width: 13.5rem;
   padding: 0.55rem;
