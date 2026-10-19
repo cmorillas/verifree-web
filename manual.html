@@ -142,6 +142,10 @@
           <li><strong>Facturar…</strong> emite la factura directamente, con la fecha de hoy y el siguiente número de la serie por defecto, y la deja ligada al presupuesto («Facturado: A-2026-0023»). Mientras le falte algo para ser factura, el editor dice qué.</li>
           <li><strong>Duplicar</strong> abre una copia sin guardar, para hacer otro parecido.</li>
         </ul>
+        <figure class="captura">
+          <img src="capturas/presupuestos.png" alt="Pantalla Presupuestos con presupuestos y proformas sin facturar, caducados y facturados" width="1920" height="1140" loading="lazy">
+          <figcaption>Datos de ejemplo.</figcaption>
+        </figure>
         <p>La lista enseña los pendientes; <strong>Ver todos</strong> muestra también los facturados y los caducados. Un presupuesto guardado no se borra, y uno facturado ya no se modifica: la AEAT recomienda conservar lo que se entregó al cliente antes de facturar, ligado a su factura.</p>
       </section>
 
@@ -164,7 +168,7 @@
         <h2>7. Facturas emitidas</h2>
         <p>En <strong>Facturas</strong> están las emitidas del periodo que elijas: <strong>Mes</strong>, <strong>Trimestre</strong> o <strong>Año</strong>, con las flechas para ir al anterior o al siguiente (el trimestre anterior, el del modelo 303, queda a un clic), o las fechas que escribas. Arriba ves sus totales: base imponible, IVA, retención de IRPF y total. El buscador busca en el número de la factura y en el nombre o el NIF del cliente, y el desplegable filtra por forma de pago.</p>
         <figure class="captura">
-          <img src="capturas/facturas.png" alt="Lista de facturas de VeriFree con los totales del trimestre y los botones de cada factura" width="1920" height="1140" loading="lazy">
+          <img src="capturas/facturas.png" alt="Lista de facturas de VeriFree con los totales del mes y los botones de cada factura" width="1920" height="1140" loading="lazy">
           <figcaption>Datos de ejemplo.</figcaption>
         </figure>
         <p>Con una factura elegida (al pie de la tabla y en el menú del botón derecho):</p>
@@ -240,6 +244,10 @@
           <li>Cuándo se repite: cada mes, cada dos meses, cada trimestre, cada semestre o cada año desde el mes que elijas, o «cuando yo diga»; y si vence a unos días de prepararla.</li>
           <li>Abajo, una vista previa de cómo saldría la próxima vez.</li>
         </ul>
+        <figure class="captura">
+          <img src="capturas/recurrentes.png" alt="Pantalla Recurrentes con las que tocan este mes ya marcadas" width="1920" height="1140" loading="lazy">
+          <figcaption>Datos de ejemplo.</figcaption>
+        </figure>
         <p>La lista enseña el mes en curso (con las flechas cambias de mes), con las que tocan ya marcadas. <strong>Preparar borradores…</strong> prepara de una vez los borradores de las marcadas y te ofrece ir a Borradores para revisarlos y emitirlos. VeriFree anota qué mes se preparó de cada una para que no se repita sin querer; <strong>Preparar solo esta…</strong> repite una a propósito. <strong>Ver todas</strong> enseña también las que no tocan ese mes y las que están en pausa.</p>
       </section>
 
@@ -251,6 +259,10 @@
           <li>Las que salen en gris son de clientes sin orden de domiciliación: elige una y pulsa <strong>Orden de domiciliación…</strong> para escribir su referencia y la fecha en que el cliente la firmó. Si aún no la tiene, <strong>Orden para firmar</strong> te da el modelo de la banca española, relleno, para imprimirlo.</li>
           <li>Elige el día de cobro en <strong>Cobrar el</strong> (de entrada, el primero posible: el banco necesita el fichero con unos días de antelación) y pulsa <strong>Generar remesa…</strong>, que crea el fichero para el banco y su listado en PDF.</li>
         </ol>
+        <figure class="captura">
+          <img src="capturas/remesas.png" alt="Pantalla Remesas con las facturas domiciliadas del mes, la cuenta y la orden firmada de cada cliente" width="1920" height="1140" loading="lazy">
+          <figcaption>Datos de ejemplo.</figcaption>
+        </figure>
         <p>En <strong>Historial</strong> están las remesas generadas, para volver a guardar su fichero o ver su listado. El identificador de acreedor se calcula de tu NIF; si tu banco te ha dado un código comercial distinto de 000, cámbialo con <strong>Cambiar el código comercial</strong>.</p>
         <p class="aviso">VeriFree no lleva el control de cobros: no marca facturas como cobradas, solo dice en qué remesas ha ido cada una.</p>
       </section>

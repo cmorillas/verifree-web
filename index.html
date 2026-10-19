@@ -80,7 +80,7 @@
 
       <!-- Captura real del programa -->
       <figure class="escenario">
-        <img src="capturas/facturas.png" alt="VeriFree: lista de facturas con los totales del trimestre y el estado de envío a la AEAT" width="1920" height="1140">
+        <img src="capturas/facturas.png" alt="VeriFree: lista de facturas con los totales del mes y el estado de envío a la AEAT" width="1920" height="1140">
         <div class="flotante flotante-izq" aria-hidden="true"><strong>Tus datos, en tu PC</strong><span>Sin nube ni servidores de terceros</span></div>
         <div class="flotante flotante-der" aria-hidden="true"><img src="capturas/factura-pdf.png" alt="" width="992" height="780"><strong>Código QR oficial de cotejo</strong></div>
 
@@ -324,24 +324,36 @@
       <div class="selector" role="tablist" aria-label="Capturas del programa">
         <button type="button" class="tab-btn activo" role="tab" aria-selected="true" aria-controls="tab-facturas">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          Facturas y estados AEAT
+          Facturas
         </button>
         <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-pdf">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          Factura PDF con código QR
+          Factura en PDF
         </button>
         <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-ubl">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           Factura electrónica
         </button>
+        <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-presupuestos">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M8 13h8M8 17h5"/></svg>
+          Presupuestos
+        </button>
+        <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-recurrentes">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+          Recurrentes
+        </button>
+        <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-remesas">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Remesas
+        </button>
       </div>
 
       <div id="tab-facturas" class="tab-contenido activo" role="tabpanel">
         <figure class="captura-marco">
-          <img src="capturas/facturas.png" alt="Pantalla principal de Facturas de VeriFree: totales del trimestre, filtros y avisos de remisión a la AEAT" width="1920" height="1140" loading="lazy">
+          <img src="capturas/facturas.png" alt="Pantalla principal de Facturas de VeriFree: totales del mes, filtros y estado de envío de cada factura a la AEAT" width="1920" height="1140" loading="lazy">
         </figure>
         <p class="captura-pie">
-          Listado correlativo inmutable, totales del trimestre en tiempo real, desglose de bases y estado directo de cada registro en la AEAT con CSV oficial.
+          Listado correlativo inmutable, totales del mes, el trimestre o el año al momento, y el estado de cada factura en la AEAT, con su CSV oficial. Datos de ejemplo, enviados al entorno de pruebas de la AEAT.
         </p>
       </div>
 
@@ -385,6 +397,33 @@
             </ul>
           </div>
         </div>
+      </div>
+
+      <div id="tab-presupuestos" class="tab-contenido" role="tabpanel">
+        <figure class="captura-marco">
+          <img src="capturas/presupuestos.png" alt="Pantalla Presupuestos de VeriFree: presupuestos y facturas proforma con su validez y su situación (sin facturar, caducado o facturado)" width="1920" height="1140" loading="lazy">
+        </figure>
+        <p class="captura-pie">
+          Presupuestos y facturas proforma con su número y su validez. Cada uno dice solo si está sin facturar, caducado o ya facturado, y con qué factura.
+        </p>
+      </div>
+
+      <div id="tab-recurrentes" class="tab-contenido" role="tabpanel">
+        <figure class="captura-marco">
+          <img src="capturas/recurrentes.png" alt="Pantalla Recurrentes de VeriFree: lo que se factura cada mes o cada trimestre, con las que tocan este mes ya marcadas" width="1920" height="1140" loading="lazy">
+        </figure>
+        <p class="captura-pie">
+          Lo que facturas cada cierto tiempo: elige el mes, revisa las que tocan, ya marcadas, y prepara de una vez sus borradores.
+        </p>
+      </div>
+
+      <div id="tab-remesas" class="tab-contenido" role="tabpanel">
+        <figure class="captura-marco">
+          <img src="capturas/remesas.png" alt="Pantalla Remesas de VeriFree: facturas domiciliadas del mes con la cuenta y la orden de domiciliación de cada cliente" width="1920" height="1140" loading="lazy">
+        </figure>
+        <p class="captura-pie">
+          Las facturas domiciliadas del periodo, con la cuenta y la orden firmada de cada cliente y en qué remesas han ido ya. Un clic y tienes el fichero para tu banco.
+        </p>
       </div>
     </div>
   </section>
