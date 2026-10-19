@@ -28,7 +28,7 @@
     <nav class="menu" id="menu-principal" aria-label="Navegación principal">
       <a href="index.html#funciones">Funciones</a>
       <a href="index.html#precios">Precios</a>
-      <a href="filosofia.html">Código abierto</a>
+      <a href="filosofia.html">Código público</a>
       <a href="comparativa.html">Comparativa</a>
       <a href="garantia.html">Garantía legal</a>
       <a href="preguntas.html" aria-current="page">Preguntas</a>
@@ -65,16 +65,25 @@
             <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </summary>
           <div class="faq-respuesta">
-            Porque la ley no nos deja. El Reglamento VERI*FACTU (RD 1007/2023) exige que cada ejecutable lleve incrustados los datos del productor responsable que garantiza bajo su firma que el programa cumple la ley. Si repartiéramos un ejecutable precompilado con nuestros datos a todo el mundo de forma anónima, estaríamos asumiendo la responsabilidad legal y las sanciones tributarias (multas fijas de 150.000 € por ejercicio y tipo de sistema, art. 201 bis LGT) de miles de instalaciones fuera de nuestro control. Por eso, el código está libre en GitHub para que quien quiera compilarlo gratis se registre como su propio productor.
+            Porque la ley no nos deja. El Reglamento VERI*FACTU (RD 1007/2023) exige que cada ejecutable lleve incrustados los datos del productor responsable que garantiza bajo su firma que el programa cumple la ley. Si repartiéramos un ejecutable precompilado con nuestros datos a todo el mundo de forma anónima, estaríamos asumiendo la responsabilidad legal y las sanciones tributarias (multas fijas de 150.000 € por ejercicio y tipo de sistema, art. 201 bis LGT) de miles de instalaciones fuera de nuestro control. Por eso, el código es público en GitHub para que quien quiera compilarlo gratis lo haga como su propio productor.
           </div>
         </details>
         <details class="faq-item">
           <summary>
-            <span>¿Qué ocurre si compilo el código libre sin cambiar los datos de prueba del productor?</span>
+            <span>¿VeriFree es software libre?</span>
             <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </summary>
           <div class="faq-respuesta">
-            El código en GitHub viene configurado con un NIF ficticio de prueba (89890001K) para evitar envíos involuntarios. Si intentas enviar facturas a la AEAT con ese NIF de prueba, la Agencia Tributaria rechaza el envío con el error 1110 («Error en el bloque de SistemaInformatico. El NIF no está identificado en el censo de la AEAT»). Para que la versión libre funcione, debes compilarla obligatoriamente con tu propio NIF o CIF censado como productor.
+            Compartimos su filosofía, pero no del todo, y queremos decirlo claro. Su código es <strong>público</strong>: cualquiera puede leerlo, auditarlo y compilarlo gratis para su propia facturación o la de los clientes de su despacho. Lo que no permite la licencia es redistribuirlo ni revenderlo, y eso es lo que lo separa del software libre. El motivo es la ley: cada programa de facturación tiene que tener un productor que responda de él ante Hacienda (RD 1007/2023 y art. 201 bis LGT). Quien lo compila es el productor de su propia copia; si cualquiera pudiera repartir copias modificadas, nadie respondería de ellas ante quien las usa.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>¿Qué ocurre si compilo el código sin cambiar los datos de prueba del productor?</span>
+            <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="faq-respuesta">
+            El código en GitHub viene configurado con un NIF ficticio de prueba (89890001K) para evitar envíos involuntarios. La AEAT no admite ese NIF como productor (rechazaría cada envío con el error 1110: «Error en el bloque de SistemaInformatico. El NIF no está identificado en el censo de la AEAT»), así que un programa compilado así no envía nada y avisa de que es una versión de evaluación. Para que envíe a la AEAT, compílalo con tu propio NIF o CIF censado como productor.
           </div>
         </details>
         <details class="faq-item">
@@ -92,7 +101,7 @@
             <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </summary>
           <div class="faq-respuesta">
-            Mediante verificación criptográfica. Cada ejecutable oficial distribuido cuenta con su huella SHA-256 pública. Si un tercero descargase el código fuente libre o manipulase el ejecutable para cometer fraude o alterar registros, la huella SHA-256 cambia de forma matemática e inmediata y cualquier firma digital queda invalidada. Ante una inspección de la AEAT o un peritaje judicial, esto permite demostrar que el software ha sido modificado sin autorización y no se corresponde con el producto original certificado por el autor.
+            Mediante verificación criptográfica. Cada ejecutable oficial distribuido cuenta con su huella SHA-256 pública. Si un tercero descargase el código fuente o manipulase el ejecutable para cometer fraude o alterar registros, la huella SHA-256 cambia de forma matemática e inmediata y cualquier firma digital queda invalidada. Ante una inspección de la AEAT o un peritaje judicial, esto permite demostrar que el software ha sido modificado sin autorización y no se corresponde con el producto original certificado por el autor.
           </div>
         </details>
         <details class="faq-item">
@@ -101,7 +110,7 @@
             <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </summary>
           <div class="faq-respuesta">
-            Porque elimina de raíz cualquier sospecha de «software de doble uso» o contabilidad paralela (sancionado con hasta 50.000 € por el art. 201 bis de la LGT). Mientras que el software comercial cerrado es una caja negra opaca donde ni el usuario ni los inspectores pueden auditar qué ocurre por dentro, el código de VeriFree está a la vista pública: cualquier perito informático, asesor fiscal o actuario de la Agencia Tributaria puede comprobar línea por línea que la base de datos es inalterable por triggers, que no existen cajas B ni funciones para ocultar facturas, y que el encadenamiento criptográfico cumple estrictamente con el Reglamento VERI*FACTU.
+            Porque elimina de raíz cualquier sospecha de «software de doble uso» o contabilidad paralela (sancionado con hasta 50.000 € por el art. 201 bis de la LGT). Mientras que el software comercial cerrado es una caja negra opaca donde ni el usuario ni los inspectores pueden auditar qué ocurre por dentro, el código de VeriFree es público: cualquier perito informático, asesor fiscal o actuario de la Agencia Tributaria puede comprobar línea por línea que la base de datos es inalterable por triggers, que no existen cajas B ni funciones para ocultar facturas, y que el encadenamiento criptográfico cumple estrictamente con el Reglamento VERI*FACTU.
           </div>
         </details>
         <details class="faq-item">
@@ -110,7 +119,7 @@
             <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </summary>
           <div class="faq-respuesta">
-            Mayor fiabilidad, seguridad y cero sorpresas. En el software privativo cerrado estás obligado a confiar a ciegas en un fabricante: si su programa contiene fallos de redondeo en el IVA, errores en el encadenamiento criptográfico o vulnerabilidades de seguridad, nadie externo puede advertirlo hasta que el problema ya te ha afectado o te llega un requerimiento de Hacienda. Al ser de código visible en GitHub, VeriFree está expuesto al escrutinio técnico continuo de peritos, desarrolladores y especialistas en ciberseguridad. Cualquier inconsistencia se detecta a la luz pública, lo que se traduce en un software mucho más robusto, depurado y contrastado para tu trabajo diario.
+            Mayor fiabilidad, seguridad y cero sorpresas. En el software privativo cerrado estás obligado a confiar a ciegas en un fabricante: si su programa contiene fallos de redondeo en el IVA, errores en el encadenamiento criptográfico o vulnerabilidades de seguridad, nadie externo puede advertirlo hasta que el problema ya te ha afectado o te llega un requerimiento de Hacienda. Al tener el código público en GitHub, VeriFree está expuesto al escrutinio técnico continuo de peritos, desarrolladores y especialistas en ciberseguridad. Cualquier inconsistencia se detecta a la luz pública, lo que se traduce en un software mucho más robusto, depurado y contrastado para tu trabajo diario.
           </div>
         </details>
         <details class="faq-item">
@@ -201,7 +210,7 @@
             <svg class="faq-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </summary>
           <div class="faq-respuesta">
-            ¡Claro! Descarga <code>VeriFree.exe</code> desde esta misma web, sin registrarte y sin dar ningún dato de pago. Viene preconfigurado en Modo Pruebas con un productor de evaluación: te permite explorar todas las funciones, crear clientes, hacer presupuestos y borradores, emitir facturas simuladas con hash encadenado SHA-256 (no se envían a la AEAT), ver el PDF con código QR y exportar el libro oficial en Excel en tu propio PC. Para emitir facturas con validez fiscal real ante la AEAT en Producción, tan solo necesitarás adquirir la Licencia Oficial (donde nuestra empresa productora, Telytec Ingenieros, S.L., asume la responsabilidad legal ante la AEAT) o compilar el código libre con tu propio NIF o CIF censado.
+            ¡Claro! Descarga <code>VeriFree.exe</code> desde esta misma web, sin registrarte y sin dar ningún dato de pago. Viene preconfigurado en Modo Pruebas con un productor de evaluación: te permite explorar todas las funciones, crear clientes, hacer presupuestos y borradores, emitir facturas simuladas con hash encadenado SHA-256 (no se envían a la AEAT), ver el PDF con código QR y exportar el libro oficial en Excel en tu propio PC. Para emitir facturas con validez fiscal real ante la AEAT en Producción, tan solo necesitarás adquirir la Licencia Oficial (donde nuestra empresa productora, Telytec Ingenieros, S.L., asume la responsabilidad legal ante la AEAT) o compilar el código con tu propio NIF o CIF censado.
           </div>
         </details>
         <details class="faq-item">
@@ -221,7 +230,7 @@
           <div class="faq-respuesta">
             Depende de cómo tengas VeriFree, y en ningún caso te atamos:
             <ul>
-              <li><strong>Si utilizas el repositorio libre (0 €):</strong> El código fuente en GitHub se publica con fines de transparencia, auditoría e independencia técnica bajo modelo «as-is». Las publicaciones son discrecionales y no conllevan compromiso de calendario, paridad inmediata con nuevas órdenes ministeriales ni soporte. Quien busca adaptación continua y garantizada a la normativa cuenta con la Licencia Oficial y su plan de actualizaciones.</li>
+              <li><strong>Si compilas el código de GitHub (0 €):</strong> El código fuente en GitHub se publica con fines de transparencia, auditoría e independencia técnica bajo modelo «as-is». Las publicaciones son discrecionales y no conllevan compromiso de calendario, paridad inmediata con nuevas órdenes ministeriales ni soporte. Quien busca adaptación continua y garantizada a la normativa cuenta con la Licencia Oficial y su plan de actualizaciones.</li>
               <li><strong>Si tienes la Licencia Oficial (119 €):</strong> Durante los 12 meses siguientes a la compra recibes todas las actualizaciones normativas y el soporte. Después puedes renovarlos con el plan anual o seguir usando tu versión, que no caduca y cumple la normativa vigente al recibirla. Si más adelante la AEAT cambia los requisitos, las adaptaciones llegan con la renovación.</li>
               <li><strong>Si renuevas Actualizaciones y soporte (59 €/año):</strong> Sigues teniendo cubiertas todas las actualizaciones normativas y evolutivas (nuevos requisitos de VERI*FACTU y factura electrónica obligatoria), con los nuevos ejecutables oficiales listos para usar.</li>
             </ul>
@@ -276,7 +285,7 @@
           <img src="icono.svg" alt="Logotipo VeriFree" width="28" height="28">
           VeriFree <span>Facturación</span>
         </div>
-        <p>Software de facturación para Windows adaptado al Reglamento VERI*FACTU y la Ley Crea y Crece. Con el código a la vista y gratis para quien sabe compilarlo.</p>
+        <p>Software de facturación para Windows adaptado al Reglamento VERI*FACTU y la Ley Crea y Crece. Con el código público y gratis para quien sabe compilarlo.</p>
         <p class="pie-nota">100% privado en tu equipo, sin servidores en la nube y con base de datos SQLite local inalterable.</p>
       </div>
 
