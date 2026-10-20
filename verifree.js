@@ -125,19 +125,6 @@
     })(titular);
   }
 
-  /* Captura de portada que se endereza al bajar */
-  var captura = document.querySelector('.escenario > img');
-  if (captura && !sinMovimiento && window.innerWidth > 980) {
-    var enderezar = function () {
-      var r = captura.getBoundingClientRect();
-      var p = Math.min(1, Math.max(0, 1 - r.top / window.innerHeight));
-      captura.style.setProperty('--inclinacion', (18 * (1 - p)).toFixed(2) + 'deg');
-      captura.style.setProperty('--escala', (0.92 + 0.08 * p).toFixed(3));
-    };
-    window.addEventListener('scroll', enderezar, { passive: true });
-    enderezar();
-  }
-
   /* Foco de luz que sigue al ratón */
   document.querySelectorAll('.explorador-panel, .plan, .coste').forEach(function (el) {
     el.addEventListener('pointermove', function (e) {

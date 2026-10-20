@@ -706,11 +706,10 @@ summary::-webkit-details-marker {
   color: var(--tinta);
 }
 
-/* Captura con perspectiva que se endereza al bajar */
+/* Captura de la portada */
 .escenario {
   position: relative;
   margin-top: clamp(3.5rem, 7vw, 6rem);
-  perspective: 1600px;
 }
 
 .escenario > img {
@@ -718,8 +717,6 @@ summary::-webkit-details-marker {
   border-radius: 14px;
   background: var(--blanco);
   box-shadow: var(--sombra-captura);
-  transform: rotateX(var(--inclinacion, 0deg)) scale(var(--escala, 1));
-  transform-origin: 50% 0;
 }
 
 /* Tarjetas flotantes sobre la captura: oscuras, para que destaquen sobre el programa y sobre el fondo */
@@ -2399,10 +2396,6 @@ p.aviso {
     animation: enfocar 1.2s var(--curva) 1s both;
   }
 
-  .escenario > img {
-    transition: transform 0.1s linear;
-  }
-
   .flotante {
     animation: flotar 6s ease-in-out infinite;
   }
@@ -2725,9 +2718,6 @@ p.aviso {
     display: none;
   }
 
-  .escenario > img {
-    transform: none;
-  }
 }
 
 @media (max-width: 900px) {
