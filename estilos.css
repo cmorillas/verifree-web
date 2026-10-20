@@ -759,14 +759,14 @@ summary::-webkit-details-marker {
 
 /* Sobre la zona blanca del programa, no sobre su barra lateral, que es del mismo azul que la tarjeta */
 .flotante-izq {
-  left: 24%;
-  bottom: 5%;
+  left: 43%;
+  bottom: -13%;
   max-width: 14rem;
 }
 
 .flotante-der {
-  right: -4%;
-  top: 10%;
+  right: -10%;
+  top: -10%;
   width: 13.5rem;
   padding: 0.55rem;
 }
@@ -2620,6 +2620,13 @@ p.aviso {
 
   .precios-extra > div {
     grid-column: 1 / -1;
+  }
+}
+
+/* Sin margen a los lados de la captura, la tarjeta de arriba se cortaría contra el borde de la pantalla */
+@media (max-width: 1380px) {
+  .flotante-der {
+    right: -3%;
   }
 }
 
