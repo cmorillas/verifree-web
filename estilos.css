@@ -757,9 +757,10 @@ summary::-webkit-details-marker {
   font-size: 0.875rem;
 }
 
+/* Sobre la zona blanca del programa, no sobre su barra lateral, que es del mismo azul que la tarjeta */
 .flotante-izq {
-  left: -4%;
-  bottom: 8%;
+  left: 24%;
+  bottom: 5%;
   max-width: 14rem;
 }
 
