@@ -843,6 +843,15 @@ summary::-webkit-details-marker {
 }
 
 /* 7. Secciones y coste ==================================================== */
+/* En Precios, bajo los planes */
+.planes + .coste {
+  margin-top: var(--hueco);
+}
+
+.coste + .precios-extra {
+  margin-top: var(--hueco);
+}
+
 .coste {
   position: relative;
   padding: clamp(1.75rem, 4vw, 3.5rem);
