@@ -893,7 +893,7 @@ summary::-webkit-details-marker {
 .coste-fila,
 .coste-eje {
   display: grid;
-  grid-template-columns: 13rem minmax(0, 1fr) 10rem;
+  grid-template-columns: 15rem minmax(0, 1fr) 10rem;
   column-gap: 1.5rem;
   align-items: center;
   padding-inline: 1rem;
