@@ -42,6 +42,9 @@
   --crema-3: #e7e3dc;
   --negro: #0b0b0c;
   --negro-2: #151519;
+  /* Las superficies oscuras (secciones, tarjeta destacada, pie): el azul marino del programa */
+  --marino: #142947;
+  --marino-2: #1B365D;
 
   /* Texto (se redefine dentro de los bloques oscuros) */
   --tinta: #0b0b0c;
@@ -621,7 +624,7 @@ summary::-webkit-details-marker {
   align-items: center;
   width: 22rem;
   padding: 0.5rem 0;
-  background: var(--negro);
+  background: #0b0b0c;
   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6);
   color: var(--blanco);
   line-height: 1.2;
@@ -676,7 +679,7 @@ summary::-webkit-details-marker {
 }
 
 .portada .btn-primario {
-  background: var(--negro);
+  background: var(--marino);
   color: var(--blanco);
 }
 
@@ -724,7 +727,7 @@ summary::-webkit-details-marker {
   position: absolute;
   z-index: 2;
   padding: 1.25rem 1.4rem;
-  background: radial-gradient(120% 120% at 100% 0%, rgba(255, 122, 26, 0.3), transparent 60%), var(--negro);
+  background: radial-gradient(120% 120% at 100% 0%, rgba(255, 122, 26, 0.3), transparent 60%), var(--marino);
   border-radius: 22px;
   box-shadow: 0 30px 60px -18px rgba(11, 11, 12, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.1);
   color: var(--tinta);
@@ -1048,7 +1051,7 @@ summary::-webkit-details-marker {
 }
 
 .resumen-destacada {
-  background: radial-gradient(120% 120% at 100% 0%, rgba(255, 122, 26, 0.3), transparent 60%), var(--negro);
+  background: radial-gradient(120% 120% at 100% 0%, rgba(255, 122, 26, 0.3), transparent 60%), var(--marino);
   box-shadow: none;
 }
 
@@ -1175,7 +1178,7 @@ summary::-webkit-details-marker {
   visibility: hidden;
   overflow: hidden;
   padding: clamp(1rem, 2vw, 1.5rem);
-  background: radial-gradient(120% 90% at 100% 0%, rgba(255, 122, 26, 0.28), transparent 55%), var(--negro);
+  background: radial-gradient(120% 90% at 100% 0%, rgba(255, 122, 26, 0.28), transparent 55%), var(--marino);
   border-radius: 28px;
 }
 
@@ -1212,7 +1215,7 @@ summary::-webkit-details-marker {
 
 /* 9. Código a la vista ==================================================== */
 .codigo {
-  background: var(--negro);
+  background: var(--marino);
 }
 
 .manifiesto {
@@ -1261,7 +1264,7 @@ summary::-webkit-details-marker {
 
 .codigo-bloque {
   padding: clamp(1.75rem, 3vw, 2.5rem);
-  background: var(--negro-2);
+  background: var(--marino-2);
   border: 1px solid var(--borde);
   border-radius: var(--radio-panel);
 }
@@ -1424,7 +1427,7 @@ summary::-webkit-details-marker {
   border-left: 1px solid var(--borde);
 }
 .plan-destacado {
-  background: var(--negro);
+  background: var(--marino);
 }
 
 .plan-lema       { grid-row: 1; }
@@ -1876,7 +1879,7 @@ summary::-webkit-details-marker {
 
 .cierre {
   padding-block: clamp(4rem, 7vw, 6rem);
-  background: var(--negro);
+  background: var(--marino);
 }
 
 .cierre .marco {
@@ -1916,7 +1919,7 @@ summary::-webkit-details-marker {
 
 .pie {
   padding-block: 4rem 2rem;
-  background: var(--negro);
+  background: var(--marino);
   border-top: 1px solid var(--borde);
   font-size: 0.875rem;
 }
@@ -2316,7 +2319,7 @@ summary::-webkit-details-marker {
   width: 4.5rem;
   height: 4.5rem;
   overflow: hidden;
-  background: radial-gradient(120% 120% at 100% 0%, rgba(255, 122, 26, 0.4), transparent 60%), var(--negro);
+  background: radial-gradient(120% 120% at 100% 0%, rgba(255, 122, 26, 0.4), transparent 60%), var(--marino);
   border-radius: 50%;
   color: #ffffff;
   font-size: 1.375rem;

@@ -1,79 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <defs>
-    <!-- Filtros de sombra y profundidad -->
-    <filter id="vf-shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020617" flood-opacity="0.5"/>
-    </filter>
-    <filter id="vf-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="14" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
-
-    <!-- Gradiente de fondo del contenedor (Dark Titanium / Navy profundo) -->
-    <linearGradient id="vf-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1E293B"/>
-      <stop offset="40%" stop-color="#0F172A"/>
-      <stop offset="100%" stop-color="#020617"/>
-    </linearGradient>
-
-    <!-- Gradiente del borde sutil -->
-    <linearGradient id="vf-border" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#1E40AF" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#10B981" stop-opacity="0.4"/>
-    </linearGradient>
-
-    <!-- Gradiente del brazo izquierdo (Veri / Solidez / Plata-Azulado) -->
-    <linearGradient id="vf-left" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="50%" stop-color="#E2E8F0"/>
-      <stop offset="100%" stop-color="#94A3B8"/>
-    </linearGradient>
-
-    <!-- Gradiente del brazo derecho (Checkmark / Libertad / Esmeralda eléctrico) -->
-    <linearGradient id="vf-right" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#059669"/>
-      <stop offset="35%" stop-color="#10B981"/>
-      <stop offset="75%" stop-color="#34D399"/>
-      <stop offset="100%" stop-color="#6EE7B7"/>
-    </linearGradient>
-
-    <!-- Resplandor esmeralda central -->
-    <radialGradient id="vf-ambient-glow" cx="50%" cy="55%" r="45%">
-      <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
-    </radialGradient>
+    <linearGradient id="vf-fondo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffa257"/><stop offset="1" stop-color="#ff6a00"/></linearGradient>
+    <linearGradient id="vf-luz" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.35"/><stop offset="0.5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="vf-v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#254a80"/><stop offset="1" stop-color="#142947"/></linearGradient>
   </defs>
-
-  <!-- 1. Contenedor redondeado moderno (Squircle) -->
-  <rect x="16" y="16" width="224" height="224" rx="54" fill="url(#vf-bg)" filter="url(#vf-shadow)"/>
-  <rect x="16" y="16" width="224" height="224" rx="54" fill="none" stroke="url(#vf-border)" stroke-width="2.5"/>
-
-  <!-- 2. Halo ambiental de luz interna -->
-  <circle cx="128" cy="138" r="85" fill="url(#vf-ambient-glow)"/>
-
-  <!-- 3. Isotipo VeriFree: Fusión geométrica de 'V' y Checkmark de Verificación -->
-  <g id="vf-symbol">
-    <!-- Brazo izquierdo ('V' anclada en plata pura) -->
-    <path d="M 74 88 
-             L 116 176" 
-          fill="none" 
-          stroke="url(#vf-left)" 
-          stroke-width="26" 
-          stroke-linecap="round" 
-          stroke-linejoin="round"/>
-
-    <!-- Brazo derecho (Checkmark dinámico ascendente en verde esmeralda) -->
-    <path d="M 114 176 
-             L 194 72" 
-          fill="none" 
-          stroke="url(#vf-right)" 
-          stroke-width="26" 
-          stroke-linecap="round" 
-          stroke-linejoin="round"
-          filter="url(#vf-glow)"/>
-
-    <!-- Núcleo de vértice suave -->
-    <circle cx="115" cy="176" r="13" fill="#10B981"/>
-  </g>
+  <!-- Isotipo de VeriFree: una V cuyo brazo derecho es una marca de verificación, en azul marino con el brazo izquierdo
+       en blanco, sobre naranja. El mismo que el icono del programa. -->
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#vf-fondo)"/>
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#vf-luz)"/>
+  <path d="M74 90 116 178 190 76" fill="none" stroke="url(#vf-v)" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M74 90 116 178" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round"/>
 </svg>
