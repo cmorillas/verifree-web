@@ -1040,6 +1040,17 @@ summary::-webkit-details-marker {
   color: var(--naranja);
 }
 
+.resumen-tarjeta .btn svg {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 0;
+  color: inherit;
+}
+
+.resumen-tarjeta .btn span {
+  color: inherit;
+}
+
 .resumen-tarjeta h3 {
   color: var(--tinta);
   font-size: 1.125rem;
@@ -1263,8 +1274,15 @@ summary::-webkit-details-marker {
   color: var(--naranja-texto);
 }
 
+/* El botón siempre al pie de la tarjeta, a la misma altura en las tres */
+.resumen:has(.contacto-accion) .resumen-tarjeta {
+  display: flex;
+  flex-direction: column;
+}
+
 .resumen-tarjeta .contacto-accion {
-  margin-top: 1.25rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
 }
 
 .contacto-texto {
