@@ -2308,21 +2308,7 @@ summary::-webkit-details-marker {
   margin-top: 0.5rem;
 }
 
-/* Quiénes somos: cada persona del equipo con su foto (o sus iniciales), su cargo y unas líneas */
-.equipo {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.persona {
-  padding: 1.25rem;
-  background: var(--blanco);
-  border-radius: var(--radio);
-  box-shadow: 0 0 0 1px var(--borde);
-}
-
+/* Quiénes somos: iniciales (o foto) en un círculo */
 .persona-foto {
   display: grid;
   place-items: center;
@@ -2337,25 +2323,36 @@ summary::-webkit-details-marker {
   letter-spacing: -0.02em;
 }
 
+/* El fundador: su foto (o sus iniciales) junto a unas líneas */
+.fundador {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: 0 0 0 1px var(--borde);
+}
+
+.fundador .persona-foto {
+  flex: none;
+}
+
+.texto .fundador p {
+  margin-top: 0;
+}
+
+@media (max-width: 520px) {
+  .fundador {
+    flex-direction: column;
+  }
+}
+
 .persona-foto img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.texto .persona h3 {
-  margin-top: 1rem;
-}
-
-.texto .persona .persona-cargo {
-  margin-top: 0.15rem;
-  color: var(--naranja-texto);
-  font-size: 0.875rem;
-  font-weight: 600;
-}
-
-.texto .persona p {
-  font-size: 0.9375rem;
 }
 
 .huella-valor {
