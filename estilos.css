@@ -1217,6 +1217,37 @@ summary::-webkit-details-marker {
   font-size: 1.375rem;
 }
 
+/* Contacto: tarjetas con el dato bien visible y su botón al pie */
+.resumen-tarjeta .contacto-dato {
+  margin-top: 0.75rem;
+  font-size: 1.1875rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.resumen-tarjeta .contacto-dato + .contacto-dato {
+  margin-top: 0.25rem;
+}
+
+.resumen-tarjeta .contacto-dato a {
+  color: var(--tinta);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.resumen-tarjeta .contacto-dato a:hover {
+  color: var(--naranja-texto);
+}
+
+.resumen-tarjeta .contacto-accion {
+  margin-top: 1.25rem;
+}
+
+.contacto-texto {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
 .pagina-cabecera .acciones {
   margin-top: 1.75rem;
 }
