@@ -850,13 +850,9 @@ summary::-webkit-details-marker {
 }
 
 /* 7. Secciones y coste ==================================================== */
-/* En Precios, bajo los planes */
-.planes + .coste {
-  margin-top: var(--hueco);
-}
-
-.coste + .precios-extra {
-  margin-top: var(--hueco);
+/* En Precios, al final, tras cómo se compra */
+.alcance + .coste {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
 }
 
 .coste {
@@ -1319,72 +1315,6 @@ summary::-webkit-details-marker {
   margin-top: clamp(2.5rem, 5vw, 4rem);
 }
 
-/* Comprar: un artículo por tarjeta, con su precio y sus botones al pie */
-.tienda {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-@media (max-width: 760px) {
-  .tienda {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-.articulo {
-  display: flex;
-  flex-direction: column;
-  padding: clamp(1.5rem, 3vw, 2rem);
-  background: var(--blanco);
-  border-radius: var(--radio-panel);
-  box-shadow: 0 0 0 1px var(--borde);
-}
-
-.articulo h3 {
-  color: var(--tinta);
-  font-size: 1.25rem;
-  letter-spacing: -0.015em;
-}
-
-.articulo p {
-  margin-top: 0.5rem;
-  color: var(--tinta-2);
-  font-size: 0.9375rem;
-  line-height: 1.55;
-}
-
-.articulo .articulo-cifra {
-  margin-top: 1.25rem;
-  color: var(--tinta);
-  font-size: 2.25rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1;
-}
-
-.articulo-cifra span {
-  color: var(--tinta-2);
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-.articulo .articulo-iva {
-  margin-top: 0.5rem;
-  color: var(--tinta-3);
-  font-size: 0.8125rem;
-}
-
-.articulo-botones {
-  margin-top: auto;
-  padding-top: 1.5rem;
-}
-
-.tienda-texto {
-  margin-top: clamp(2.5rem, 5vw, 4rem);
-}
-
 .pagina-cabecera .acciones {
   margin-top: 1.75rem;
 }
@@ -1593,6 +1523,22 @@ summary::-webkit-details-marker {
 .plan > .btn {
   align-self: end;
   width: 100%;
+}
+
+/* Botones de pago: en el plan, uno debajo de otro; en los servicios, uno al lado de otro */
+.plan-botones {
+  display: grid;
+  grid-row: 6;
+  align-self: end;
+  gap: 0.6rem;
+}
+
+.plan-botones .btn {
+  width: 100%;
+}
+
+.precio-botones {
+  margin-top: 1.25rem;
 }
 
 .precios-extra {
@@ -2648,7 +2594,8 @@ p.aviso {
     grid-row: auto;
   }
 
-  .plan > .btn {
+  .plan > .btn,
+  .plan-botones {
     margin-top: auto;
   }
 

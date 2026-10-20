@@ -41,7 +41,7 @@
       <a href="contacto.html">Contacto</a>
     </nav>
     <div class="cabecera-acciones">
-      <a class="btn btn-secundario btn-sm cabecera-comprar" href="comprar.html">Comprar</a>
+      <a class="btn btn-secundario btn-sm cabecera-comprar" href="precios.html#planes">Comprar</a>
       <a class="btn btn-primario btn-sm cabecera-accion" href="https://github.com/cmorillas/verifree-web/releases/latest/download/VeriFree.exe" download>
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Probar gratis
@@ -78,7 +78,7 @@
       </div>
 
       <a class="veri veri-centro" href="contacto.html" title="Hablar con nosotros"><img src="mascota/veri.svg" alt="" width="96" height="96"><p class="veri-bocadillo">Sin trucos ni letra pequeña: pagas una vez y, si un día no renuevas, tu programa sigue funcionando.</p></a>
-      <div class="planes">
+      <div class="planes" id="planes">
         <article class="plan plan-destacado">
           <div class="plan-lema">Pago único · Sin cuotas mensuales</div>
           <div class="plan-cabecera">
@@ -95,9 +95,11 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Declaración responsable oficial</strong> incluida: usas un software con la declaración del productor que exige el art. 201 bis de la LGT.</span></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Presupuestos, facturas recurrentes y remesas SEPA</strong> incluidos, sin módulos extra.</span></li>
           </ul>
-          <a class="btn btn-primario" href="comprar.html">
-            <span>Comprar Licencia Oficial</span>
-          </a>
+          <!-- Enlaces de pago provisionales: se sustituyen por los reales de Stripe y PayPal -->
+          <div class="plan-botones">
+            <a class="btn btn-primario" href="https://stripe.com" target="_blank" rel="noopener"><span>Pagar con tarjeta</span></a>
+            <a class="btn btn-secundario" href="https://www.paypal.com" target="_blank" rel="noopener"><span>Pagar con PayPal</span></a>
+          </div>
         </article>
 
         <article class="plan">
@@ -138,7 +140,48 @@
         </article>
       </div>
 
-<figure class="coste" id="coste" aria-labelledby="coste-titulo">
+      <div class="precios-extra">
+        <div>
+          <h4>Puesta en Marcha llave en mano</h4>
+          <p class="precio-servicio">45 € + IVA (pago único)</p>
+          <p>Instalación remota de VeriFree, configuración de tu certificado digital FNMT/DNIe, datos fiscales, series y primera factura de prueba guiada paso a paso.</p>
+          <div class="acciones precio-botones">
+            <a class="btn btn-primario" href="https://stripe.com" target="_blank" rel="noopener"><span>Pagar con tarjeta</span></a>
+            <a class="btn btn-secundario" href="https://www.paypal.com" target="_blank" rel="noopener"><span>Pagar con PayPal</span></a>
+          </div>
+        </div>
+        <div>
+          <h4>Actualizaciones y soporte, desde el segundo año</h4>
+          <p class="precio-servicio">59 € + IVA al año (opcional)</p>
+          <p>Las actualizaciones normativas de la AEAT y del BOE, la adaptación a la factura electrónica obligatoria (Ley Crea y Crece) y el soporte directo. Sin permanencia: renuevas cuando lo necesites.</p>
+          <div class="acciones precio-botones">
+            <a class="btn btn-primario" href="https://stripe.com" target="_blank" rel="noopener"><span>Pagar con tarjeta</span></a>
+            <a class="btn btn-secundario" href="https://www.paypal.com" target="_blank" rel="noopener"><span>Pagar con PayPal</span></a>
+          </div>
+        </div>
+        <div>
+          <h4>¿Dudas antes de comprar la Licencia Oficial o la Puesta en Marcha?</h4>
+          <p>Atención directa de lunes a viernes (mañanas, de 9:00 a 14:00 h): llámanos al <a class="tel" href="tel:965134033">965 13 40 33</a> o escríbenos por WhatsApp al <a class="tel" href="tel:686600299">686 60 02 99</a>.</p>
+        </div>
+
+      </div>
+
+      <div class="alcance como-comprar" id="como-comprar">
+        <div>
+          <h3>Cómo se compra</h3>
+          <ul class="lista-check">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Eliges lo que necesitas y pagas con tarjeta o con PayPal.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Te enviamos la factura por correo. Si necesitas que lleve datos concretos (razón social, NIF, dirección), indícanoslo al pagar o escríbenos después.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Con la Licencia Oficial te mandamos el ejecutable oficial y lo que necesitas para empezar. Con la Puesta en Marcha, te llamamos o te escribimos por WhatsApp para fijar el día.</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>¿Prefieres pagar por transferencia?</h3>
+          <p>Escríbenos a <a href="mailto:contacto@verifree.es?subject=Quiero%20pagar%20por%20transferencia">contacto@verifree.es</a>, dinos qué necesitas y te mandamos la factura con los datos del banco.</p>
+        </div>
+      </div>
+
+      <figure class="coste" id="coste" aria-labelledby="coste-titulo">
         <p class="coste-gancho">Hasta <b>1.621 €</b> menos en 3 años</p>
         <figcaption class="coste-titulo" id="coste-titulo">Coste acumulado a 3 años</figcaption>
         <div class="coste-grafico">
@@ -173,24 +216,6 @@
         </div>
         <p class="coste-nota"><strong>VeriFree es software local:</strong> 119 € en un solo pago con el 1.er año de soporte y actualizaciones legales incluido (59 €/año a partir del segundo, 100% opcional). En la nube pagas un alquiler mensual continuo (15 € a 40 €/mes) por servidores de terceros. Compilar el código tú mismo cuesta 0 €, pero entonces eres tú quien responde como productor ante Hacienda (<a href="compilalo.html">cómo se hace</a>).</p>
       </figure>
-
-      <div class="precios-extra">
-        <div>
-          <h4>Puesta en Marcha llave en mano</h4>
-          <p class="precio-servicio">45 € + IVA (pago único)</p>
-          <p>Instalación remota de VeriFree, configuración de tu certificado digital FNMT/DNIe, datos fiscales, series y primera factura de prueba guiada paso a paso.</p>
-        </div>
-        <div>
-          <h4>Actualizaciones y soporte, desde el segundo año</h4>
-          <p class="precio-servicio">59 € + IVA al año (opcional)</p>
-          <p>Las actualizaciones normativas de la AEAT y del BOE, la adaptación a la factura electrónica obligatoria (Ley Crea y Crece) y el soporte directo. Sin permanencia: renuevas cuando lo necesites.</p>
-        </div>
-        <div>
-          <h4>¿Dudas antes de comprar la Licencia Oficial o la Puesta en Marcha?</h4>
-          <p>Atención directa de lunes a viernes (mañanas, de 9:00 a 14:00 h): llámanos al <a class="tel" href="tel:965134033">965 13 40 33</a> o escríbenos por WhatsApp al <a class="tel" href="tel:686600299">686 60 02 99</a>.</p>
-        </div>
-
-      </div>
     </div>
   </section>
 </main>
