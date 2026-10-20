@@ -779,7 +779,7 @@ summary::-webkit-details-marker {
   font-size: 1.125rem;
 }
 
-/* Veri, la mascota: un lince ibérico («ojos de lince»), que parpadea y respira (mascota/veri.svg) */
+/* Veri, la mascota: un lince ibérico («ojos de lince»), que parpadea (mascota/veri.svg) */
 .veri {
   display: flex;
   align-items: center;
