@@ -328,6 +328,13 @@ summary::-webkit-details-marker {
   justify-self: end;
 }
 
+/* En pantallas muy estrechas no cabe junto al menú; se llega desde Precios */
+@media (max-width: 520px) {
+  .cabecera-comprar {
+    display: none;
+  }
+}
+
 /* Grupos del menú: se abren al pasar el ratón, con un toque o con el teclado (verifree.js). Precios es un enlace
    con una flecha al lado que abre lo suyo; Ayuda es solo un título */
 .menu-grupo {
