@@ -2323,30 +2323,46 @@ summary::-webkit-details-marker {
   letter-spacing: -0.02em;
 }
 
-/* El fundador: su foto (o sus iniciales) junto a unas líneas */
-.fundador {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-  padding: 1.25rem;
-  background: var(--blanco);
-  border-radius: var(--radio);
-  box-shadow: 0 0 0 1px var(--borde);
+/* Cita del fundador, al final de Quiénes somos, con su firma */
+.cita {
+  margin-top: 3rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--borde-2);
 }
 
-.fundador .persona-foto {
-  flex: none;
+.cita blockquote {
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--naranja);
 }
 
-.texto .fundador p {
+.texto .cita blockquote p {
   margin-top: 0;
+  color: var(--tinta);
+  font-size: clamp(1.25rem, 0.8vw + 1rem, 1.5rem);
+  font-weight: 450;
+  line-height: 1.45;
+  letter-spacing: -0.015em;
 }
 
-@media (max-width: 520px) {
-  .fundador {
-    flex-direction: column;
-  }
+.cita figcaption {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 1.25rem;
+  color: var(--tinta-2);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+.cita figcaption strong {
+  color: var(--tinta);
+}
+
+.cita .persona-foto {
+  flex: none;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1rem;
 }
 
 .persona-foto img {
