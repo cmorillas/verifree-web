@@ -621,9 +621,9 @@ summary::-webkit-details-marker {
   align-items: center;
   width: 22rem;
   padding: 0.5rem 0;
-  background: linear-gradient(90deg, rgba(255, 122, 26, 0.9), rgba(240, 90, 0, 0.9));
-  box-shadow: 0 10px 20px -10px rgba(160, 60, 0, 0.6);
-  color: var(--negro);
+  background: var(--negro);
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6);
+  color: var(--blanco);
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
@@ -640,7 +640,7 @@ summary::-webkit-details-marker {
   font-weight: 700;
 }
 
-/* El logo de GitHub, sin modificar y en negro, como permiten sus normas de marca */
+/* El logo de GitHub, sin modificar y en blanco sobre la cinta negra, como permiten sus normas de marca */
 .cinta svg {
   width: 1.15em;
   height: 1.15em;
@@ -1215,6 +1215,14 @@ summary::-webkit-details-marker {
 
 .codigo-bloque h3 {
   font-size: 1.375rem;
+}
+
+.pagina-cabecera .acciones {
+  margin-top: 1.75rem;
+}
+
+.codigo-bloque .acciones {
+  margin-top: 2.25rem;
 }
 
 .codigo .lista-check {
