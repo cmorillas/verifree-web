@@ -962,6 +962,20 @@ summary::-webkit-details-marker {
   box-shadow: 0 0 0 4px rgba(255, 122, 26, 0.2);
 }
 
+.es-cero .coste-barra {
+  top: calc(50% - 0.45rem);
+  bottom: auto;
+  width: 0.9rem;
+  height: 0.9rem;
+  margin-left: -0.45rem;
+  background: var(--naranja);
+}
+
+.es-cero .coste-valor {
+  color: #d95a00;
+  font-weight: 700;
+}
+
 .coste-eje {
   margin-top: 0.75rem;
   color: var(--tinta-3);
@@ -2917,6 +2931,13 @@ p.aviso {
   .coste-barra {
     height: 100%;
     border-radius: 999px;
+  }
+
+  .es-cero .coste-barra {
+    top: 0;
+    width: 0.625rem;
+    height: 100%;
+    margin-left: 0;
   }
 
   .coste-eje {
