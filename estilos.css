@@ -328,13 +328,6 @@ summary::-webkit-details-marker {
   justify-self: end;
 }
 
-/* En pantallas muy estrechas no cabe junto al menú; se llega desde Precios */
-@media (max-width: 520px) {
-  .cabecera-comprar {
-    display: none;
-  }
-}
-
 /* Grupos del menú: se abren al pasar el ratón, con un toque o con el teclado (verifree.js). Precios es un enlace
    con una flecha al lado que abre lo suyo; Ayuda es solo un título */
 .menu-grupo {
@@ -1525,18 +1518,7 @@ summary::-webkit-details-marker {
   width: 100%;
 }
 
-/* Botones de pago: en el plan, uno debajo de otro; en los servicios, uno al lado de otro */
-.plan-botones {
-  display: grid;
-  grid-row: 6;
-  align-self: end;
-  gap: 0.6rem;
-}
-
-.plan-botones .btn {
-  width: 100%;
-}
-
+/* Botón de compra de los servicios */
 .precio-botones {
   margin-top: 1.25rem;
 }
@@ -2594,8 +2576,7 @@ p.aviso {
     grid-row: auto;
   }
 
-  .plan > .btn,
-  .plan-botones {
+  .plan > .btn {
     margin-top: auto;
   }
 
