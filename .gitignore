@@ -1,6 +1,3 @@
-# Archivos y notas privadas locales (excluidos de git)
-PRIVADO.md
-AGENTS.md
 *.tmp
 *.log
 # Los ejecutables no van en el repositorio: se publican como Release de GitHub.
