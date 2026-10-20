@@ -782,8 +782,12 @@ summary::-webkit-details-marker {
   align-items: center;
   justify-content: center;
   gap: 0.9rem;
+  width: fit-content;
+  max-width: 100%;
   margin: 2rem auto 0;
+  color: inherit;
   text-align: left;
+  text-decoration: none;
 }
 
 .veri img {
@@ -813,7 +817,29 @@ summary::-webkit-details-marker {
 
 .veri-izq {
   justify-content: flex-start;
+  margin-left: 0;
   margin-top: 1.75rem;
+}
+
+/* Veri lleva a Contacto: saluda al pasar el ratón */
+.veri img {
+  transform-origin: 50% 90%;
+}
+
+.veri:hover .veri-bocadillo {
+  box-shadow: 0 0 0 1px var(--naranja), 0 10px 30px -14px rgba(60, 40, 20, 0.35);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .veri:hover img {
+    animation: veri-saludo 0.7s ease-in-out;
+  }
+}
+
+@keyframes veri-saludo {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-8deg) translateY(-4px); }
+  60% { transform: rotate(6deg) translateY(-2px); }
 }
 
 /* 7. Secciones y coste ==================================================== */
