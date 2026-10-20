@@ -2058,6 +2058,20 @@ summary::-webkit-details-marker {
   margin-top: 0;
 }
 
+.seccion-cabecera + .bloque {
+  margin-top: 0;
+}
+
+.tabla-nota {
+  text-align: center;
+}
+
+.ficha-intro {
+  margin-top: 0.35rem;
+  color: var(--tinta-3);
+  font-size: 0.9375rem;
+}
+
 .ficha {
   display: grid;
   grid-template-columns: minmax(10rem, 3fr) minmax(0, 9fr);
