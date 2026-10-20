@@ -2313,26 +2313,21 @@ summary::-webkit-details-marker {
   margin-top: 0.5rem;
 }
 
-/* Quiénes somos: iniciales (o foto) en un círculo */
-.persona-foto {
-  display: grid;
-  place-items: center;
-  width: 4.5rem;
-  height: 4.5rem;
-  overflow: hidden;
-  background: radial-gradient(120% 120% at 100% 0%, rgba(255, 122, 26, 0.4), transparent 60%), var(--marino);
-  border-radius: 50%;
-  color: #ffffff;
-  font-size: 1.375rem;
-  font-weight: 650;
-  letter-spacing: -0.02em;
-}
-
-/* Cita del fundador, al final de Quiénes somos, con su firma */
+/* Cita del fundador, al final de Quiénes somos: su foto de medio cuerpo junto a la cita y la firma */
 .cita {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 2.75rem);
   margin-top: 3rem;
   padding-top: 2.25rem;
   border-top: 1px solid var(--borde-2);
+}
+
+.cita-foto {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 24px 48px -20px rgba(11, 11, 12, 0.45);
 }
 
 .cita blockquote {
@@ -2351,9 +2346,6 @@ summary::-webkit-details-marker {
 }
 
 .cita figcaption {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
   margin-top: 1.25rem;
   color: var(--tinta-2);
   font-size: 0.9375rem;
@@ -2362,19 +2354,6 @@ summary::-webkit-details-marker {
 
 .cita figcaption strong {
   color: var(--tinta);
-}
-
-.cita .persona-foto {
-  flex: none;
-  width: 3rem;
-  height: 3rem;
-  font-size: 1rem;
-}
-
-.persona-foto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .huella-valor {
@@ -2868,6 +2847,14 @@ p.aviso {
 @media (max-width: 760px) {
   .portada {
     padding-block: 2.75rem 3.5rem;
+  }
+
+  .cita {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cita-foto {
+    max-width: 13rem;
   }
 
   .portada h1 {
