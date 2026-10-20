@@ -2231,6 +2231,7 @@ summary::-webkit-details-marker {
 }
 
 .texto-pagina {
+  max-width: 78ch;
   margin-inline: auto;
 }
 
