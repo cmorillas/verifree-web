@@ -825,7 +825,7 @@ summary::-webkit-details-marker {
   margin-top: 1.75rem;
 }
 
-/* Veri lleva a Contacto: saluda al pasar el ratón */
+/* Veri abre WhatsApp con el móvil de atención: saluda al pasar el ratón */
 .veri img {
   transform-origin: 50% 90%;
 }
