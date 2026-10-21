@@ -96,20 +96,20 @@
         <p><code>Get-FileHash .\VeriFree.exe -Algorithm SHA256</code></p>
         <p>La huella SHA-256 oficial de la versión de evaluación disponible en la web es:<br><code class="huella-valor">48A3FC4799BC4B1364846535BE33CD9F2BB173ED88C575CF2C24D07BD84E984B</code></p>
         <h3>Cómo actualizar a una nueva versión</h3>
-        <p>Al ser una aplicación portátil sin instalación, actualizar es tan sencillo como sustituir el archivo <span class="ruta">VeriFree.exe</span> por la nueva versión oficial descargada o recompilada. Tus empresas, facturas y configuraciones se conservan intactas en la carpeta <span class="ruta">Empresas</span> y el programa actualiza la base de datos automáticamente al abrirse. La versión que tienes se ve en <strong>Configuración › Acerca de</strong>.</p>
+        <p>Cierra VeriFree y sustituye <span class="ruta">VeriFree.exe</span> por el de la versión nueva. No borres la carpeta <span class="ruta">Empresas</span>: ahí están tus empresas, sus facturas, su configuración y tus licencias, y el programa pone al día sus datos al abrirse. La versión que tienes se ve en <strong>Configuración › Acerca de</strong>.</p>
       </section>
 
       <section id="empresa">
         <h2>2. Crear la empresa</h2>
         <p>La primera vez, el programa pide los datos fiscales de la empresa: el NIF, el nombre (o el nombre y los apellidos, si eres persona física), el domicilio (dirección, código postal, población, provincia y país) y el IBAN, que se imprime en las facturas por transferencia. Pulsa <strong>Crear la empresa</strong> y ya puedes facturar.</p>
-        <p>La empresa empieza en el entorno de pruebas de la AEAT, y arriba se ve la etiqueta <strong>PRUEBAS</strong>. Cuando quieras facturar de verdad, pásate a Producción (ver <a href="#aeat">Envío a la AEAT</a>).</p>
+        <p>La empresa empieza en el entorno de pruebas de la AEAT, y arriba se ve la etiqueta <strong>PRUEBAS</strong>. Cuando quieras facturar de verdad, pasa la empresa a Producción con su Licencia Oficial (ver <a href="#produccion">Pruebas y Producción</a>).</p>
         <h3>Varias empresas</h3>
         <p>Arriba a la izquierda está el nombre de la empresa abierta. Púlsalo para cambiar a otra o elige <strong>Crear una empresa nueva…</strong>. Cada empresa tiene sus facturas, sus clientes, su numeración y su configuración por separado.</p>
       </section>
 
       <section id="configuracion">
         <h2>3. Configuración</h2>
-        <p>En <strong>Configuración</strong> hay una pestaña para cada cosa. <strong>Guardar cambios</strong> guarda Empresa, Cobro, Valores por defecto y Email; las series, el logo y el certificado se guardan al momento.</p>
+        <p>En <strong>Configuración</strong> hay una pestaña para cada cosa. <strong>Guardar cambios</strong> guarda Empresa, Cobro, Valores por defecto y Email; el logo y lo de las demás pestañas se guardan al momento.</p>
         <dl>
           <dt>Empresa</dt>
           <dd>Los datos fiscales, que se copian en cada factura al emitirla; el texto al pie de las facturas (por ejemplo, la inscripción en el Registro Mercantil o el aviso de protección de datos); la actividad económica, para el libro registro, y el logo.</dd>
@@ -122,11 +122,11 @@
           <dt>Series</dt>
           <dd>La serie A para las facturas y la R para las rectificativas, con una numeración que empieza cada año (A-2026-0001). Puedes crear otras.</dd>
           <dt>VERI*FACTU</dt>
-          <dd>El entorno de la AEAT (Pruebas o Producción), el certificado con el que se envía, el estado de los envíos y los datos del productor del programa. Ver <a href="#aeat">Envío a la AEAT</a>.</dd>
+          <dd>El entorno de la AEAT (Pruebas o Producción) y la Licencia Oficial de la empresa, el certificado con el que se envía, el estado de los envíos y los datos del productor del programa. Ver <a href="#aeat">Envío a la AEAT</a>.</dd>
           <dt>Factura electrónica</dt>
           <dd>La firma de las facturas electrónicas y la carpeta donde se guarda una copia. Ver <a href="#electronica">Factura electrónica</a>.</dd>
           <dt>Acerca de</dt>
-          <dd>La versión del programa, dónde están tus datos, cómo actualizar y las licencias de terceros.</dd>
+          <dd>La versión del programa, dónde están tus datos, cómo actualizar, la declaración responsable del productor (en PDF, para guardarla o imprimirla) y las licencias de terceros.</dd>
         </dl>
       </section>
 
@@ -221,11 +221,18 @@
       <section id="aeat">
         <h2>9. Envío a la AEAT</h2>
         <p>Cada factura y cada anulación se envían solas a la AEAT al emitirlas. Si no hay conexión, el programa lo vuelve a intentar solo y, mientras falte algo, lo avisa una banda arriba con un botón para resolverlo.</p>
-        <h3>Pruebas y Producción</h3>
-        <p>Cada empresa empieza en el entorno de pruebas de la AEAT, sin validez legal: sus facturas llevan la banda «Modo de pruebas». Cuando quieras facturar de verdad, pásate a Producción en <strong>Configuración › VERI*FACTU</strong>: el programa pide confirmación, comprueba el certificado y la conexión, y el cambio no se puede deshacer durante el año. La versión de evaluación no envía nada a la AEAT ni puede pasar a Producción: una banda arriba lo recuerda.</p>
-        <h3>El certificado</h3>
+        <h3 id="produccion">Pruebas y Producción</h3>
+        <p>Cada empresa empieza en el entorno de pruebas de la AEAT, sin validez legal: sus facturas llevan la banda «Modo de pruebas». Para facturar de verdad, pasa la empresa a Producción en <strong>Configuración › VERI*FACTU</strong>:</p>
+        <ol>
+          <li>Elige el certificado con el que se envía (ver <a href="#certificado">El certificado</a>).</li>
+          <li>Carga la Licencia Oficial con <strong>Cargar licencia…</strong>: es el archivo que recibes al comprarla, con los NIF de las empresas para las que sirve. Si esta empresa no está entre ellas, el programa te lo dice. Si aún no tienes licencia, <strong>Comprar licencia</strong> abre la página donde se compra.</li>
+          <li>Pulsa <strong>Pasar a Producción…</strong>. El programa comprueba el certificado y la conexión con la AEAT y, si falta algo, te dice qué. Si todo está bien, pide confirmación.</li>
+        </ol>
+        <p>El paso no se puede deshacer: desde entonces, cada factura queda registrada en la AEAT con validez legal. Las facturas de prueba se quedan como de prueba, y la numeración de cada serie sigue donde iba, porque la AEAT no permite volver a usar sus números. La licencia se guarda en la carpeta <span class="ruta">Empresas</span>, así que entra en la copia de seguridad.</p>
+        <p>La versión de evaluación no envía nada a la AEAT ni puede pasar a Producción: una banda arriba lo recuerda.</p>
+        <h3 id="certificado">El certificado</h3>
         <p>En <strong>Configuración › VERI*FACTU</strong>, elige el certificado con el que se envía: el de la empresa o el de quien tenga poder para enviar por ella (apoderado o colaborador social). El programa lista los certificados instalados en Windows que sirven para conectar con la AEAT; si el tuyo está en un archivo, usa <strong>Importar archivo .pfx / .p12…</strong>.</p>
-        <p>El certificado se queda en Windows: en la carpeta de la empresa no se guarda ni el certificado ni su contraseña. Por eso, en otro equipo hay que volver a instalarlo.</p>
+        <p>El certificado se queda en Windows: en la carpeta de la empresa no se guarda ni el certificado ni su contraseña. Por eso, en otro equipo hay que volver a instalarlo. Desde un mes antes de que caduque, una banda lo avisa: renuévalo y elige el nuevo aquí.</p>
         <h3>Si algo falla</h3>
         <ul>
           <li>En la misma pestaña ves cuántos registros quedan por enviar. <strong>Enviar ahora</strong> los envía sin esperar al próximo intento, respetando el tiempo de espera que fija la AEAT.</li>
