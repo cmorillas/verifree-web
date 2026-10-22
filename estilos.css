@@ -1038,6 +1038,10 @@ summary::-webkit-details-marker {
   gap: 1rem;
 }
 
+.resumen-dos {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 @media (max-width: 760px) {
   .resumen {
     grid-template-columns: minmax(0, 1fr);
@@ -1408,7 +1412,7 @@ summary::-webkit-details-marker {
 /* Planes en una sola pieza; las filas se alinean entre columnas */
 .planes {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(6, auto);
   overflow: hidden;
   background: var(--blanco);
